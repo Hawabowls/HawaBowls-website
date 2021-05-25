@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    @font-face {
+        font-family: 'AracneRegular';
+        src: local('AracneRegular'),url('~assets/font/AracneRegular.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: 'BryantPro';
+        src: local('BryantPro'),url('~assets/font/BryantPro-Bold.otf') format('otf');
+    }
+    @font-face {
+        font-family: 'BryantPro';
+        src: local('BryantPro'),url('~assets/font/BryantPro-MediumAlt.otf') format('otf');
+    }
+    @font-face {
+        font-family: 'BryantPro';
+        src: local('BryantPro'),url('~assets/font/BryantPro-RegularAlt.otf') format('otf');
+    }  
+
+    body {
+        @apply font-body;
+    }
+     h1,h2,h3,h4{
+        @apply font-titre;
+    }
+}
