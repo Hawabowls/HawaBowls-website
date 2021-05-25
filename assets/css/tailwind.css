@@ -25,6 +25,27 @@
         @apply font-body;
     }
      h1,h2,h3,h4{
-        @apply font-titre;
+        @apply font-titre !important;
     }
+}
+
+
+@layer components{
+    .btn{
+        @apply py-2 px-5 text-white font-semibold  shadow-md   focus:outline-none font-body;
+    }
+
+    .btn-test1{
+       @apply bg-accent border hover:bg-white rounded-full hover:text-accent hover:border-accent-light;
+        
+    }
+
+    .btn-test2{
+        @apply bg-white border border-accent-light rounded-lg text-accent  hover:bg-accent;
+    }
+
+    .btn-test3{
+        @apply bg-white border border-accent-light rounded-full text-accent  hover:text-white hover:bg-accent font-bold;
+    }
+
 }
