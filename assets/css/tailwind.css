@@ -32,20 +32,28 @@
 
 @layer components{
     .btn{
-        @apply py-2 px-5 text-white font-semibold  shadow-md   focus:outline-none font-body;
+        @apply py-1 px-3 text-white font-semibold  shadow-md   focus:outline-none font-body;
     }
 
     .btn-test1{
-       @apply bg-accent border hover:bg-white rounded-full hover:text-accent hover:border-accent-light;
+       @apply bg-accent-500 border hover:bg-white rounded-full hover:text-accent-500 hover:border-accent-300;
         
     }
 
     .btn-test2{
-        @apply bg-white border border-accent-light rounded-lg text-accent  hover:bg-accent;
+        @apply bg-white border border-accent-300 rounded-lg text-accent-500  hover:bg-accent-500;
     }
 
     .btn-test3{
-        @apply bg-white border border-accent-light rounded-full text-accent  hover:text-white hover:bg-accent font-bold;
+        @apply bg-white border border-accent-300 rounded-full text-accent-500  hover:text-white hover:bg-accent-500 font-bold;
+    }
+
+    /* Navbar */
+    .nav-brand-logo {
+    }
+  
+    .nav-brand-link {
+      @apply block text-white rounded hover:text-accent-500 font-semibold sm:text-gray-100 px-2 py-1 sm:inline-block ; 
     }
 
 }
