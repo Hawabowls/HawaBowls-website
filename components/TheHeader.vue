@@ -41,7 +41,7 @@
           >Contact</nuxt-link
         >
 
-        <button class="mt-1 btn btn-test1">
+        <button class="mt-1 sm:mt-0 btn btn-test1">
           Commander
         </button>
       </div>
