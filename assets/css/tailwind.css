@@ -53,7 +53,7 @@
     }
   
     .nav-brand-link {
-      @apply block text-white rounded hover:text-accent-500 font-semibold sm:text-gray-100 px-2 py-1 sm:inline-block ; 
+      @apply block text-white  font-semibold hover:text-accent-500 rounded sm:text-gray-100 px-2 py-1 font-titre sm:inline-block ; 
     }
 
 }

@@ -35,9 +35,13 @@
         <nuxt-link class="nav-brand-link  sm:hidden md:block" to=""
           >Home</nuxt-link
         >
-        <nuxt-link class="mt-1 sm:mt-0 nav-brand-link" to="">Menu</nuxt-link>
-        <nuxt-link class="mt-1 sm:mt-0 nav-brand-link" to="">Blog</nuxt-link>
-        <nuxt-link class="mt-1 sm:mt-0 sm:active nav-brand-link" to=""
+        <nuxt-link class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link" to=""
+          >Menu</nuxt-link
+        >
+        <nuxt-link class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link" to=""
+          >Blog</nuxt-link
+        >
+        <nuxt-link class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link" to=""
           >Contact</nuxt-link
         >
 

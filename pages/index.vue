@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <main class="container">
     <div>
       <h1 class="title">
         Test composant
       </h1>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
