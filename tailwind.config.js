@@ -51,7 +51,7 @@ module.exports = {
             },
         },
         fontFamily: {
-            'titre': ['AracneRegular', 'sans-serif'],
+            'titre': ['AracneRegular'],
             'body': ['BryanPro']
         }
 
