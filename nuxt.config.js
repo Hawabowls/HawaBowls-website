@@ -39,6 +39,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
+  dev: process.env.NODE_ENV !== 'production',
   //tailwind
   tailwindcss: {
     // add '~tailwind.config` alias
