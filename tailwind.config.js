@@ -52,7 +52,7 @@ module.exports = {
         },
         fontFamily: {
             'titre': ['AracneRegular'],
-            'body': ['BryanPro']
+            'body': ['BryanProB']
         }
 
 
