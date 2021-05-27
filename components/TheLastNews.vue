@@ -11,6 +11,7 @@
 <script>
 import CardCarrousel from "./CardCarrousel.vue";
 export default {
+  name: "TheLastNews",
   components: { CardCarrousel },
   data() {
     return {
