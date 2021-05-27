@@ -1,5 +1,5 @@
 <template>
-  <button :href="url" class="btn">
+  <button :href="url" class="btn ">
     {{ text }}
   </button>
 </template>
