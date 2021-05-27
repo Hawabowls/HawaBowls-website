@@ -21,12 +21,80 @@
           text="Commander"
         ></BaseButton>
       </div>
+
+      <div>
+        <card-carrousel
+          :post="lastNews[0]"
+          :source="lastNews[0].source"
+        ></card-carrousel>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      lastNews: [
+        {
+          id: 0,
+          url:
+            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          titre: "Hola que tal",
+          caption: "Bienvenido",
+          source: "blog"
+        },
+        {
+          id: 1,
+          url:
+            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          titre: "Poke Poke Poke",
+          caption:
+            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
+          source: "instragram"
+        },
+        {
+          id: 2,
+          url:
+            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          titre: "Hola que tal",
+          caption:
+            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
+          source: "blog"
+        },
+        {
+          id: 3,
+          url:
+            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          titre: "Poke Poke Poke",
+          caption:
+            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
+          source: "instragram"
+        },
+
+        {
+          id: 4,
+          url:
+            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          titre: "Poke Poke Poke",
+          caption:
+            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
+          source: "instragram"
+        },
+        {
+          id: 5,
+          url:
+            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          titre: "Poke Poke Poke",
+          caption:
+            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
+          source: "instragram"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style>
