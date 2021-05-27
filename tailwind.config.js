@@ -50,10 +50,22 @@ module.exports = {
                 900: "#15171a"
             },
         },
-        fontFamily: {
-            'titre': ['AracneRegular'],
-            'body': ['BryanProB']
+
+
+        extend: {
+            fontFamily: {
+                'titre': ['AracneRegular'],
+                'body': ['BryanProB']
+            },
+
+        },
+        variants: {
+            extend: {
+                alignSelf: ['odd']
+            }
+
         }
+
 
 
     },
