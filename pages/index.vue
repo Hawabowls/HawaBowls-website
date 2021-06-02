@@ -1,15 +1,39 @@
 <template>
-  <main class="container">
-    <div>
+  <main>
+    <about-poke></about-poke>
+    <how-to-do-poke></how-to-do-poke>
+    <!--  <section class="">
       <h1 class="title">
         Test composant
       </h1>
-    </div>
+    </section> -->
+
+    <vector-background></vector-background>
+    <the-dishes></the-dishes>
+    <the-last-news></the-last-news>
+    <the-contact></the-contact>
   </main>
 </template>
 
 <script>
-export default {};
+import AboutPoke from "~/components/AboutPoke.vue";
+import HowToDoPoke from "~/components/HowToDoPoke.vue";
+import TheDishes from "~/components/TheDishes.vue";
+import TheLastNews from "~/components/TheLastNews.vue";
+import TheContact from "~/components/TheContact.vue";
+import VectorBackground from "~/components/VectorBackground.vue";
+import IconScrollBar from "~/components/IconScrollBar.vue";
+export default {
+  components: {
+    TheContact,
+    TheLastNews,
+    TheDishes,
+    AboutPoke,
+    HowToDoPoke,
+    VectorBackground,
+    IconScrollBar
+  }
+};
 </script>
 
 <style>

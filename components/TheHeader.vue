@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-secondary-500 w-full fixed inset-x-0 z-40">
+  <header class="bg-secondary-500 w-full fixed inset-x-0 z-40 mb-4">
     <nav class="sm:flex py-3 sm:justify-between items-center px-3">
       <div class="flex justify-between ">
         <div>
