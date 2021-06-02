@@ -37,6 +37,6 @@ export default {
 
 <style>
 .footer-link {
-  @apply block text-white  font-semibold mx-2 hover:text-accent-500 rounded sm:text-gray-100 px-2 py-1 font-titre sm:inline-block;
+  @apply block text-white text-xl font-semibold mx-2 hover:text-accent-500 rounded sm:text-gray-100 px-2 py-1 font-serif sm:inline-block;
 }
 </style>
