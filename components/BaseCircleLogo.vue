@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="h-20 object-cover" src="img/Fichier 3.png" alt="Hawabowls" />
+    <img class="h-24 object-cover" src="img/Fichier 3.png" alt="Hawabowls" />
   </div>
 </template>
 
