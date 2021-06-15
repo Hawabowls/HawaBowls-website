@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import CardDishes from "~/components/CardDishes.vue";
 import TheDishes from "~/components/TheDishes.vue";
 import Thathero from "~/components/v2/Thathero.vue";
 import ThisHeroes from "~/components/v2/ThisHeroes.vue";
