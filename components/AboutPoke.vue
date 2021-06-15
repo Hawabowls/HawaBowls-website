@@ -1,69 +1,80 @@
 <template>
-  <section class=" relative h-1/2 py-6 mx-auto ">
-    <div class="z-30 m-3 text-center">
-      <h2>Kezako le poké?</h2>
-      <div class="z-40 flex justify-between px-4 py-2">
-        <card-about>
-          <svg
-            id="Bold"
-            class="h-16 w-12 mx-auto"
-            enable-background="new 0 0 24 24"
-            height="512"
-            viewBox="0 0 24 24"
-            width="512"
-            xmlns="http://www.w3.org/2000/svg"
+  <div class="relative bg-white overflow-hidden h-screen">
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="relative z-10 pb-8 bg-white h-screen sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
+      >
+        <svg
+          class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+          fill="currentColor"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
+
+        <div>
+          <div class="relative pt-6 px-4 sm:px-6 lg:px-8"></div>
+          <main
+            class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
           >
-            <path
-              d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"
-            />
-            <path d="m.396 7.977h4.976v16.023h-4.976z" />
-            <path
-              d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"
-            /></svg
-        ></card-about>
-        <card-about>
-          <svg
-            id="Bold"
-            class="h-16 w-12 mx-auto"
-            enable-background="new 0 0 24 24"
-            height="512"
-            viewBox="0 0 24 24"
-            width="512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"
-            />
-            <path d="m.396 7.977h4.976v16.023h-4.976z" />
-            <path
-              d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"
-            />
-          </svg>
-        </card-about>
-        <card-about>
-          <svg
-            id="Bold"
-            class="h-16 w-12 mx-auto"
-            enable-background="new 0 0 24 24"
-            height="512"
-            viewBox="0 0 24 24"
-            width="512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"
-            />
-            <path d="m.396 7.977h4.976v16.023h-4.976z" />
-            <path
-              d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"
-            />
-          </svg>
-        </card-about>
+            <div class="sm:text-center lg:text-left">
+              <h1
+                class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
+              >
+                <span class="block xl:inline"> Quezako le </span>
+                <span class="block text-indigo-600 xl:inline">Poké?</span>
+              </h1>
+              <p
+                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+              >
+                Le poke ou poké est un des plats principaux de la cuisine
+                traditionnelle hawaïenne. Il est composé de poisson cru coupé en
+                dés, servi comme entrée ou en plat principal.
+              </p>
+              <div
+                class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
+              >
+                <div class="rounded-md shadow">
+                  <a
+                    href="#"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent-400 hover:bg-accent-500 md:py-4 md:text-lg md:px-10"
+                  >
+                    Commander
+                  </a>
+                </div>
+                <div class="mt-3 sm:mt-0 sm:ml-3">
+                  <a
+                    href="#"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-700 bg-indigo-100 hover:text-white hover:bg-primary-400 md:py-4 md:text-lg md:px-10"
+                  >
+                    Nos Plats
+                  </a>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <video
+          src="~/assets/img/banner/hawai-bowls-stop-motion.mp4"
+          loop
+          autoplay
+          muted
+          class="h-56 w-full object-cover o sm:h-72 md:h-96 lg:w-full lg:h-full"
+        ></video>
+
+        <!--      <img
+          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          alt=""
+        />
+         -->
       </div>
     </div>
-
-    <wave-background></wave-background>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -74,4 +85,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.o {
+  object-position: 50% 35%;
+}
+</style>
