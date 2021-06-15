@@ -83,8 +83,6 @@ module.exports = {
                 900: "#15171a"
             },
         },
-
-
         extend: {
             fontFamily: {
                 'titre': ['AracneRegular'],
@@ -111,7 +109,6 @@ module.exports = {
                 '4/5': "80%",
             }
 
-
         },
         variants: {
             extend: {
@@ -119,9 +116,6 @@ module.exports = {
             }
 
         }
-
-
-
     },
     variants: {},
     plugins: [

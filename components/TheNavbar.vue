@@ -31,17 +31,23 @@
           </button>
         </div>
       </div>
-      <div class=" px-2 pt-2 sm:flex " :class="isOpen ? 'block' : 'hidden'">
-        <nuxt-link class="nav-brand-link  sm:hidden md:block" to=""
-          >Home</nuxt-link
+      <div id="mobile-menu" :class="isOpen ? 'block' : 'hidden'">
+        <nuxt-link class="nav-brand-link anima sm:hidden md:block" to="/"
+          >Accueil</nuxt-link
         >
-        <nuxt-link class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link" to=""
+        <nuxt-link
+          class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
+          to="#menu"
           >Menu</nuxt-link
         >
-        <nuxt-link class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link" to=""
+        <nuxt-link
+          class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
+          to="Blog"
           >Blog</nuxt-link
         >
-        <nuxt-link class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link" to=""
+        <nuxt-link
+          class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link anima bg-opacity-60 "
+          to="Contact"
           >Contact</nuxt-link
         >
 
@@ -96,7 +102,7 @@ export default {
     document.addEventListener("scroll", function() {
       /*Apply classes for slide in bar*/
       scrollpos = window.scrollY;
-      if (scrollpos > 615) {
+      if (scrollpos > 675) {
         header.classList.add("bg-primary-500");
         video.classList.remove("hidden");
         /*     navaction.classList.remove("bg-white");
@@ -119,4 +125,26 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="postcss">
+#mobile-menu {
+  @apply px-2 py-2 mt-3 bg-white rounded;
+  @screen sm {
+    background-color: transparent;
+    @apply mt-0 flex bg-opacity-60;
+  }
+}
+.anima {
+  @apply transition duration-1000 text-primary-500;
+  &:hover {
+    @apply rounded bg-accent-200 bg-opacity-60;
+  }
+  @screen sm {
+    border-color: transparent;
+    @apply border-b-2 text-primary-100 transition duration-500;
+    &:hover {
+      background-color: transparent;
+      @apply border-accent-400;
+    }
+  }
+}
+</style>
