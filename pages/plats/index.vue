@@ -1,10 +1,10 @@
 <template>
-  <main class="max-w-7xl mx-auto sm:px-5 lg:px-8">
+  <main class="max-w-7xl mx-auto py-4 sm:px-5 lg:px-8">
     <h3 class="font-semibold text-2xl text-center tracking-wider leading-tight">
       Nos plats Signatures
     </h3>
     <div
-      class="grid grid-cols-1 bg-gray-100 gap-x-6 gap-y-4 px-2 sm:grid-cols-2 md:grid-cols-3"
+      class="grid grid-cols-1  gap-x-6 gap-y-4 px-2 sm:grid-cols-2 md:grid-cols-3"
     >
       <div class="max-w-lg" v-for="p in poke" :key="p.titre">
         <div class="relative pb-4/5">
