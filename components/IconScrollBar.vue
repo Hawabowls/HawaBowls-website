@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="container-icon-scroll">
     <svg
       class="icon-scroll"
       version="1.1"
@@ -48,34 +48,28 @@
 	c0.36-0.15,0.54-0.53,0.4-0.85l-0.37-0.9c-0.01-0.02-0.03-0.05-0.04-0.06L227.97,664L212.61,670.45z"
       />
       <polygon
-        v-if="lvl > 0"
         class="st1 protein "
         points="350.81,786.25 327.26,798.52 312.45,845.54 322.57,864.97 346.05,852.74 360.9,805.62 "
       />
       <polygon
-        v-if="lvl > 0"
         class="st1 protein "
         points="349.13,851.14 377.03,836.6 362.5,808.7 "
       />
       <polygon
-        v-if="lvl > 0"
-        class="st1 protein "
+        class="st1 protein"
         points="296.35,814.62 310.84,842.46 324.18,800.12 "
       />
       <polygon
-        v-if="lvl > 0"
         class="st1 protein transition-opacity ease-in duration-75"
         points="349.13,851.14 377.03,836.6 362.35,808.4 362.5,808.7 "
       />
 
       <polygon
-        v-if="false"
         class="st1"
         points="360.9,805.62 350.81,786.25 326.97,798.67 327.26,798.52 312.45,845.54 322.57,864.97 346.05,852.74 
 	"
       />
       <polygon
-        v-if="false"
         class="st1"
         points="324.19,800.12 296.35,814.62 310.85,842.46 "
       />
@@ -161,8 +155,7 @@ export default {
     };
   },
   methods: {
-    test(e) {
-      if (e.target.documentElement.scrollTop < 600) {
+    /*   if (e.target.documentElement.scrollTop < 600) {
         this.lvl = 0;
       } else if (
         e.target.documentElement.scrollTop > 650 &&
@@ -185,18 +178,33 @@ export default {
         this.lvl = 4;
         console.log(this.lvl);
       }
-    }
+    } */
   },
   mounted() {
-    window.addEventListener("scroll", this.test);
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.test);
+    let scrollpos = window.scrollY;
+    let c = document.getElementById("container-icon-scroll");
+    let icon = document.getElementsByClassName("ion-scroll");
+    let prot = document.getElementsByClassName("protein");
+    console.log(prot);
+    window.addEventListener("scroll", function() {
+      scrollpos = window.scrollY;
+      if (scrollpos > 675 && scrollpos < 975) {
+        for (let i = 0; i < prot.length; i++) {
+          prot[i].classList.add("protein_active");
+        }
+      } else if (scrollpos > 975 && scrollpos < 1500) {
+        this.lvl = 1;
+        console.log(this.lvl);
+      } else if (scrollpos > 1500 && scrollpos < 2000) {
+        this.lvl = 2;
+        console.log(this.lvl);
+      }
+    });
   }
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .icon-scroll {
   @apply fixed bottom-0 left-0 z-40 w-56 h-56;
 }
@@ -215,5 +223,13 @@ export default {
 .st3 {
   fill: #3c9d7d;
   opacity: 0;
+}
+
+.protein {
+  @apply transition duration-500;
+  &_active {
+    opacity: 1;
+    @apply transform translate-y-6;
+  }
 }
 </style>
