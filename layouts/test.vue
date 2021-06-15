@@ -1,9 +1,9 @@
 <template>
-  <div class="relative">
+  <div>
     <TheHeader> </TheHeader>
-    <!--   <the-hero></the-hero> -->
-    <icon-scroll-bar :entries="[0.2, 0.05, 0.75, 1.0]"></icon-scroll-bar>
+    <icon-scroll-bar></icon-scroll-bar>
     <Nuxt />
+
     <TheFooter></TheFooter>
   </div>
 </template>

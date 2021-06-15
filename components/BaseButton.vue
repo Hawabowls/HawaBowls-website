@@ -1,5 +1,5 @@
 <template>
-  <button :href="url" class="btn ">
+  <button class="btn ">
     {{ text }}
   </button>
 </template>
@@ -7,7 +7,7 @@
 <script>
 export default {
   name: "BaseButton",
-  props: ["url", "text"]
+  props: ["text"]
 };
 </script>
 

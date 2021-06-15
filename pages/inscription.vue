@@ -21,10 +21,51 @@
         <a
           href="#"
           class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline"
-          >Connexion avec email</a
+          >Inscription avec email</a
         >
 
         <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
+      </div>
+
+      <div class="mt-4">
+        <label
+          class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+          for="LoggingEmailAddress"
+          >Nom</label
+        >
+        <input
+          id="LoggingEmailAddress"
+          class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+          type="email"
+        />
+      </div>
+      <div class="mt-4">
+        <label
+          class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+          for="LoggingEmailAddress"
+          >Prénom</label
+        >
+        <input
+          id="LoggingEmailAddress"
+          class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+          type="email"
+        />
+      </div>
+      <div class="mt-4">
+        <div class="flex justify-between">
+          <label
+            class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+            for="loggingMobile"
+            >Mobile</label
+          >
+        </div>
+
+        <input
+          id="loggingMobile"
+          class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+          type="tel"
+          pattern="[0-9]{2}-[0-9]{2}-[0-9]{6}"
+        />
       </div>
 
       <div class="mt-4">
@@ -39,7 +80,6 @@
           type="email"
         />
       </div>
-
       <div class="mt-4">
         <div class="flex justify-between">
           <label
@@ -60,16 +100,15 @@
           type="password"
         />
       </div>
-
-      <div class="mt-6">
+      <div class="mt-6 mb-3">
         <button
           class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-primary-600 rounded hover:bg-primary-700 focus:outline-none focus:bg-primary-700"
         >
-          Connexion
+          Inscription
         </button>
       </div>
 
-      <div class="flex items-center justify-between mt-4">
+      <!--  <div class="flex items-center justify-between mt-4">
         <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
 
         <a
@@ -79,36 +118,7 @@
         >
 
         <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-      </div>
-      <div class="mt-5">
-        <nuxt-link to="/inscription">
-          <button
-            class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-primary-600 rounded hover:bg-primary-700 focus:outline-none focus:bg-primary-700"
-          >
-            Inscription
-          </button></nuxt-link
-        >
-      </div>
-      <div class="flex items-center justify-between mt-4">
-        <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-
-        <a
-          href="#"
-          class="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
-          >Commander sans compte</a
-        >
-
-        <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-      </div>
-      <div class="mt-5">
-        <nuxt-link to="/inscription">
-          <button
-            class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-secondary-600 rounded hover:bg-secondary-700 focus:outline-none focus:bg-secondary-700"
-          >
-            Commander
-          </button></nuxt-link
-        >
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

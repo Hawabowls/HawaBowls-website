@@ -21,9 +21,7 @@
         src: local('BryantPro'),url('~assets/font/BryantPro-RegularAlt.otf') format('otf');
     }  
 
-    body {
-        @apply font-body;
-    }
+   
      h1,h2,h3,h4{
         @apply font-sans !important;
     }
@@ -38,7 +36,7 @@
 
 @layer components{
     .btn{
-        @apply py-1 px-3 text-white font-semibold  shadow-md   focus:outline-none font-body;
+        @apply py-1 px-3 text-white font-semibold  shadow-md   focus:outline-none;
     }
 
     .btn-test1{
@@ -64,7 +62,7 @@
     }
   
     .nav-brand-link {
-      @apply block text-white  font-semibold hover:text-accent-500 rounded sm:text-gray-100 px-2 py-1 font-serif sm:inline-block ; 
+      @apply block text-white  hover:bg-white hover:bg-opacity-60 font-semibold hover:text-accent-500 rounded sm:text-gray-100 px-2 py-1  sm:inline-block ; 
     }
 
 }

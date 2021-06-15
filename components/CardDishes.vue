@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-gray-400 rounded-lg mx-4 shadow-lg overflow-hidden">
+  <div
+    class="bg-gray-400 rounded-lg m-1 shadow-lg overflow-hidden cursor-pointer"
+  >
     <img
       class="w-56 h-56 object-coover object-center"
       src="
@@ -10,7 +12,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style></style>

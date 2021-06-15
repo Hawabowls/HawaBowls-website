@@ -38,6 +38,39 @@ module.exports = {
             white: {
                 DEFAULT: '#FFFFFF'
             },
+            pink: {
+                100: "#fde3f0",
+                200: "#fbc7e2",
+                300: "#f8aad3",
+                400: "#f68ec5",
+                500: "#f472b6",
+                600: "#c35b92",
+                700: "#92446d",
+                800: "#622e49",
+                900: "#311724"
+            }, orange: {
+                100: "#fee9d8",
+                200: "#fdd3b1",
+                300: "#fdbe8a",
+                400: "#fca863",
+                500: "#fb923c",
+                600: "#c97530",
+                700: "#975824",
+                800: "#643a18",
+                900: "#321d0c"
+            },
+            red: {
+                100: "#fcdada",
+                200: "#f9b4b4",
+                300: "#f58f8f",
+                400: "#f26969",
+                500: "#ef4444",
+                600: "#bf3636",
+                700: "#8f2929",
+                800: "#601b1b",
+                900: "#300e0e"
+            },
+
             gray: {
                 100: "#e1e3e6",
                 200: "#c4c7cc",
@@ -57,6 +90,27 @@ module.exports = {
                 'titre': ['AracneRegular'],
                 'body': ['BryanProB']
             },
+            spacing: {
+                128: '32rem',
+                132: '36rem',
+            },
+
+            zIndex: {
+                '-10': '-10',
+            },
+            spacing: {
+                '1/2': '50%',
+                '1/3': "33.333333%",
+                '2/3': "66.666667%",
+                '1/4': " 25%",
+                '2/4': "50%",
+                '3/4': "75%",
+                '1/5': "20%",
+                '2/5': "40%",
+                '3/5': "60%",
+                '4/5': "80%",
+            }
+
 
         },
         variants: {
@@ -70,7 +124,10 @@ module.exports = {
 
     },
     variants: {},
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio')
+    ],
     purge: {
         content: [
             `components/**/*.{vue,js}`,
