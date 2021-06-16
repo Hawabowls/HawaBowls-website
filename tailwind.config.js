@@ -107,6 +107,54 @@ module.exports = {
                 '2/5': "40%",
                 '3/5': "60%",
                 '4/5': "80%",
+            },
+            keyframes: {
+                'fade-in-down': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateY(-200px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateY(0)'
+                    },
+                },
+                'fade-out-down': {
+                    'from': {
+                        opacity: '1',
+                        transform: 'translateY(0px)'
+                    },
+                    'to': {
+                        opacity: '0',
+                        transform: 'translateY(10px)'
+                    },
+                },
+                'fade-in-up': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateY(10px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateY(0)'
+                    },
+                },
+                'fade-out-up': {
+                    'from': {
+                        opacity: '1',
+                        transform: 'translateY(0px)'
+                    },
+                    'to': {
+                        opacity: '0',
+                        transform: 'translateY(-50px)'
+                    },
+                }
+            },
+            animation: {
+                'fade-in-down': 'fade-in-down 0.8s ease-out',
+                'fade-out-down': 'fade-out-down 0.5s ease-out',
+                'fade-in-up': 'fade-in-up 0.5s ease-out',
+                'fade-out-up': 'fade-out-up 0.6s ease-out'
             }
 
         },
