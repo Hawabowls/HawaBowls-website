@@ -34,8 +34,13 @@
         </div>
       </div>
       <div class="flex justify-center">
+        <<<<<<< HEAD
         <!-- <the-carousel>
              <the-carousel-slide
+=======
+        <the-carousel>
+          <the-carousel-slide
+>>>>>>> 553f8e8ac4cfc527181e4dbd7ef5d7615181ffb5
             v-for="slide in slides"
             :key="slide"
             class="carousel-slider"
