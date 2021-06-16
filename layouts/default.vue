@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 *,
 *::before,
 *::after {

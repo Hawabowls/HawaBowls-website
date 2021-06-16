@@ -119,7 +119,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 .t {
   background: center/90% no-repeat url("@/assets/img/Fichier1.png");
 }

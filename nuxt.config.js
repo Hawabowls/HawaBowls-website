@@ -1,3 +1,4 @@
+import { join } from 'path'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
@@ -30,9 +31,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
-    '@nuxt/postcss8'
-
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -61,6 +60,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['vue-splide'],
+    postcss: {
+      plugins: {
+        'tailwindcss': join(__dirname, 'tailwind.config.js'),
+        'postcss-nested': {},
+        'postcss-preset-env': {},
+      },
+    }
   }
 
 }
