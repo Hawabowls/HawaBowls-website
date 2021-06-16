@@ -34,7 +34,6 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <<<<<<< HEAD
         <!-- <the-carousel>
              <the-carousel-slide
 =======
