@@ -8,7 +8,8 @@
     </section> -->
 
     <the-dishes></the-dishes>
-    <!--   <the-last-news></the-last-news> -->
+    <notre-menu></notre-menu>
+    <the-last-news></the-last-news>
     <the-contact></the-contact>
   </main>
 </template>
@@ -20,13 +21,15 @@ import TheDishes from "~/components/TheDishes.vue";
 import TheLastNews from "~/components/TheLastNews.vue";
 import TheContact from "~/components/TheContact.vue";
 import IconScrollBar from "~/components/IconScrollBar.vue";
+import NotreMenu from "~/components/NotreMenu.vue";
 export default {
   components: {
     TheContact,
     TheLastNews,
     TheDishes,
     AboutPoke,
-    IconScrollBar
+    IconScrollBar,
+    NotreMenu
   }
 };
 </script>
