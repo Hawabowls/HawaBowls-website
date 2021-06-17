@@ -15,10 +15,17 @@
           />
         </div>
         <div>
-          <base-button
-            text="Commander"
+          <button
+            @click="isModal = !isModal"
             class=" bg-accent-400 hover:bg-accent-500 px-3 py-2 rounded-lg text-white font-medium text-xl  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-          ></base-button>
+          >
+            Commander
+          </button>
+
+          <the-modal-order
+            v-if="isModal"
+            @close-modal="changeValue"
+          ></the-modal-order>
         </div>
         <button
           class="px-4 py-2 mt-20 text-sm font-medium text-white uppercase transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
@@ -55,8 +62,21 @@
 </template>
 
 <script>
+import TheModalOrder from "./admin/TheModalOrder.vue";
 export default {
-  name: "TheHeader"
+  name: "TheHeader",
+  components: { TheModalOrder },
+  data() {
+    return {
+      isModal: false
+    };
+  },
+  methods: {
+    changeValue(payload) {
+      console.log(payload);
+      this.isModal = payload.value;
+    }
+  }
 };
 </script>
 

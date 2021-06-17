@@ -100,11 +100,11 @@
         >
           <button
             @click="livraison = !livraison"
-            class="inline-flex text-white items-center text-3xl justify-center bg-accent-400 w-full rounded-lg p-2 m-1 hover:bg-accent-300 focus:outline-none"
+            class="inline-flex text-white items-center text-3xl justify-center bg-accent-400 w-full sm:w-1/2 rounded-lg p-2 m-1 hover:bg-accent-300 focus:outline-none"
           >
             Livraison
           </button>
-          <nuxt-link to="/plats">
+          <nuxt-link to="/plats" class="w-full sm:w-1/2">
             <button
               class="inline-flex text-white items-center text-3xl justify-center bg-accent-400 w-full rounded-lg p-2 m-1 hover:bg-accent-300 focus:outline-none"
             >
