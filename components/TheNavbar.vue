@@ -37,17 +37,17 @@
         >
         <nuxt-link
           class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
-          to="#menu"
+          to="/menu"
           >Menu</nuxt-link
         >
         <nuxt-link
           class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
-          to="Blog"
+          to="/Blog"
           >Blog</nuxt-link
         >
         <nuxt-link
           class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link anima bg-opacity-60 "
-          to="Contact"
+          to="/Contact"
           >Contact</nuxt-link
         >
 
