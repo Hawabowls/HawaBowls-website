@@ -19,8 +19,8 @@
       </div>
       <div class="mx-auto min-w-sm flex space-x-2 overflow-x-auto">
         <div
-          @click="poke = !poke"
-          class="relative w-full max-w-sm h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          @click="toggle('poke')"
+          class="relative w-full max-w-sm h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -34,8 +34,8 @@
           />
         </div>
         <div
-          @click="dessert = !dessert"
-          class="relative w-full max-w-sm h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          @click="toggle('dessert')"
+          class="relative w-full max-w-sm h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -50,8 +50,8 @@
         </div>
 
         <div
-          @click="boisson = !boisson"
-          class="relative w-full max-w-sm h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          @click="toggle('boisson')"
+          class="relative group  w-full max-w-sm cursor-pointer h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -59,7 +59,7 @@
             Boisson
           </h3>
           <img
-            class="absolute h-64 w-full object-cover"
+            class="absolute h-64 w-full group-hover:opacity-85 object-cover"
             src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             alt=""
           />
@@ -116,6 +116,25 @@ export default {
       boisson: false,
       dessert: false
     };
+  },
+  methods: {
+    toggle(section) {
+      if (section == "poke") {
+        this.poke = !this.poke;
+        this.dessert = false;
+        this.boisson = false;
+      }
+      if (section == "dessert") {
+        this.dessert = !this.dessert;
+        this.poke = false;
+        this.boisson = false;
+      }
+      if (section == "boisson") {
+        this.boisson = !this.boisson;
+        this.poke = false;
+        this.dessert = false;
+      }
+    }
   }
 };
 </script>
