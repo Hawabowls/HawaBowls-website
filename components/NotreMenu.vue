@@ -1,9 +1,12 @@
 <template>
-  <section class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+  <section
+    class="max-w-7xl mx-auto bg-primary-100 py-16 px-4 sm:py-24 sm:px-6 lg:px-8"
+    id="menu"
+  >
     <div class="space-y-16">
       <div class="text-center">
         <h2
-          class="text-base font-semibold text-primary-300 tracking-wide uppercase"
+          class="text-base font-semibold text-secondary-200 tracking-wide uppercase"
         >
           Venez deguster
         </h2>
@@ -12,7 +15,7 @@
         >
           Plongez dans nos bowl de fraicheur
         </p>
-        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-300">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores iste
           , inventore voluptate necessitatibus reiciendis atque!!
         </p>
@@ -20,7 +23,7 @@
       <div class="mx-auto min-w-sm flex space-x-2 overflow-x-auto">
         <div
           @click="toggle('poke')"
-          class="relative w-full max-w-sm h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          class=" group hover:bg-white relative w-full max-w-sm h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -28,7 +31,7 @@
             Poke
           </h3>
           <img
-            class="absolute h-64 w-full object-cover"
+            class="absolute h-64 w-full group-hover:opacity-80 object-cover"
             src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
             alt=""
           />
@@ -112,7 +115,7 @@ export default {
 
   data() {
     return {
-      poke: false,
+      poke: true,
       boisson: false,
       dessert: false
     };

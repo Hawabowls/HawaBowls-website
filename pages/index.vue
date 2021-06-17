@@ -6,9 +6,9 @@
         Test composant
       </h1>
     </section> -->
-
-    <the-dishes></the-dishes>
     <notre-menu></notre-menu>
+    <the-dishes></the-dishes>
+
     <the-last-news></the-last-news>
     <the-contact></the-contact>
   </main>
