@@ -1,8 +1,9 @@
 <template>
-  <div class="relative bg-white overflow-hidden h-screen">
+  <div class="relative bg-white overflow-hidden mdmd:h-screen">
     <div class="max-w-7xl mx-auto">
       <div
-        class="relative z-10 pb-8 bg-white h-screen sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
+        id="right-hero"
+        class="relative z-10 pb-8 bg-white h-full sm:pb-10 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
       >
         <svg
           class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
@@ -63,7 +64,7 @@
           loop
           autoplay
           muted
-          class="h-56 w-full object-cover o sm:h-72 md:h-96 lg:w-full lg:h-full"
+          class="h-72 w-full object-cover o sm:h-72 md:h-96 lg:w-full lg:h-full"
         ></video>
 
         <!--      <img
@@ -85,8 +86,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 .o {
   object-position: 50% 35%;
+  @screen xs {
+    object-position: 35% 50%;
+  }
+}
+
+#right-hero {
+  @screen md {
+    @apply h-screen;
+  }
 }
 </style>

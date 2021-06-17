@@ -96,6 +96,10 @@ module.exports = {
             zIndex: {
                 '-10': '-10',
             },
+            screens: {
+                'xs': '495px',
+            },
+
             spacing: {
                 '1/2': '50%',
                 '1/3': "33.333333%",

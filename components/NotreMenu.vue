@@ -1,26 +1,28 @@
 <template>
   <section
-    class="max-w-7xl mx-auto bg-primary-100 py-16 px-4 sm:py-24 sm:px-6 lg:px-8"
+    class="w-full mx-auto bg-primary-400 py-16 px-4 sm:py-24 sm:px-6 lg:px-8"
     id="menu"
   >
-    <div class="space-y-16">
+    <div class="space-y-14">
       <div class="text-center">
         <h2
-          class="text-base font-semibold text-secondary-200 tracking-wide uppercase"
+          class="text-base font-semibold text-accent-300 tracking-wide uppercase"
         >
           Venez deguster
         </h2>
         <p
-          class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
+          class="mt-1 text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl"
         >
           Plongez dans nos bowl de fraicheur
         </p>
-        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-300">
+        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-200">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores iste
           , inventore voluptate necessitatibus reiciendis atque!!
         </p>
       </div>
-      <div class="mx-auto min-w-sm flex space-x-2 overflow-x-auto">
+      <div
+        class="mx-auto min-w-sm flex justify-center space-x-2 overflow-x-auto"
+      >
         <div
           @click="toggle('poke')"
           class=" group hover:bg-white relative w-full max-w-sm h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
@@ -71,21 +73,48 @@
       <ul
         v-if="poke"
         role="list"
-        class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+        class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 mx-auto sm:gap-x-6 lg:grid-cols-5 xl:gap-x-8"
       >
-        <li
-          class="relative"
-          v-for="i in 5"
-          :key="i"
-          :class="[i == 5 ? 'lg:col-start-2' : '']"
-        >
+        <li class="relative" v-for="i in 5" :key="i">
           <div
             class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
           >
             <img
               src="~assets/img/plat/po'aha2.jpg"
               alt=""
-              class="object-cover pointer-events-none group-hover:opacity-75"
+              class="object-fill pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
+          </div>
+          <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        </li>
+
+        <!-- More files... -->
+      </ul>
+      <ul
+        v-if="dessert"
+        role="list"
+        class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 mx-auto sm:gap-x-6 lg:grid-cols-5 xl:gap-x-8"
+      >
+        <li class="relative" v-for="i in 5" :key="i">
+          <div
+            class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1605190557072-1fe6a230ee65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80  "
+              alt=""
+              class="object-fill pointer-events-none group-hover:opacity-75"
             />
             <button type="button" class="absolute inset-0 focus:outline-none">
               <span class="sr-only">View details</span>
