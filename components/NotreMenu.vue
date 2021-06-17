@@ -1,6 +1,6 @@
 <template>
   <section class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-    <div class="space-y-4">
+    <div class="space-y-16">
       <div class="text-center">
         <h2
           class="text-base font-semibold text-primary-300 tracking-wide uppercase"
@@ -17,8 +17,9 @@
           , inventore voluptate necessitatibus reiciendis atque!!
         </p>
       </div>
-      <div class="mx-auto">
+      <div class="mx-auto min-w-sm flex space-x-2 overflow-x-auto">
         <div
+          @click="poke = !poke"
           class="relative w-full max-w-sm h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
@@ -32,29 +33,90 @@
             alt=""
           />
         </div>
-      </div>
-      <div class="flex justify-center">
-        <!-- <the-carousel>
-             <the-carousel-slide
-=======
-        <the-carousel>
-          <the-carousel-slide
->>>>>>> 553f8e8ac4cfc527181e4dbd7ef5d7615181ffb5
-            v-for="slide in slides"
-            :key="slide"
-            class="carousel-slider"
+        <div
+          @click="dessert = !dessert"
+          class="relative w-full max-w-sm h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+        >
+          <h3
+            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
           >
-            <img :src="slide" :alt="slide" />
-          </the-carousel-slide>
-        </the-carousel> -->
+            Dessert
+          </h3>
+          <img
+            class="absolute h-64 w-full object-cover"
+            src="https://images.unsplash.com/photo-1605190557072-1fe6a230ee65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80  "
+            alt=""
+          />
+        </div>
+
+        <div
+          @click="boisson = !boisson"
+          class="relative w-full max-w-sm h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+        >
+          <h3
+            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+          >
+            Boisson
+          </h3>
+          <img
+            class="absolute h-64 w-full object-cover"
+            src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+            alt=""
+          />
+        </div>
       </div>
+      <ul
+        v-if="poke"
+        role="list"
+        class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+      >
+        <li
+          class="relative"
+          v-for="i in 5"
+          :key="i"
+          :class="[i == 5 ? 'lg:col-start-2' : '']"
+        >
+          <div
+            class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
+          >
+            <img
+              src="~assets/img/plat/po'aha2.jpg"
+              alt=""
+              class="object-cover pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
+          </div>
+          <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        </li>
+
+        <!-- More files... -->
+      </ul>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  components: {}
+  components: {},
+
+  data() {
+    return {
+      poke: false,
+      boisson: false,
+      dessert: false
+    };
+  }
 };
 </script>
 

@@ -174,8 +174,8 @@ export default {
     let prot = document.getElementsByClassName("protein");
     let veg = document.getElementsByClassName("veggie");
     let base = document.getElementsByClassName("base");
-    let toppings = document.getElementsByClassName("base");
-    let sauce = document.getElementsByClassName("base");
+    let toppings = document.getElementsByClassName("toppings");
+    let sauce = document.getElementsByClassName("sauce");
     let vm = this;
     window.addEventListener("scroll", function() {
       scrollpos = window.scrollY;
@@ -213,7 +213,7 @@ export default {
         prot[i].classList.remove("protein_active");
       }
     }
-    if (scrollpos > 900) {
+    if (scrollpos > 600) {
       vm.lvl = 1;
       for (let i = 0; i < toppings.length; i++) {
         toppings[i].classList.add("toppings_active");
@@ -229,7 +229,10 @@ export default {
 
 <style lang="postcss" scoped>
 .icon-scroll {
-  @apply fixed bottom-0 left-0 z-40 w-56 h-56;
+  @apply hidden fixed bottom-0 left-0 z-40 w-56 h-56;
+  @screen sm {
+    @apply block;
+  }
 }
 
 .st0 {
