@@ -7,12 +7,23 @@
     <TheFooter></TheFooter>
   </div>
 </template>
-
+<script>
+export default {
+  head: {
+    bodyAttrs: {
+      class: "op"
+    }
+  }
+};
+</script>
 <style lang="postcss">
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+.op {
+  @apply overflow-x-hidden;
 }
 </style>
