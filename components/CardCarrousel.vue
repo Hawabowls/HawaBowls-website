@@ -7,10 +7,10 @@
         alt=""
       />
     </div>
-    <div class="py-2">
+    <div class="py-2 px-2">
       <span class="text-accent-200 ">{{ post.source }}</span>
       <!-- <h3 class="font-semibold text-gray-800">{{ post.titre }}</h3> -->
-      <p class="text-gray-600">{{ post.caption }}</p>
+      <p class="text-gray-600 truncate">{{ post.caption }}</p>
     </div>
     <div class="flex justify-around pb-1">
       <div class="fill-accent-500">

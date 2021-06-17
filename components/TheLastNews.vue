@@ -1,39 +1,29 @@
 <template>
-  <section class="container">
-    <splide :options="options">
-      <splide-slide v-for="(news, i) in lastNews" :key="i">
-        <card-carrousel post="news" class="mb-8"></card-carrousel>
-      </splide-slide>
-    </splide>
+  <section class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="flex flex-col justify-center items-center px-3 py-4">
+      <h3
+        class="mt-1 text-4xl text-center font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
+      >
+        Nos Dernierès Actu
+      </h3>
+      <client-only>
+        <lazy-carrousel-news :lastNews="lastNews"></lazy-carrousel-news>
+      </client-only>
+    </div>
   </section>
 </template>
 
 <script>
-import CardCarrousel from "./CardCarrousel.vue";
 export default {
   name: "TheLastNews",
-  components: { CardCarrousel },
+  components: {
+    CarrouselNews: () =>
+      process.client
+        ? import("@/components/CarrouselNews.vue")
+        : Promise.resolve({ render: h => h("div") })
+  },
   data() {
     return {
-      options: {
-        rewind: true,
-        padding: 10,
-        arrows: "slide",
-        width: 900,
-        perPage: 3,
-        gap: "2rem",
-        breakpoints: {
-          650: {
-            perPage: 1,
-            width: 580
-          },
-          1024: {
-            perPage: 2,
-            width: 780
-          }
-        }
-      },
-
       lastNews: [
         {
           id: 0,
