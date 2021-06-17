@@ -4,11 +4,10 @@
       <div class="flex flex-col justify justify-between items-center">
         <base-circle-logo></base-circle-logo>
         <div class="sm:flex sm:justify-around text-center">
-          <nuxt-link to="" class="footer-link">Blog</nuxt-link>
-          <nuxt-link to="" class="footer-link">Menu</nuxt-link>
-          <nuxt-link to="" class="footer-link">Faq</nuxt-link>
-          <nuxt-link to="" class="footer-link">Commander</nuxt-link>
-          <nuxt-link to="" class="footer-link"> Traiteur</nuxt-link>
+          <nuxt-link to="/blog" class="footer-link">Blog</nuxt-link>
+          <nuxt-link to="/#menu" class="footer-link">Menu</nuxt-link>
+          <nuxt-link to="/plats" class="footer-link">Commander</nuxt-link>
+          <nuxt-link to="/contact" class="footer-link"> Traiteur</nuxt-link>
         </div>
         <div>
           <button-network name="facebook"></button-network>
@@ -37,6 +36,6 @@ export default {
 
 <style>
 .footer-link {
-  @apply block text-white text-xl font-semibold mx-2 hover:text-accent-500 rounded sm:text-gray-100 px-2 py-1 font-serif sm:inline-block;
+  @apply block text-white text-xl font-semibold mx-2 hover:text-accent-500 rounded sm:text-gray-100 px-2 py-1 sm:inline-block;
 }
 </style>
