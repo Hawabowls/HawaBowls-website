@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full mx-auto bg-primary-400 py-16 px-4 sm:py-24 sm:px-6 lg:px-8"
+    class="w-full mx-auto bg-primary-400 py-16 px-3 sm:py-24 sm:px-6 lg:px-8"
     id="menu"
   >
     <div class="space-y-14">
@@ -25,7 +25,7 @@
       >
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative w-full max-w-sm h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          class=" group hover:bg-white relative w-64 h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -40,7 +40,7 @@
         </div>
         <div
           @click="toggle('dessert')"
-          class="relative w-full max-w-sm h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          class="relative w-64 h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -56,7 +56,7 @@
 
         <div
           @click="toggle('boisson')"
-          class="relative group  w-full max-w-sm cursor-pointer h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          class="relative group  w-64  cursor-pointer h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -66,6 +66,21 @@
           <img
             class="absolute h-64 w-full group-hover:opacity-85 object-cover"
             src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+            alt=""
+          />
+        </div>
+        <div
+          @click="toggle('boisson')"
+          class="relative group   w-64  cursor-pointer h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+        >
+          <h3
+            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+          >
+            Entrée
+          </h3>
+          <img
+            class="absolute h-64 w-full group-hover:opacity-85 object-cover"
+            src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             alt=""
           />
         </div>
