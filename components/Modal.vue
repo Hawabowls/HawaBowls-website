@@ -45,7 +45,6 @@
       >
         <div class="block absolute top-0 right-0 pt-4 pr-4">
           <button
-            @click="close"
             type="button"
             class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
@@ -207,17 +206,7 @@
 </template>
 
 <script>
-export default {
-  name: "TheDishesModal",
-  data() {
-    return {};
-  },
-  methods: {
-    close() {
-      this.$emit("close-modal", { value: false });
-    }
-  }
-};
+export default {};
 </script>
 
 <style></style>

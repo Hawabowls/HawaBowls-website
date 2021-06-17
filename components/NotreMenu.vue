@@ -16,11 +16,13 @@
           Plongez dans nos bowl de fraicheur
         </p>
         <p class="max-w-xl mt-5 mx-auto text-xl text-gray-200">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores iste
-          , inventore voluptate necessitatibus reiciendis atque!!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim a
+          labore quaerat odit possimus reprehenderit quisquam, amet tempore
+          consequatur excepturi obcaecati nobis aspernatur nisi incidunt
+          voluptates soluta rem distinctio.
         </p>
       </div>
-      <div
+      <!--     <div
         class="mx-auto min-w-sm flex justify-center space-x-2 overflow-x-auto"
       >
         <div
@@ -38,53 +40,7 @@
             alt=""
           />
         </div>
-        <div
-          @click="toggle('dessert')"
-          class="relative w-64 h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
-        >
-          <h3
-            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
-          >
-            Dessert
-          </h3>
-          <img
-            class="absolute h-64 w-full object-cover"
-            src="https://images.unsplash.com/photo-1605190557072-1fe6a230ee65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80  "
-            alt=""
-          />
-        </div>
-
-        <div
-          @click="toggle('boisson')"
-          class="relative group  w-64  cursor-pointer h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
-        >
-          <h3
-            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
-          >
-            Boisson
-          </h3>
-          <img
-            class="absolute h-64 w-full group-hover:opacity-85 object-cover"
-            src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            alt=""
-          />
-        </div>
-        <div
-          @click="toggle('boisson')"
-          class="relative group   w-64  cursor-pointer h-60 shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
-        >
-          <h3
-            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
-          >
-            Entrée
-          </h3>
-          <img
-            class="absolute h-64 w-full group-hover:opacity-85 object-cover"
-            src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            alt=""
-          />
-        </div>
-      </div>
+      </div> -->
       <ul
         v-if="poke"
         role="list"
@@ -92,7 +48,7 @@
       >
         <li class="relative" v-for="i in 5" :key="i">
           <div
-            class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
+            class="group block w-full aspect-w-10 aspect-h-12 rounded-lg t bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
           >
             <img
               src="~assets/img/plat/po'aha2.jpg"
