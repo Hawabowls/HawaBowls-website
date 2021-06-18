@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-10 inset-0 overflow-y-auto"
+    class="fixed z-30 inset-0 overflow-y-auto"
     aria-labelledby="modal-title"
     role="dialog"
     aria-modal="true"
@@ -19,7 +19,7 @@
         To: "opacity-0"
     -->
       <div
-        class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        class="fixed inset-0 bg-gray-200 bg-opacity-40 transition-opacity"
         aria-hidden="true"
       ></div>
 
@@ -73,7 +73,7 @@
           >
             <!-- Heroicon name: outline/exclamation -->
             <img
-              src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+              :src="require('~/assets/img/plat/' + item.image + '.jpg')"
               alt=""
             />
           </div>
@@ -82,13 +82,11 @@
               class="text-lg leading-6 font-medium text-gray-900"
               id="modal-title"
             >
-              Nom du Poke
+              {{ item.nom }}
             </h3>
             <div class="mt-2">
               <p class="text-sm text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores iste , inventore voluptate necessitatibus reiciendis
-                atqu.
+                {{ item.desc }}
               </p>
             </div>
           </div>
@@ -206,7 +204,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["item"]
+};
 </script>
 
 <style></style>
