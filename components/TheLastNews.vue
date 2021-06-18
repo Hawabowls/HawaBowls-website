@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <section class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-hidden">
     <div class="flex flex-col justify-center items-center px-3 py-4">
       <h3
         class="mt-1 text-4xl text-center font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
