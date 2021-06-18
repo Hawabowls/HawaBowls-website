@@ -3,7 +3,7 @@
     class="w-full mx-auto bg-primary-400 py-16 px-3 sm:py-24 sm:px-6 lg:px-8"
     id="menu"
   >
-    <div class="space-y-14">
+    <div class="space-y-12">
       <div class="text-center">
         <h2
           class="
@@ -36,12 +36,12 @@
           voluptates soluta rem distinctio.
         </p>
       </div>
-      <!--     <div
-        class="mx-auto min-w-sm flex justify-center space-x-2 overflow-x-auto"
+      <div
+        class="mx-auto min-w-sm  card-container flex-nowrap justify-center space-x-2 overflow-x-auto overflow-y-visible p-4"
       >
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative w-64 h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          class=" group hover:bg-white relative card h-80 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -49,12 +49,44 @@
             Poke
           </h3>
           <img
-            class="absolute h-64 w-full group-hover:opacity-80 object-cover"
+            class="absolute h-full w-full group-hover:opacity-80 object-cover"
             src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
             alt=""
           />
         </div>
-      </div> -->
+        <div
+          @click="toggle('poke')"
+          class=" group hover:bg-white relative card h-80 cursor-pointer shadow-lg rounded-lg flex items-end  justify-center overflow-hidden"
+        >
+          <h3
+            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+          >
+           Nos Petites faim
+          </h3>
+          <img
+            class="absolute h-full w-full group-hover:opacity-80 object-cover"
+            src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+            alt=""
+          />
+        </div>
+        <div
+          @click="toggle('poke')"
+          class=" group hover:bg-white relative card h-80 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+        >
+          <h3
+            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+          >
+            Bubble
+          </h3>
+          <img
+            class="absolute h-full w-full group-hover:opacity-80 object-cover"
+            src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+            alt=""
+          />
+        </div>
+      </div>
+     
+      </div>
       <ul
         v-if="poke"
         role="list"
@@ -65,6 +97,7 @@
           mx-auto
           sm:gap-x-6
           lg:grid-cols-5
+          mt-4
           xl:gap-x-8
         "
       >
@@ -74,7 +107,7 @@
               group
               block
               w-full
-              aspect-w-10 aspect-h-12
+              aspect-w-8 aspect-h-10
               rounded-lg
               t
               bg-gray-100
@@ -140,7 +173,7 @@
             <img
               src="https://images.unsplash.com/photo-1605190557072-1fe6a230ee65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80  "
               alt=""
-              class="object-fill pointer-events-none group-hover:opacity-75"
+              class="object-cover pointer-events-none group-hover:opacity-75"
             />
             <button type="button" class="absolute inset-0 focus:outline-none">
               <span class="sr-only">View details</span>
@@ -172,7 +205,7 @@ export default {
     return {
       poke: true,
       boisson: false,
-      dessert: false,
+      dessert: false
     };
   },
   methods: {
@@ -192,9 +225,24 @@ export default {
         this.poke = false;
         this.dessert = false;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style></style>
+<style lang="postcss">
+.card{
+  min-width: 14rem;
+  &:hover{
+    
+    @apply transform -translate-y-3;
+  }
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+}
+</style>
