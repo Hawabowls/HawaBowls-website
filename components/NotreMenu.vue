@@ -137,7 +137,7 @@
           >
             9.90
           </p> -->
-          <modal v-if="isModal" :item="selectionedDish"></modal>
+          <modal v-if="isModal" @close-modal="changeValue" :item="selectionedDish"></modal>
         </li>
 
         <!-- More files... -->
@@ -189,6 +189,10 @@ export default {
     sendDish(dish){
       this.selectionedDish=dish
       this.isModal=true;
+    },
+    changeValue(payload) {
+      console.log(payload);
+      this.isModal = payload.value;
     }
   }
 };
