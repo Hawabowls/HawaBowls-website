@@ -27,44 +27,36 @@ export default {
       lastNews: [
         {
           id: 0,
-          url:
-            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          url: "big",
           titre: "Hola que tal",
           caption: "Bienvenido",
           source: "blog"
         },
         {
           id: 1,
-          url:
-            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          url: "little1",
           titre: "Poke Poke Poke",
-          caption:
-            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
+          caption: "Belle journée",
           source: "instragram"
         },
         {
           id: 2,
-          url:
-            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          url: "little3",
           titre: "Hola que tal",
-          caption:
-            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
-          source: "blog"
+          caption: "envie d'un petit tensai",
+          source: "instagram"
         },
         {
           id: 3,
-          url:
-            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          url: "little2",
           titre: "Poke Poke Poke",
-          caption:
-            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
+          caption: "see big",
           source: "instragram"
         },
 
         {
           id: 4,
-          url:
-            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          url: "little1",
           titre: "Poke Poke Poke",
           caption:
             "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
@@ -72,8 +64,7 @@ export default {
         },
         {
           id: 5,
-          url:
-            "https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          url: "big",
           titre: "Poke Poke Poke",
           caption:
             "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",

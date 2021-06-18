@@ -122,35 +122,35 @@
           lg:h-full
         "
       >
-        <div class="absolute inset-0 w-full h-full bg-gray-400 p-12 md:p-16">
+        <div class="absolute inset-0 w-full h-full p-12 md:p-16">
           <div class="flex  -mx-4">
             <div class=" md:block md:w-1/2 px-4">
               <div
-                class="h-full w-full bg-cover rounded shadow-md"
+                class="h-full w-full bg-cover rounded shadow-md b"
                 style="
-                    background-image: url('https://source.unsplash.com/random/1280x720');
+                   
                   "
               ></div>
             </div>
-            <div class="md:w-1/2 h-full px-4">
+            <div class="md:w-1/2 h-1/3 px-4">
               <div class="mb-8">
                 <img
                   class="rounded shadow-md"
-                  src="https://source.unsplash.com/random/1280x720"
+                  src="~assets/img/grid/little1.jpg"
                   alt=""
                 />
               </div>
               <div class="mb-8">
                 <img
                   class="rounded shadow-md"
-                  src="https://source.unsplash.com/random/1280x720"
+                  src="~assets/img/grid/little2.jpg"
                   alt=""
                 />
               </div>
               <div>
                 <img
                   class="rounded shadow-md"
-                  src="https://source.unsplash.com/random/1280x720"
+                  src="~assets/img/grid/little3.jpg"
                   alt=""
                 />
               </div>
@@ -180,5 +180,10 @@ export default {
   @screen md {
     @apply h-screen;
   }
+}
+
+.b {
+  background-image: url("~assets/img/grid/big.jpg");
+  @apply bg-center;
 }
 </style>

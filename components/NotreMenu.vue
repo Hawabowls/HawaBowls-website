@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full mx-auto bg-primary-400 py-16 px-3 sm:py-24 sm:px-6 lg:px-8"
+    class="w-full mx-auto bg-white py-16 px-3 sm:py-24 sm:px-6 lg:px-8"
     id="menu"
   >
     <div class="space-y-12">
@@ -21,7 +21,7 @@
             mt-1
             text-4xl
             font-extrabold
-            text-white
+            text-primary-600
             sm:text-5xl
             sm:tracking-tight
             lg:text-6xl
@@ -65,7 +65,7 @@
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+            src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             alt=""
           />
         </div>
@@ -80,7 +80,7 @@
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+            src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
             alt=""
           />
         </div>
@@ -197,6 +197,7 @@ export default {
 <style lang="postcss">
 .card{
   min-width: 14rem;
+  width: 100%;
   &:hover{
     
     @apply transform -translate-y-3;
