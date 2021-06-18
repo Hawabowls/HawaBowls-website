@@ -1,154 +1,167 @@
 <template>
-  <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="relative bg-gray-50">
-    <main class="lg:relative">
-      <div
+  <section
+    class="w-full mx-auto bg-primary-400 py-16 px-3 sm:py-24 sm:px-6 lg:px-8"
+    id="menu"
+  >
+    <div class="space-y-14">
+      <div class="text-center">
+        <h2
+          class="
+            text-base
+            font-semibold
+            text-accent-300
+            tracking-wide
+            uppercase
+          "
+        >
+          Venez deguster
+        </h2>
+        <p
+          class="
+            mt-1
+            text-4xl
+            font-extrabold
+            text-white
+            sm:text-5xl
+            sm:tracking-tight
+            lg:text-6xl
+          "
+        >
+          Plongez dans nos bowl de fraicheur
+        </p>
+        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-200">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim a
+          labore quaerat odit possimus reprehenderit quisquam, amet tempore
+          consequatur excepturi obcaecati nobis aspernatur nisi incidunt
+          voluptates soluta rem distinctio.
+        </p>
+      </div>
+      <!--     <div
+        class="mx-auto min-w-sm flex justify-center space-x-2 overflow-x-auto"
+      >
+        <div
+          @click="toggle('poke')"
+          class=" group hover:bg-white relative w-64 h-60 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+        >
+          <h3
+            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+          >
+            Poke
+          </h3>
+          <img
+            class="absolute h-64 w-full group-hover:opacity-80 object-cover"
+            src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+            alt=""
+          />
+        </div>
+      </div> -->
+      <ul
+        v-if="poke"
+        role="list"
         class="
+          grid grid-cols-2
+          gap-x-4 gap-y-8
+          sm:grid-cols-3
           mx-auto
-          max-w-7xl
-          w-full
-          pt-16
-          pb-20
-          text-center
-          lg:py-24
-          lg:text-left
+          sm:gap-x-6
+          lg:grid-cols-5
+          xl:gap-x-8
         "
       >
-        <div class="px-2 lg:w-1/2 sm:px-4 xl:pr-24">
-          <h2
+        <li class="relative" v-for="i in 5" :key="i">
+          <div
             class="
-              text-4xl
-              tracking-tight
-              font-extrabold
-              text-gray-900
-              sm:text-4xl
-              md:text-6xl
-              lg:text-5xl
-              xl:text-5xl
+              group
+              block
+              w-full
+              aspect-w-10 aspect-h-12
+              rounded-lg
+              t
+              bg-gray-100
+              focus-within:ring-2
+              focus-within:ring-offset-2
+              focus-within:ring-offset-gray-100
+              focus-within:ring-indigo-500
+              overflow-hidden
             "
           >
-            <span class="block text-accent-500 xl:inline">Qui somme-nous?</span>
-          </h2>
-          <p
-            class="
-              mt-3
-              max-w-md
-              mx-auto
-              text-lg text-accent-400
-              sm:text-xl
-              md:mt-5
-              md:max-w-3xl
-            "
-          >
-            C'est en 2010 que les deux foncdateurs et amis de longue date, Walid
-            et Daniel ont l'idée de ccréer un concept de restaurant
-            healthy.Quand on sais que 80% des résultats du sportif se trouvent
-            dans l'assiette et 20% dans l'effort, il était important pour eux,
-            grands sportifs, de proposer un endroit dédié au bien être proposant
-            des produits frais et vitaminés en alliant plaisir culinaire er
-            bienfaits.
-          </p>
-          <p
-            class="
-              mt-3
-              max-w-md
-              mx-auto
-              text-lg text-accent-400
-              sm:text-xl
-              md:mt-5
-              md:max-w-3xl
-            "
-          >
-            C'est finalement 10 ans plus tard, en décembre 2020, que leur
-            rêve^prend forme avec l'ouverture d'Hawa Bowls en plein coeur de
-            Nantes. Inspirés par le soleil d'Hawai avec une touche nantaise, les
-            poké hawa Bowls ravissent à la fois les sportifs et les gourmands
-            soucieux d eprendre soin de leur alimentation grâce à des produits
-            frais et de qualité.
-          </p>
-          <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-              <a
-                href="#"
-                class="
-                  w-full
-                  flex
-                  items-center
-                  justify-center
-                  px-8
-                  py-3
-                  border border-transparent
-                  text-base
-                  font-medium
-                  rounded-md
-                  text-white
-                  bg-accent-400
-                  hover:bg-accent-600
-                  md:py-4
-                  md:text-lg
-                  md:px-10
-                "
-                >Commander</a
-              >
-            </div>
+            <img
+              src="~assets/img/plat/po'aha2.jpg"
+              alt=""
+              class="object-fill pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
           </div>
-        </div>
-      </div>
-      <div
+          <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        </li>
+
+        <!-- More files... -->
+      </ul>
+      <ul
+        v-if="dessert"
+        role="list"
         class="
-          relative
-          w-full
-          h-64
-          sm:h-72
-          md:h-96
-          lg:absolute
-          lg:inset-y-0
-          lg:right-0
-          lg:w-1/2
-          lg:h-full
+          grid grid-cols-2
+          gap-x-4 gap-y-8
+          sm:grid-cols-3
+          mx-auto
+          sm:gap-x-6
+          lg:grid-cols-5
+          xl:gap-x-8
         "
       >
-        <div class="absolute inset-0 w-full h-full bg-gray-400 p-12 md:p-24">
-          <div class="py-2 px-4">
-            <div class="flex flex-wrap -mx-4">
-              <div class="hidden md:block md:w-1/2 px-4">
-                <div
-                  class="h-full w-full bg-cover rounded shadow-md"
-                  style="
-                    background-image: url('https://source.unsplash.com/random/1280x720');
-                  "
-                ></div>
-              </div>
-              <div class="md:w-1/2 h-auto px-4">
-                <div class="mb-8">
-                  <img
-                    class="rounded shadow-md"
-                    src="https://source.unsplash.com/random/1280x720"
-                    alt=""
-                  />
-                </div>
-                <div class="mb-8">
-                  <img
-                    class="rounded shadow-md"
-                    src="https://source.unsplash.com/random/1280x720"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="rounded shadow-md"
-                    src="https://source.unsplash.com/random/1280x720"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+        <li class="relative" v-for="i in 5" :key="i">
+          <div
+            class="
+              group
+              block
+              w-full
+              aspect-w-10 aspect-h-7
+              rounded-lg
+              bg-gray-100
+              focus-within:ring-2
+              focus-within:ring-offset-2
+              focus-within:ring-offset-gray-100
+              focus-within:ring-indigo-500
+              overflow-hidden
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1605190557072-1fe6a230ee65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80  "
+              alt=""
+              class="object-fill pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
           </div>
-        </div>
-        <!--  <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt=""> -->
-      </div>
-    </main>
-  </div>
+          <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        </li>
+
+        <!-- More files... -->
+      </ul>
+    </div>
+  </section>
 </template>
 
 <script>

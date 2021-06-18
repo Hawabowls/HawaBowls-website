@@ -1,93 +1,153 @@
 <template>
-  <div class="relative bg-white ">
-    <div class="max-w-7xl mx-auto">
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="relative bg-gray-50">
+    <main class="lg:relative">
       <div
-        id="right-hero"
-        class="relative z-10 pb-8 bg-white h-full sm:pb-10 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
+        class="
+          mx-auto
+          max-w-7xl
+          w-full
+          pt-16
+          pb-20
+          text-center
+          lg:py-24
+          lg:text-left
+        "
       >
-        <!-- <svg
-          class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-          fill="currentColor"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <polygon points="50,0 100,0 50,100 0,100" />
-        </svg>
- -->
-        <div>
-          <div class="relative pt-6 px-4 sm:px-6 lg:px-8"></div>
-          <div
-            class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+        <div class="px-2 lg:w-1/2 sm:px-4 xl:pr-24">
+          <h2
+            class="
+              text-4xl
+              tracking-tight
+              font-extrabold
+              text-gray-900
+              sm:text-4xl
+              md:text-6xl
+              lg:text-5xl
+              xl:text-5xl
+            "
           >
-            <div class="sm:text-center">
-              <h1
-                class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
+            <span class="block text-accent-500 xl:inline">Qui somme-nous?</span>
+          </h2>
+          <p
+            class="
+              mt-3
+              max-w-md
+              mx-auto
+              text-lg text-accent-400
+              sm:text-xl
+              md:mt-5
+              md:max-w-3xl
+            "
+          >
+            C'est en 2010 que les deux foncdateurs et amis de longue date, Walid
+            et Daniel ont l'idée de ccréer un concept de restaurant
+            healthy.Quand on sais que 80% des résultats du sportif se trouvent
+            dans l'assiette et 20% dans l'effort, il était important pour eux,
+            grands sportifs, de proposer un endroit dédié au bien être proposant
+            des produits frais et vitaminés en alliant plaisir culinaire er
+            bienfaits.
+          </p>
+          <p
+            class="
+              mt-3
+              max-w-md
+              mx-auto
+              text-lg text-accent-400
+              sm:text-xl
+              md:mt-5
+              md:max-w-3xl
+            "
+          >
+            C'est finalement 10 ans plus tard, en décembre 2020, que leur
+            rêve^prend forme avec l'ouverture d'Hawa Bowls en plein coeur de
+            Nantes. Inspirés par le soleil d'Hawai avec une touche nantaise, les
+            poké hawa Bowls ravissent à la fois les sportifs et les gourmands
+            soucieux d eprendre soin de leur alimentation grâce à des produits
+            frais et de qualité.
+          </p>
+          <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+            <div class="rounded-md shadow">
+              <a
+                href="#"
+                class="
+                  w-full
+                  flex
+                  items-center
+                  justify-center
+                  px-8
+                  py-3
+                  border border-transparent
+                  text-base
+                  font-medium
+                  rounded-md
+                  text-white
+                  bg-accent-400
+                  hover:bg-accent-600
+                  md:py-4
+                  md:text-lg
+                  md:px-10
+                "
+                >Commander</a
               >
-                <span class="block xl:inline"> Qui sommes-nous? </span>
-              </h1>
-              <p
-                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-              >
-                Le poke ou poké est un des plats principaux de la cuisine
-                traditionnelle hawaïenne. Il est composé de poisson cru coupé en
-                dés, servi comme entrée ou en plat principal.
-              </p>
-              <p
-                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-              >
-                Le poke ou poké est un des plats principaux de la cuisine
-                traditionnelle hawaïenne. Il est composé de poisson cru coupé en
-                dés, servi comme entrée ou en plat principal. Lorem ipsum dolor
-                sit, amet consectetur adipisicing elit. At enim a labore quaerat
-                odit possimus reprehenderit quisquam, amet tempore consequatur
-                excepturi obcaecati nobis aspernatur nisi incidunt voluptates
-                soluta rem distinctio.
-              </p>
-              <div class="flex justify-center">
-                <div class="w-44 h-44 bg-primary-100"></div>
-              </div>
-              <div
-                class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
-              >
-                <div class="rounded-md shadow">
-                  <nuxt-link
-                    to="/commander"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent-400 hover:bg-accent-500 md:py-4 md:text-lg md:px-10"
-                  >
-                    Commander
-                  </nuxt-link>
-                </div>
-                <!--       <div class="mt-3 sm:mt-0 sm:ml-3">
-                  <nuxt-link
-                    to="#menu"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-700 bg-indigo-100 hover:text-white hover:bg-primary-400 md:py-4 md:text-lg md:px-10"
-                  >
-                    Nos Plats
-                  </nuxt-link>
-                </div> -->
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <video
-          src="~/assets/img/banner/hawai-bowls-stop-motion.mp4"
-          loop
-          autoplay
-          muted
-          class="h-72 w-full object-cover o sm:h-72 md:h-96 lg:w-full lg:h-full"
-        ></video>
-
-        <!--      <img
-          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-          alt=""
-        />
-         -->
+      <div
+        class="
+          relative
+          w-full
+          h-64
+          sm:h-72
+          md:h-96
+          lg:absolute
+          lg:inset-y-0
+          lg:right-0
+          lg:w-1/2
+          lg:h-full
+        "
+      >
+        <div class="absolute inset-0 w-full h-full bg-gray-400 p-12 md:p-24">
+          <div class="py-2 px-4">
+            <div class="flex flex-wrap -mx-4">
+              <div class="hidden md:block md:w-1/2 px-4">
+                <div
+                  class="h-full w-full bg-cover rounded shadow-md"
+                  style="
+                    background-image: url('https://source.unsplash.com/random/1280x720');
+                  "
+                ></div>
+              </div>
+              <div class="md:w-1/2 h-auto px-4">
+                <div class="mb-8">
+                  <img
+                    class="rounded shadow-md"
+                    src="https://source.unsplash.com/random/1280x720"
+                    alt=""
+                  />
+                </div>
+                <div class="mb-8">
+                  <img
+                    class="rounded shadow-md"
+                    src="https://source.unsplash.com/random/1280x720"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="rounded shadow-md"
+                    src="https://source.unsplash.com/random/1280x720"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt=""> -->
       </div>
-    </div>
+    </main>
   </div>
 </template>
 
@@ -95,7 +155,7 @@
 import CardAbout from "./CardAbout.vue";
 import WaveBackground from "./WaveBackground.vue";
 export default {
-  components: { WaveBackground, CardAbout }
+  components: { WaveBackground, CardAbout },
 };
 </script>
 
