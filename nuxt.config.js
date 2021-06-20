@@ -52,7 +52,22 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta: {
+      title: "Hawa'Bowls",
+      author: 'Bertyn99',
+    },
+    icon: {
+      source: "img/Fichier 3.png",
+      fileName: "logo"
+    },
     manifest: {
+      name: "Hawa'Bowls",
+      short_name: "Hawa'Bowls",
+      description: "Une application qui sert a commander des poké délicieux",
+      display: "standalone",
+      orientation: "portrait",
+      start_url: "/",
+      theme_color: "#30377f",
       lang: 'fr'
     }
   },
