@@ -31,26 +31,35 @@
         ravissent à la fois les sportifs et les gourmands soucieux d eprendre
         soin de leur alimentation grâce à des produits frais et de qualité.
       </p>
-      <div class="mt-10 sm:flex w-full flex-col lg:justify-start space-y-2">
-        <div class="relative pb-3/4 rounded overflow-hidden">
+      <div class="mt-10 sm:flex w-full flex-col justify-center space-y-2">
+        <!--  <div class="relative pb-1/2 rounded-lg overflow-hidden">
           <video
             loop
             muted
             autoplay
-            class="absolute object-cover mx-auto w-96 h-full object-center o"
+            class="
+              absolute
+              object-cover
+              rounded-lg
+              mx-auto
+              w-96
+              h-full
+              object-center
+              o
+            "
           >
             <source
               src="~/assets/img/banner/hawai-bowls-stop-motion.mp4"
               type="video/mp4"
             />
           </video>
-        </div>
+        </div> -->
         <div class="">
           <nuxt-link
             to="#"
             class="
               w-full
-              md:w-1/2
+              md:w-64
               flex
               items-center
               justify-center
@@ -63,6 +72,7 @@
               text-white
               bg-accent-400
               hover:bg-accent-600
+              mx-auto
               md:py-4
               md:text-lg
               md:px-10
@@ -87,7 +97,7 @@
             </div>
             <div class="card-i">
               <img
-                class="h-full w-full object-cover"
+                class="h-full w-full object-cover object-start"
                 src="~assets/img/grid/little2.jpg"
                 alt=""
               />
@@ -115,16 +125,15 @@ export default {};
   display: flex;
   flex-direction: column;
   min-height: 78rem;
-  padding: 4rem;
+  padding: 2rem;
   @screen md {
-    @apply flex-row;
+    @apply flex-row py-20    px-6;
   }
 
   .side {
     min-width: 50%;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     justify-content: space-around;
     align-items: center;
   }
@@ -133,6 +142,7 @@ export default {};
     padding: 1rem;
 
     .big {
+      border-radius: 0.5rem;
       height: 100%;
       background-image: url("~assets/img/grid/big.jpg");
       background-size: cover;
@@ -145,16 +155,18 @@ export default {};
       @apply bg-cover;
     }
     .little2 {
-      height: 24rem;
-      background-image: url("~assets/img/grid/little1.jpg");
+      background-image: url("~assets/img/grid/little2.jpg");
+      background-size: cover;
+      background-position: center;
     }
     .little3 {
       height: 24rem;
       background-image: url("~assets/img/grid/little1.jpg");
     }
     .card-i {
+      @apply rounded-lg overflow-hidden;
       @screen lg {
-        max-height: 300px;
+        max-height: 18.75rem;
       }
     }
   }
