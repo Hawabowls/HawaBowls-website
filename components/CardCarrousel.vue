@@ -2,15 +2,15 @@
   <div class="max-w-xs mx-auto bg-white rounded-md shadow-md">
     <div class="h-64">
       <img
-        class="w-full rounded-t shadow h-full object-cover object-center   "
+        class="w-full rounded-t shadow h-full object-cover object-center"
         :src="require('~/assets/img/grid/' + post.url + '.jpg')"
         alt=""
       />
     </div>
     <div class="py-2 px-2">
-      <span class="text-accent-200 ">{{ post.source }}</span>
+      <!--  <span class="text-accent-200 ">{{ post.source }}</span> -->
       <!-- <h3 class="font-semibold text-gray-800">{{ post.titre }}</h3> -->
-      <p class="text-gray-600 truncate">{{ post.caption }}</p>
+      <!--  <p class="text-gray-600 truncate">{{ post.caption }}</p> -->
     </div>
     <div class="flex justify-around pb-1">
       <div class="fill-accent-500">
@@ -75,7 +75,7 @@
 <script>
 export default {
   name: "CardCarrousel",
-  props: ["post", "source"]
+  props: ["post", "source"],
 };
 </script>
 
