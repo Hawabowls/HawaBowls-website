@@ -3,26 +3,18 @@
     <div class="side h-full">
       <h2
         class="
-              text-4xl
-              tracking-tight
-              font-semibold
-              text-gray-900
-              sm:text-4xl
-              md:text-5xl
-              lg:text-5xl
-            "
+          text-4xl
+          tracking-tight
+          font-semibold
+          text-gray-900
+          sm:text-4xl
+          md:text-5xl
+          lg:text-5xl
+        "
       >
         <span class="block text-accent-500 xl:inline">Qui somme-nous?</span>
       </h2>
-      <p
-        class="
-              mt-3
-              max-w-md
-              mx-auto
-              text-lg text-accent-400
-              sm:text-xl
-            "
-      >
+      <p class="mt-3 max-w-md mx-auto text-lg text-accent-400 sm:text-xl">
         C'est en 2010 que les deux foncdateurs et amis de longue date, Walid et
         Daniel ont l'idée de ccréer un concept de restaurant healthy.Quand on
         sais que 80% des résultats du sportif se trouvent dans l'assiette et 20%
@@ -31,14 +23,7 @@
         en alliant plaisir culinaire er bienfaits.
       </p>
       <p
-        class="
-              mt-3
-              max-w-md
-              mx-auto
-              text-lg text-accent-400
-              sm:text-xl
-              md:mt-5
-            "
+        class="mt-3 max-w-md mx-auto text-lg text-accent-400 sm:text-xl md:mt-5"
       >
         C'est finalement 10 ans plus tard, en décembre 2020, que leur rêve^prend
         forme avec l'ouverture d'Hawa Bowls en plein coeur de Nantes. Inspirés
@@ -46,13 +31,13 @@
         ravissent à la fois les sportifs et les gourmands soucieux d eprendre
         soin de leur alimentation grâce à des produits frais et de qualité.
       </p>
-      <div class="mt-10 sm:flex flex-col lg:justify-start space-y-2">
+      <div class="mt-10 sm:flex w-full flex-col lg:justify-start space-y-2">
         <div class="relative pb-3/4 rounded overflow-hidden">
           <video
             loop
             muted
             autoplay
-            class="absolute object-cover w-full h-full object-center o"
+            class="absolute object-cover mx-auto w-96 h-full object-center o"
           >
             <source
               src="~/assets/img/banner/hawai-bowls-stop-motion.mp4"
@@ -64,24 +49,24 @@
           <nuxt-link
             to="#"
             class="
-                  w-full
-                  md:w-1/2
-                  flex
-                  items-center
-                  justify-center
-                  px-8
-                  py-3
-                  border border-transparent
-                  text-base
-                  font-medium
-                  rounded-full
-                  text-white
-                  bg-accent-400
-                  hover:bg-accent-600
-                  md:py-4
-                  md:text-lg
-                  md:px-10
-                "
+              w-full
+              md:w-1/2
+              flex
+              items-center
+              justify-center
+              px-8
+              py-3
+              border border-transparent
+              text-base
+              font-medium
+              rounded-full
+              text-white
+              bg-accent-400
+              hover:bg-accent-600
+              md:py-4
+              md:text-lg
+              md:px-10
+            "
             >Commander</nuxt-link
           >
         </div>
@@ -91,23 +76,23 @@
       <div class="h-full grid grid-cols-2 gap-4">
         <div class="col-span-1 bg-primary-300 big"></div>
 
-        <div class="col-span-1 bg-primary-500 ">
-          <div class="grid grid-row-3 gap-3 ">
-            <div>
+        <div class="col-span-1">
+          <div class="grid grid-row-3 gap-3">
+            <div class="hidden md:block card-i">
               <img
                 class="h-full w-full object-cover"
                 src="~assets/img/grid/little1.jpg"
                 alt=""
               />
             </div>
-            <div>
+            <div class="card-i">
               <img
                 class="h-full w-full object-cover"
                 src="~assets/img/grid/little2.jpg"
                 alt=""
               />
             </div>
-            <div class="h-24">
+            <div class="card-i">
               <img
                 class="h-full w-full object-cover"
                 src="~assets/img/grid/little3.jpg"
@@ -166,6 +151,11 @@ export default {};
     .little3 {
       height: 24rem;
       background-image: url("~assets/img/grid/little1.jpg");
+    }
+    .card-i {
+      @screen lg {
+        max-height: 300px;
+      }
     }
   }
 }

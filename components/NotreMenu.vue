@@ -1,9 +1,9 @@
 <template>
   <section
-    class="w-full mx-auto bg-white py-16 px-3 sm:py-24 sm:px-6 lg:px-8"
+    class="w-full mx-auto bg-white py-16 px-3 sm:py-20 sm:px-6 lg:px-8"
     id="menu"
   >
-    <div class="space-y-12">
+    <div class="space-y-12 mb-1">
       <div class="text-center">
         <h2
           class="
@@ -37,14 +37,32 @@
         </p>
       </div>
       <div
-        class="mx-auto min-w-sm  card-container space-x-2 overflow-x-hidden p-4"
+        class="mx-auto min-w-sm card-container space-x-2 overflow-x-hidden p-4"
       >
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
+          class="
+            group
+            hover:bg-white
+            relative
+            card
+            cursor-pointer
+            shadow-lg
+            rounded-full
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+          "
         >
           <h3
-            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+            class="
+              text-2xl
+              lg:text-4xl
+              font-bold
+              text-center text-accent-200
+              z-10
+            "
           >
             Poke
           </h3>
@@ -56,12 +74,33 @@
         </div>
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
+          class="
+            group
+            hover:bg-white
+            relative
+            card
+            cursor-pointer
+            shadow-lg
+            rounded-full
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+          "
         >
           <h3
-            class="text-2xl lg:text-3xl font-bold text-center leading-tight text-accent-200 z-10"
+            class="
+              text-2xl
+              lg:text-3xl
+              font-bold
+              text-center
+              leading-tight
+              text-accent-200
+              z-10
+            "
           >
-           Petites <br /> faim
+            Petites <br />
+            faim
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
@@ -71,12 +110,31 @@
         </div>
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
+          class="
+            group
+            hover:bg-white
+            relative
+            card
+            cursor-pointer
+            shadow-lg
+            rounded-full
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+          "
         >
           <h3
-            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+            class="
+              text-2xl
+              lg:text-4xl
+              font-bold
+              text-center text-accent-200
+              z-10
+            "
           >
-            Bubble<br /> Tea
+            Bubble<br />
+            Tea
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
@@ -85,29 +143,32 @@
           />
         </div>
       </div>
-     
-      </div>
-      <ul
-        v-if="poke"
-        role="list"
-        class="
-          grid grid-cols-2
-          gap-x-4 gap-y-8
-          sm:grid-cols-3
-          mx-auto
-          sm:gap-x-6
-          lg:grid-cols-5
-          mt-4
-          xl:gap-x-8
-        "
+    </div>
+    <ul
+      v-if="poke"
+      role="list"
+      class="
+        grid grid-cols-2
+        gap-x-4 gap-y-8
+        sm:grid-cols-3
+        mx-auto
+        sm:gap-x-6
+        lg:grid-cols-5
+        mt-4
+        xl:gap-x-8
+      "
+    >
+      <li
+        class="relative"
+        v-for="dish in plats"
+        @click="sendDish(dish)"
+        :key="dish.nom"
       >
-        <li class="relative" v-for="dish in plats" @click="sendDish(dish)" :key="dish.nom">
-          <div
+        <!--  <div
             class="
               group
               block
               w-full
-              aspect-w-8 aspect-h-10
               rounded-lg
               t
               bg-gray-100
@@ -126,8 +187,31 @@
             <button type="button" class="absolute inset-0 focus:outline-none">
               <span class="sr-only">View details</span>
             </button>
+          </div> -->
+
+        <div class="card-image">
+          <img
+            :src="require('~/assets/img/plat/' + dish.image + '.jpg')"
+            :alt="dish.image"
+            class="image pointer-events-none"
+          />
+          <div class="image-overlay">
+            <p
+              class="
+                text-2xl
+                lg:text-3xl
+                font-bold
+                text-center
+                leading-tight
+                text-accent-100
+              "
+            >
+              {{ dish.nom }}
+            </p>
           </div>
-          <!--     <p
+        </div>
+
+        <!--     <p
             class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
           >
             po'aha
@@ -137,35 +221,63 @@
           >
             9.90
           </p> -->
-          <modal v-if="isModal" @close-modal="changeValue" :item="selectionedDish"></modal>
-        </li>
+        <modal
+          v-if="isModal"
+          @close-modal="changeValue"
+          :item="selectionedDish"
+        ></modal>
+      </li>
 
-        <!-- More files... -->
-      </ul>
-      
-  
-     </div>
+      <!-- More files... -->
+    </ul>
   </section>
 </template>
 
 <script>
-import Modal from './Modal.vue';
+import Modal from "./Modal.vue";
 export default {
-  components: {Modal},
+  components: { Modal },
 
   data() {
     return {
       poke: true,
       boisson: false,
-      isModal:false,
+      isModal: false,
       dessert: false,
 
-      plats:[{nom:"Po'Akahi",image:"po'akahi",desc:"Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",allergene:""},
-      {nom:"Po'Alua",image:"po'alua",desc:"Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",allergene:""},
-      {nom:"Po'Akolu",image:"po'aha2",desc:"Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",allergene:""},
-      {nom:"Po'Aha",image:"po'aha2",desc:"Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",allergene:""},
-      {nom:"Po'Alima",image:"po'aha2",desc:"Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",allergene:""}],
-      selectionedDish:{}
+      plats: [
+        {
+          nom: "Po'Akahi",
+          image: "po'akahi",
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+          allergene: "",
+        },
+        {
+          nom: "Po'Alua",
+          image: "po'alua",
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
+        },
+        {
+          nom: "Po'Akolu",
+          image: "po'aha2",
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
+        },
+        {
+          nom: "Po'Aha",
+          image: "po'aha2",
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
+        },
+        {
+          nom: "Po'Alima",
+          image: "po'aha2",
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
+        },
+      ],
+      selectionedDish: {},
     };
   },
   methods: {
@@ -186,38 +298,76 @@ export default {
         this.dessert = false;
       }
     },
-    sendDish(dish){
-      this.selectionedDish=dish
-      this.isModal=true;
+    sendDish(dish) {
+      this.selectionedDish = dish;
+      this.isModal = true;
     },
     changeValue(payload) {
       console.log(payload);
       this.isModal = payload.value;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="postcss">
-.card{
-  min-width: 12rem;
-  &:hover{
+.card {
+  width: 10rem;
+  height: 10rem;
+
+  & img {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+  &:hover {
     @apply transform -translate-y-3;
   }
 }
 
-.card-container{
+.card-container {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   -webkit-overflow-scrolling: touch;
-  overflow-x:auto
-  @screen sm{
-    overflow: hidden ;
+  overflow-x:auto @screen sm {
+    overflow: hidden;
   }
   & ::-webkit-scrollbar {
     display: none !important;
   }
 }
 
+.card-image {
+  @apply relative w-full h-52  overflow-hidden rounded-lg;
+
+  @screen md {
+    @apply h-64;
+  }
+  .image {
+    @apply block w-full h-full;
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out;
+    &:hover img {
+      transform: scale(1);
+    }
+  }
+  .image-overlay {
+    @apply absolute top-0 left-0 w-full h-full bg-primary-700 bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-500;
+
+    &:hover {
+      @apply opacity-100;
+      & > * {
+        transform: translateY(0px);
+      }
+    }
+
+    & > * {
+      transform: translateY(50px);
+      transition: transform 0.25s;
+    }
+  }
+}
 </style>

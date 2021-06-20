@@ -123,19 +123,17 @@
         "
       >
         <div class="absolute inset-0 w-full h-96 md:h-full p-12 md:p-16">
-          <div class="flex  -mx-4">
-            <div class=" md:block md:w-1/2 px-4">
+          <div class="flex -mx-4">
+            <div class="md:block md:w-1/2 px-4">
               <div
                 class="h-full w-full bg-cover rounded shadow-md b"
-                style="
-                   
-                  "
+                style=""
               ></div>
             </div>
             <div class="md:w-1/2 h-1/3 px-4">
               <div class="mb-8">
                 <img
-                  class="rounded shadow-md"
+                  class="hidden sm:block rounded shadow-md"
                   src="~assets/img/grid/little1.jpg"
                   alt=""
                 />
@@ -167,7 +165,7 @@
 import CardAbout from "./CardAbout.vue";
 import WaveBackground from "./WaveBackground.vue";
 export default {
-  components: { WaveBackground, CardAbout }
+  components: { WaveBackground, CardAbout },
 };
 </script>
 
