@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Restaurant de Poke' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'img/Fichier 1.png' }
+      { rel: 'icon', type: 'image/x-icon', href: 'img/Fichier 3.png' }
     ]
   },
 
@@ -57,8 +57,8 @@ export default {
       author: 'Bertyn99',
     },
     icon: {
-      source: "img/Fichier 3.png",
-      fileName: "logo"
+      fileName: "img/Fichier 3.png",
+      sizes: [64, 120, 144, 152, 192, 384, 512]
     },
     manifest: {
       name: "Hawa'Bowls",
@@ -68,6 +68,7 @@ export default {
       orientation: "portrait",
       start_url: "/",
       theme_color: "#30377f",
+      backgroudn_color: "#30377f",
       lang: 'fr'
     }
   },
