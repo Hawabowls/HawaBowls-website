@@ -1,8 +1,55 @@
 <template>
   <main class="max-w-7xl mx-auto py-4 sm:px-5 lg:px-8">
-    <h3 class="font-semibold text-2xl text-center tracking-wider leading-tight">
-      Nos plats Signatures
-    </h3>
+    <div
+      class="mx-auto min-w-sm  card-container space-x-2 overflow-x-hidden p-4"
+    >
+      <div
+        @click="toggle('poke')"
+        class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
+      >
+        <h3
+          class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+        >
+          Poke
+        </h3>
+        <img
+          class="absolute h-full w-full group-hover:opacity-80 object-cover"
+          src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+          alt=""
+        />
+      </div>
+      <div
+        @click="toggle('poke')"
+        class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center  justify-center overflow-hidden"
+      >
+        <h3
+          class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+        >
+          Entrée
+        </h3>
+        <img
+          class="absolute h-full w-full group-hover:opacity-80 object-cover"
+          src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
+      </div>
+      <div
+        @click="toggle('poke')"
+        class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
+      >
+        <h3
+          class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+        >
+          Bubble <br />
+          Tea
+        </h3>
+        <img
+          class="absolute h-full w-full group-hover:opacity-80 object-cover"
+          src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
+          alt=""
+        />
+      </div>
+    </div>
     <div
       class="grid grid-cols-1  gap-x-6 gap-y-4 px-2 sm:grid-cols-2 md:grid-cols-3"
     >
@@ -155,8 +202,24 @@ export default {
 };
 </script>
 
-<style>
-/* .t{
-  background-image: url()"
-}; */
+<style lang="postcss">
+.card {
+  min-width: 9rem;
+  &:hover {
+    @apply transform -translate-y-3;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  -webkit-overflow-scrolling: touch;
+  overflow-x:auto @screen sm {
+    overflow: hidden;
+  }
+  & ::-webkit-scrollbar {
+    display: none !important;
+  }
+}
 </style>

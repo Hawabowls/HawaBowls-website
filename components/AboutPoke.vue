@@ -19,7 +19,7 @@
             class="
               text-4xl
               tracking-tight
-              font-extrabold
+              font-semibold
               text-gray-900
               sm:text-4xl
               md:text-6xl
@@ -122,7 +122,7 @@
           lg:h-full
         "
       >
-        <div class="absolute inset-0 w-full h-full p-12 md:p-16">
+        <div class="absolute inset-0 w-full h-96 md:h-full p-12 md:p-16">
           <div class="flex  -mx-4">
             <div class=" md:block md:w-1/2 px-4">
               <div

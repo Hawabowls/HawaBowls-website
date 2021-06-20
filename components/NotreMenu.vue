@@ -41,7 +41,7 @@
       >
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative card h-80 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
@@ -56,12 +56,12 @@
         </div>
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative card h-80 cursor-pointer shadow-lg rounded-lg flex items-end  justify-center overflow-hidden"
+          class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
         >
           <h3
-            class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
+            class="text-2xl lg:text-3xl font-bold text-center leading-tight text-accent-200 z-10"
           >
-           Nos Petites faim
+           Petites <br /> faim
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
@@ -71,12 +71,12 @@
         </div>
         <div
           @click="toggle('poke')"
-          class=" group hover:bg-white relative card h-80 cursor-pointer shadow-lg rounded-lg flex items-end justify-center overflow-hidden"
+          class=" group hover:bg-white relative card h-36 cursor-pointer shadow-lg rounded-full flex items-center justify-center overflow-hidden"
         >
           <h3
             class="text-2xl lg:text-4xl font-bold text-center text-accent-200 z-10"
           >
-            Bubble
+            Bubble<br /> Tea
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
@@ -200,10 +200,8 @@ export default {
 
 <style lang="postcss">
 .card{
-  min-width: 14rem;
-  width: 100%;
+  min-width: 12rem;
   &:hover{
-    
     @apply transform -translate-y-3;
   }
 }

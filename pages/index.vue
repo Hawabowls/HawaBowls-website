@@ -1,6 +1,7 @@
 <template>
   <main>
-    <about-poke></about-poke>
+    <test></test>
+    <!--   <about-poke></about-poke> -->
     <!--  <section class="">
       <h1 class="title">
         Test composant
@@ -22,6 +23,7 @@ import TheLastNews from "~/components/TheLastNews.vue";
 import TheContact from "~/components/TheContact.vue";
 import IconScrollBar from "~/components/IconScrollBar.vue";
 import NotreMenu from "~/components/NotreMenu.vue";
+import Test from "~/components/v2/TheTest.vue";
 export default {
   components: {
     TheContact,
@@ -29,7 +31,8 @@ export default {
     TheDishes,
     AboutPoke,
     IconScrollBar,
-    NotreMenu
+    NotreMenu,
+    Test
   }
 };
 </script>
