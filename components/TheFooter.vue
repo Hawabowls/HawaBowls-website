@@ -5,8 +5,8 @@
         <base-circle-logo></base-circle-logo>
         <div class="sm:flex sm:justify-around text-center">
           <nuxt-link to="/blog" class="footer-link">Blog</nuxt-link>
-          <nuxt-link to="/#menu" class="footer-link">Menu</nuxt-link>
           <nuxt-link to="/plats" class="footer-link">Commander</nuxt-link>
+          <nuxt-link to="/contact" class="footer-link">Contact</nuxt-link>
           <nuxt-link to="/contact" class="footer-link"> Traiteur</nuxt-link>
         </div>
         <div>

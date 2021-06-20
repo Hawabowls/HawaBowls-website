@@ -19,7 +19,7 @@
             class="
               text-4xl
               tracking-tight
-              font-extrabold
+              font-semibold
               text-gray-900
               sm:text-4xl
               md:text-6xl
@@ -66,12 +66,26 @@
             soucieux d eprendre soin de leur alimentation grâce à des produits
             frais et de qualité.
           </p>
-          <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-              <a
-                href="#"
+          <div class="mt-10 sm:flex flex-col lg:justify-start space-y-2">
+            <div class="relative pb-3/4 rounded overflow-hidden">
+              <video
+                loop
+                muted
+                autoplay
+                class="absolute object-cover w-full h-full object-center o"
+              >
+                <source
+                  src="~/assets/img/banner/hawai-bowls-stop-motion.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="">
+              <nuxt-link
+                to="#"
                 class="
                   w-full
+                  md:w-1/2
                   flex
                   items-center
                   justify-center
@@ -80,7 +94,7 @@
                   border border-transparent
                   text-base
                   font-medium
-                  rounded-md
+                  rounded-full
                   text-white
                   bg-accent-400
                   hover:bg-accent-600
@@ -88,7 +102,7 @@
                   md:text-lg
                   md:px-10
                 "
-                >Commander</a
+                >Commander</nuxt-link
               >
             </div>
           </div>
@@ -100,7 +114,7 @@
           w-full
           h-64
           sm:h-72
-          md:h-96
+          md:h-full
           lg:absolute
           lg:inset-y-0
           lg:right-0
@@ -108,39 +122,37 @@
           lg:h-full
         "
       >
-        <div class="absolute inset-0 w-full h-full bg-gray-400 p-12 md:p-24">
-          <div class="py-2 px-4">
-            <div class="flex flex-wrap -mx-4">
-              <div class="hidden md:block md:w-1/2 px-4">
-                <div
-                  class="h-full w-full bg-cover rounded shadow-md"
-                  style="
-                    background-image: url('https://source.unsplash.com/random/1280x720');
+        <div class="absolute inset-0 w-full h-96 md:h-full p-12 md:p-16">
+          <div class="flex  -mx-4">
+            <div class=" md:block md:w-1/2 px-4">
+              <div
+                class="h-full w-full bg-cover rounded shadow-md b"
+                style="
+                   
                   "
-                ></div>
+              ></div>
+            </div>
+            <div class="md:w-1/2 h-1/3 px-4">
+              <div class="mb-8">
+                <img
+                  class="rounded shadow-md"
+                  src="~assets/img/grid/little1.jpg"
+                  alt=""
+                />
               </div>
-              <div class="md:w-1/2 h-auto px-4">
-                <div class="mb-8">
-                  <img
-                    class="rounded shadow-md"
-                    src="https://source.unsplash.com/random/1280x720"
-                    alt=""
-                  />
-                </div>
-                <div class="mb-8">
-                  <img
-                    class="rounded shadow-md"
-                    src="https://source.unsplash.com/random/1280x720"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="rounded shadow-md"
-                    src="https://source.unsplash.com/random/1280x720"
-                    alt=""
-                  />
-                </div>
+              <div class="mb-8">
+                <img
+                  class="rounded shadow-md"
+                  src="~assets/img/grid/little2.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="rounded shadow-md"
+                  src="~assets/img/grid/little3.jpg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -155,21 +167,23 @@
 import CardAbout from "./CardAbout.vue";
 import WaveBackground from "./WaveBackground.vue";
 export default {
-  components: { WaveBackground, CardAbout },
+  components: { WaveBackground, CardAbout }
 };
 </script>
 
 <style lang="postcss">
 .o {
   object-position: 50% 35%;
-  @screen xs {
-    object-position: 35% 50%;
-  }
 }
 
 #right-hero {
   @screen md {
     @apply h-screen;
   }
+}
+
+.b {
+  background-image: url("~assets/img/grid/big.jpg");
+  @apply bg-center;
 }
 </style>

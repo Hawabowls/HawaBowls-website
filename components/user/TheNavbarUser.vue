@@ -26,13 +26,13 @@
             <a
               href="#"
               class="border-transparent text-white hover:border-accent-500 hover:text-accent-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-            >
+            >Plats
             </a>
             <a
               href="#"
               class="border-transparent text-white hover:border-accent-500 hover:text-accent-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
-              Projects
+              Boisson
             </a>
           </div>
         </div>

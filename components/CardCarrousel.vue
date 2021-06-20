@@ -3,7 +3,7 @@
     <div class="h-64">
       <img
         class="w-full rounded-t shadow h-full object-cover object-center   "
-        :src="post.url"
+        :src="require('~/assets/img/grid/' + post.url + '.jpg')"
         alt=""
       />
     </div>
