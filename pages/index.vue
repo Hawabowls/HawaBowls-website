@@ -8,7 +8,7 @@
       </h1>
     </section> -->
     <notre-menu></notre-menu>
-    <the-dishes></the-dishes>
+    <!-- <the-dishes></the-dishes> -->
 
     <the-last-news></the-last-news>
     <the-contact></the-contact>
@@ -32,8 +32,8 @@ export default {
     AboutPoke,
     IconScrollBar,
     NotreMenu,
-    Test,
-  },
+    Test
+  }
 };
 </script>
 
