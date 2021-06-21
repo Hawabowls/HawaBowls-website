@@ -84,6 +84,13 @@ export default {
         'postcss-nested': {},
         'postcss-preset-env': {},
       },
+      preset: {
+        autoprefixer: {
+          flexbox: true,
+          grid: true,
+          overrideBrowserslist: ['last 3 versions', '> 1%', 'ie 8', 'ie 7'],
+        },
+      },
     }
   }
 
