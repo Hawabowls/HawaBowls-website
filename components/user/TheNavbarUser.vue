@@ -129,8 +129,10 @@
           </button>
         </div>
         <div class=" lg:ml-4 flex items-center">
+          <nuxt-link to="/cart">
           <button
-            class="flex-shrink-0 p-1 text-gray-100 rounded-full hover:text-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+            class="relative flex-shrink-0 p-1 text-gray-100 rounded-full hover:text-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+          
           >
             <span class="sr-only">Voir le panier</span>
             <!-- Heroicon name: outline/bell -->
@@ -148,7 +150,9 @@
                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
+             <span v-if="cart.length !=0" class="absolute top-0 right-0 w-4 h-4 bg-red-600 mt-1 p-0.5 font-semibold leading-3 text-white text-xs rounded-full bg-opacity-90">{{cart.length}}</span>
           </button>
+          </nuxt-link>
           <div class="ml-4 relative hidden lg:block z-10 flex-shrink-0">
             <div>
               <button
@@ -291,6 +295,11 @@ export default {
       active:false,
       profile: false
     };
+  },
+  computed:{
+    cart(){
+      return this.$store.getters['cart/getCart']
+    }
   }
 };
 </script>
