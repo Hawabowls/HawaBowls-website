@@ -321,10 +321,9 @@ export default {
   height: 10rem;
 
   & img {
-    transform: scale(1);
     @apply transition duration-500 ease-in-out transform scale-100;
     &:hover {
-      transform: scale(1.3);
+      @apply transform scale-150;
     }
   }
   &:hover {
@@ -352,10 +351,10 @@ export default {
     @apply h-64;
   }
   .image {
-    @apply block w-full h-full transition duration-300 ease-in-out transform scale-125;
+    @apply block w-full h-full transition duration-300 ease-in-out transform scale-100;
 
     &:hover img {
-      transform: scale(1);
+      @apply transform scale-125;
     }
   }
   .image-overlay {
