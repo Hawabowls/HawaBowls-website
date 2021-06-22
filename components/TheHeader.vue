@@ -52,7 +52,7 @@
       loop
       muted
       autoplay
-      class="showcase-video  object-cover w-full h-full opacity-90 mix-blend-overlay"
+      class="showcase-video  object-cover w-full h-full opacity-90 "
     >
       <source src="~/assets/img/banner/video_hawa.mp4" type="video/mp4" />
     </video>

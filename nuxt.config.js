@@ -34,6 +34,8 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
 
+  loading: '~/components/LoadingIcon.vue',
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
@@ -81,6 +83,13 @@ export default {
         'tailwindcss': join(__dirname, 'tailwind.config.js'),
         'postcss-nested': {},
         'postcss-preset-env': {},
+      },
+      preset: {
+        autoprefixer: {
+          flexbox: true,
+          grid: true,
+          overrideBrowserslist: ['last 3 versions', '> 1%', 'ie 8', 'ie 7'],
+        },
       },
     }
   }

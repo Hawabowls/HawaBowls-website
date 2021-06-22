@@ -1,10 +1,10 @@
 <template>
-  <nav class="bg-primary-200 shadow">
+  <nav class="bg-primary-500 shadow">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex px-2 lg:px-0">
           <div class="flex-shrink-0 flex items-center">
-            <img
+           <nuxt-link to="/"> <img
               class="block lg:hidden h-8 w-auto"
               src="img/Logo_transparent.png"
               alt="Workflow"
@@ -13,7 +13,7 @@
               class="hidden lg:block h-8 w-auto"
               src="img/Logo_transparent.png"
               alt="Workflow"
-            />
+            /></nuxt-link>
           </div>
           <div class="hidden lg:ml-6 lg:flex lg:space-x-8">
             <!-- Current: "border-primary-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
@@ -129,8 +129,10 @@
           </button>
         </div>
         <div class=" lg:ml-4 flex items-center">
+          <nuxt-link to="/cart">
           <button
-            class="flex-shrink-0 p-1 text-gray-100 rounded-full hover:text-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+            class="relative flex-shrink-0 p-1 text-gray-100 rounded-full hover:text-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+          
           >
             <span class="sr-only">Voir le panier</span>
             <!-- Heroicon name: outline/bell -->
@@ -148,7 +150,9 @@
                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
+             <span v-if="cart.length !=0" class="absolute top-0 right-0 w-4 h-4 bg-red-600 mt-1 p-0.5 font-semibold leading-3 text-white text-xs rounded-full bg-opacity-90">{{cart.length}}</span>
           </button>
+          </nuxt-link>
           <div class="ml-4 relative hidden lg:block z-10 flex-shrink-0">
             <div>
               <button
@@ -291,6 +295,11 @@ export default {
       active:false,
       profile: false
     };
+  },
+  computed:{
+    cart(){
+      return this.$store.getters['cart/getCart']
+    }
   }
 };
 </script>

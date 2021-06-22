@@ -9,7 +9,7 @@
     </section> -->
     <the-product-grid></the-product-grid>
     <notre-menu></notre-menu>
-    <the-dishes></the-dishes>
+    <!-- <the-dishes></the-dishes> -->
 
     <the-last-news></the-last-news>
     <the-contact></the-contact>
@@ -34,8 +34,8 @@ export default {
     AboutPoke,
     IconScrollBar,
     NotreMenu,
-    Test,
-  },
+    Test
+  }
 };
 </script>
 

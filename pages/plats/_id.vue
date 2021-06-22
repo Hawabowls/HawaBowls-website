@@ -180,9 +180,9 @@
             </div>
           </div>
           <div class="flex">
-            <span class="title-font font-medium text-2xl text-gray-900"
-              >€8.00</span
-            >
+            <span class="title-font font-medium text-2xl text-gray-900">{{
+              8.0 | formatPrice
+            }}</span>
             <button
               class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
             >
@@ -213,7 +213,27 @@
 
 <script>
 export default {
-  layout: "auth"
+  layout: "auth",
+  props: ["data"],
+  data() {
+    return {
+      cartItem: {
+        id: this.data.id,
+        name: this.data.name,
+        url: this.data.Image[0].url,
+        price: this.data.price,
+        quantity: 1
+      }
+    };
+  },
+  methods: {
+    ...mapActions(["addItemToCart"])
+  },
+  filters: {
+    formatPrice(price) {
+      return `€${price}`;
+    }
+  }
 };
 </script>
 

@@ -249,35 +249,40 @@ export default {
         {
           nom: "Po'Akahi",
           image: "po'akahi",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+          allergene: ""
         },
         {
           nom: "Po'Alua",
           image: "po'alua",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
         },
         {
           nom: "Po'Akolu",
           image: "po'aha2",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
         },
         {
           nom: "Po'Aha",
           image: "po'aha2",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
         },
         {
           nom: "Po'Alima",
           image: "po'aha2",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
-        },
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
+        }
       ],
-      selectionedDish: {},
+      selectionedDish: {}
     };
   },
   methods: {
@@ -305,8 +310,8 @@ export default {
     changeValue(payload) {
       console.log(payload);
       this.isModal = payload.value;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -316,10 +321,9 @@ export default {
   height: 10rem;
 
   & img {
-    transform: scale(1);
-    transition: 0.3s ease-in-out;
+    @apply transition duration-500 ease-in-out transform scale-100;
     &:hover {
-      transform: scale(1.3);
+      @apply transform scale-150;
     }
   }
   &:hover {
@@ -347,11 +351,10 @@ export default {
     @apply h-64;
   }
   .image {
-    @apply block w-full h-full;
-    transform: scale(1.3);
-    transition: 0.3s ease-in-out;
+    @apply block w-full h-full transition duration-300 ease-in-out transform scale-100;
+
     &:hover img {
-      transform: scale(1);
+      @apply transform scale-125;
     }
   }
   .image-overlay {
@@ -360,13 +363,11 @@ export default {
     &:hover {
       @apply opacity-100;
       & > * {
-        transform: translateY(0px);
+        @apply transform translate-y-0;
       }
     }
-
     & > * {
-      transform: translateY(50px);
-      transition: transform 0.25s;
+      @apply transition duration-300 transform translate-y-9;
     }
   }
 }
