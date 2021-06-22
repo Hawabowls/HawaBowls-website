@@ -7,6 +7,7 @@
         Test composant
       </h1>
     </section> -->
+    <the-product-grid></the-product-grid>
     <notre-menu></notre-menu>
     <the-dishes></the-dishes>
 
@@ -24,6 +25,7 @@ import TheContact from "~/components/TheContact.vue";
 import IconScrollBar from "~/components/IconScrollBar.vue";
 import NotreMenu from "~/components/NotreMenu.vue";
 import Test from "~/components/v2/TheTest.vue";
+import TheProductGrid from "~/components/TheProductGrid.vue";
 export default {
   components: {
     TheContact,
@@ -37,4 +39,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style,
+    TheProductGrid></style>
