@@ -37,7 +37,16 @@
         </p>
       </div>
       <div
-        class="mx-auto min-w-sm card-container space-x-2 overflow-x-hidden p-4"
+        class="
+          mx-auto
+          min-w-sm
+          card-container
+          space-x-2
+          md:space-x-4
+          lg:space-x-8
+          overflow-x-hidden
+          p-4
+        "
       >
         <div
           @click="toggle('poke')"
@@ -249,40 +258,35 @@ export default {
         {
           nom: "Po'Akahi",
           image: "po'akahi",
-          desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
-          allergene: ""
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+          allergene: "",
         },
         {
           nom: "Po'Alua",
           image: "po'alua",
-          desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: ""
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
         },
         {
           nom: "Po'Akolu",
           image: "po'aha2",
-          desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: ""
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
         },
         {
           nom: "Po'Aha",
           image: "po'aha2",
-          desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: ""
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
         },
         {
           nom: "Po'Alima",
           image: "po'aha2",
-          desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: ""
-        }
+          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: "",
+        },
       ],
-      selectionedDish: {}
+      selectionedDish: {},
     };
   },
   methods: {
@@ -310,8 +314,8 @@ export default {
     changeValue(payload) {
       console.log(payload);
       this.isModal = payload.value;
-    }
-  }
+    },
+  },
 };
 </script>
 

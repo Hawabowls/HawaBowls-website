@@ -4,14 +4,24 @@
       <div class="flex flex-col justify justify-between items-center">
         <base-circle-logo></base-circle-logo>
         <div class="sm:flex sm:justify-around text-center">
+          <nuxt-link to="/" class="footer-link">Accueil</nuxt-link>
+          <nuxt-link to="/menu" class="footer-link">Menu</nuxt-link>
           <nuxt-link to="/blog" class="footer-link">Blog</nuxt-link>
-          <nuxt-link to="/plats" class="footer-link">Commander</nuxt-link>
           <nuxt-link to="/contact" class="footer-link">Contact</nuxt-link>
-          <nuxt-link to="/contact" class="footer-link"> Traiteur</nuxt-link>
+
+          <nuxt-link to="/cgu" class="footer-link">Cgu</nuxt-link>
+          <nuxt-link to="/cgv" class="footer-link">Cgv</nuxt-link>
+          <!--  <nuxt-link to="/contact" class="footer-link"> Traiteur</nuxt-link> -->
         </div>
         <div>
-          <button-network name="facebook"></button-network>
-          <button-network name="instagram"></button-network>
+          <button-network
+            name="facebook"
+            url="https://www.facebook.com/hawabowls"
+          ></button-network>
+          <button-network
+            name="instagram"
+            url="https://www.instagram.com/hawa_bowls/"
+          ></button-network>
         </div>
         <div>
           <span class="text-gray-300"
@@ -30,7 +40,7 @@ import CircleLogo from "./BaseCircleLogo.vue";
 import ButtonNetwork from "./ButtonNetwork.vue";
 export default {
   components: { CircleLogo, ButtonNetwork },
-  name: "TheFooter"
+  name: "TheFooter",
 };
 </script>
 
