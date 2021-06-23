@@ -101,6 +101,7 @@
 
               <div class="mt-2 space-y-1">
                 <button
+                  @click="addItemToCart(p)"
                   type="button"
                   class="inline-flex items-center px-2 py-2 border border-transparent text-md font-medium rounded shadow-sm text-white bg-accent-400 hover:bg-accent-500 focus:outline-none"
                 >
@@ -150,6 +151,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   layout: "user",
   data() {
@@ -195,6 +197,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(["cart/addItemToCart"]),
     average(arr) {
       return arr.reduce((p, c) => p + c, 0) / arr.length;
     }
