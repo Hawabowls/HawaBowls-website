@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="url">
+  <a :href="url">
     <button class="rounded-full p-1 border m-2 border-gray-800">
       <svg
         v-if="name === 'facebook'"
@@ -44,12 +44,12 @@
         />
       </svg>
     </button>
-  </nuxt-link>
+  </a>
 </template>
 
 <script>
 export default {
-  props: ["name", "url"],
+  props: ["name", "url"]
 };
 </script>
 
