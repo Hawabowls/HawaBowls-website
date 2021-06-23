@@ -32,7 +32,7 @@
         soin de leur alimentation grâce à des produits frais et de qualité.
       </p>
       <div class="mt-10 sm:flex w-full flex-col justify-center space-y-2">
-        <div class="relative pb-1/2 rounded-lg overflow-hidden">
+        <div class="relative pb-1/2 px-auto rounded-lg overflow-hidden">
           <video
             loop
             muted
