@@ -167,12 +167,7 @@
         xl:gap-x-8
       "
     >
-      <li
-        class="relative"
-        v-for="dish in plats"
-        @click="sendDish(dish)"
-        :key="dish.nom"
-      >
+      <li class="relative" v-for="dish in plats" :key="dish.nom">
         <!--  <div
             class="
               group
@@ -198,7 +193,7 @@
             </button>
           </div> -->
 
-        <div class="card-image">
+        <div class="card-image" @click="sendDish(dish)">
           <img
             :src="require('~/assets/img/plat/' + dish.image + '.jpg')"
             :alt="dish.image"
@@ -231,7 +226,7 @@
             9.90
           </p> -->
         <modal
-          v-if="isModal"
+          v-if="isModal && selectionedDish"
           @close-modal="changeValue"
           :item="selectionedDish"
         ></modal>
@@ -258,35 +253,40 @@ export default {
         {
           nom: "Po'Akahi",
           image: "po'akahi",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+          allergene: ""
         },
         {
           nom: "Po'Alua",
           image: "po'alua",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
         },
         {
           nom: "Po'Akolu",
           image: "po'aha2",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
         },
         {
           nom: "Po'Aha",
           image: "po'aha2",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
         },
         {
           nom: "Po'Alima",
           image: "po'aha2",
-          desc: "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
-          allergene: "",
-        },
+          desc:
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+          allergene: ""
+        }
       ],
-      selectionedDish: {},
+      selectionedDish: {}
     };
   },
   methods: {
@@ -312,10 +312,11 @@ export default {
       this.isModal = true;
     },
     changeValue(payload) {
-      console.log(payload);
+      console.log(payload.value);
       this.isModal = payload.value;
-    },
-  },
+      this.selectionedDish = {};
+    }
+  }
 };
 </script>
 
