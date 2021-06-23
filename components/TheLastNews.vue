@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-hidden">
+  <section class="max-w-7xl mx-auto sm:px-6 lg:px-8 overflow-hidden" id="commu">
     <div class="flex flex-col justify-center items-center px-3 py-4">
       <span
         class="text-base font-semibold text-accent-300 tracking-wide uppercase"
@@ -33,7 +33,7 @@ export default {
     CarrouselNews: () =>
       process.client
         ? import("@/components/CarrouselNews.vue")
-        : Promise.resolve({ render: (h) => h("div") }),
+        : Promise.resolve({ render: h => h("div") })
   },
   data() {
     return {
@@ -43,28 +43,28 @@ export default {
           url: "big",
           titre: "Hola que tal",
           caption: "Bienvenido",
-          source: "blog",
+          source: "blog"
         },
         {
           id: 1,
           url: "little1",
           titre: "Poke Poke Poke",
           caption: "Belle journée",
-          source: "instragram",
+          source: "instragram"
         },
         {
           id: 2,
           url: "little3",
           titre: "Hola que tal",
           caption: "envie d'un petit tensai",
-          source: "instagram",
+          source: "instagram"
         },
         {
           id: 3,
           url: "little2",
           titre: "Poke Poke Poke",
           caption: "see big",
-          source: "instragram",
+          source: "instragram"
         },
 
         {
@@ -73,7 +73,7 @@ export default {
           titre: "Poke Poke Poke",
           caption:
             "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
-          source: "instragram",
+          source: "instragram"
         },
         {
           id: 5,
@@ -81,11 +81,11 @@ export default {
           titre: "Poke Poke Poke",
           caption:
             "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
-          source: "instragram",
-        },
-      ],
+          source: "instragram"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
