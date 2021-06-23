@@ -31,7 +31,9 @@
         ravissent à la fois les sportifs et les gourmands soucieux d eprendre
         soin de leur alimentation grâce à des produits frais et de qualité.
       </p>
-      <div class="mt-10 sm:flex w-full flex-col justify-center space-y-2">
+      <div
+        class="mt-10 sm:flex w-full flex-col justify-center items-center space-y-2"
+      >
         <div class="relative pb-1/2 px-auto rounded-lg overflow-hidden">
           <video
             loop

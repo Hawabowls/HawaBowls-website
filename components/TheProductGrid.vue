@@ -32,7 +32,8 @@
       <div class="h-72 w-full bg-primary-400">
         <img
           class="h-full w-full object-cover"
-          src="https://picsum.photos/seed/picsum/300/300"
+          src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlzaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
+          "
           alt=""
         />
       </div>
@@ -46,7 +47,7 @@
       <div class="hidden lg:block h-72 w-full bg-primary-600">
         <img
           class="h-full w-full object-cover"
-          src="https://picsum.photos/seed/picsum/300/300"
+          src="https://images.unsplash.com/photo-1589753014594-0676c69bbcbe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFkaXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
           alt=""
         />
       </div>
@@ -60,7 +61,7 @@
       <div class="h-72 w-full bg-primary-700">
         <img
           class="h-full w-full object-cover"
-          src="https://picsum.photos/seed/picsum/300/300"
+          src="https://images.unsplash.com/photo-1587883012610-e3df17d41270?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
           alt=""
         />
       </div>
@@ -72,5 +73,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>
