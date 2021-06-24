@@ -12,76 +12,29 @@
             Hawabowls
           </h2>
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
-            Po'Alua
+            {{ item.name }}
           </h1>
           <div class="flex mb-4">
             <span class="flex items-center text-secondary-500">
               <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 text-indigo-500"
-                viewBox="0 0 24 24"
+                :class="
+                  i <= average(item.reviews)
+                    ? 'text-accent-400'
+                    : 'text-gray-300'
+                "
+                v-for="i in 5"
+                :key="i"
+                class="h-5 w-5 fill-current text-accent-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
               >
                 <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
               </svg>
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 text-indigo-500"
-                viewBox="0 0 24 24"
+              <span class="text-gray-600 ml-3"
+                >{{ item.reviews.length }} Reviews</span
               >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 text-indigo-500"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 text-indigo-500"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 text-indigo-500"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-              <span class="text-gray-600 ml-3">4 Reviews</span>
             </span>
             <span
               class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s"
@@ -131,11 +84,7 @@
             </span>
           </div>
           <p class="leading-relaxed">
-            Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-            sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-            juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-            seitan poutine tumeric. Gastropub blue bottle austin listicle
-            pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.
+            {{ item.description }}
           </p>
           <div
             class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"
@@ -181,7 +130,7 @@
           </div>
           <div class="flex">
             <span class="title-font font-medium text-2xl text-gray-900">{{
-              8.0 | formatPrice
+              item.price | formatPrice
             }}</span>
             <button
               class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
@@ -212,27 +161,38 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   layout: "auth",
-  props: ["data"],
   data() {
     return {
-      cartItem: {
-        id: this.data.id,
-        name: this.data.name,
-        url: this.data.Image[0].url,
-        price: this.data.price,
-        quantity: 1
+      item: {
+        _id: "",
+        name: "",
+        price: "",
+        description: "",
+        reviews: []
       }
     };
   },
   methods: {
-    ...mapActions(["addItemToCart"])
+    ...mapActions({
+      addItemToCart: "cart/addItemToCart",
+      getProduct: "product/getProduct"
+    }),
+
+    average(arr) {
+      return arr.reduce((p, c) => p + c, 0) / arr.length;
+    }
   },
   filters: {
     formatPrice(price) {
       return `€${price}`;
     }
+  },
+  async fetch() {
+    console.log(this.$route.params.id);
+    /*   this.item = await this.getProduct(this.$route.params.id); */
   }
 };
 </script>
