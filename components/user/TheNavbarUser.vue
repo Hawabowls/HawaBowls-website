@@ -15,8 +15,8 @@
               alt="Workflow"
             /></nuxt-link>
           </div>
-          <div class="hidden lg:ml-6 lg:flex lg:space-x-8">
-            <!-- Current: "border-primary-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+          <!-- <div class="hidden lg:ml-6 lg:flex lg:space-x-8">
+      
             <a
               href="#"
               class="border-primary-500 text-accent-400  inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
@@ -34,7 +34,7 @@
             >
               Boisson
             </a>
-          </div>
+          </div> -->
         </div>
         <!--         <div
           class="flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end"
@@ -153,8 +153,8 @@
              <span v-if="cart.length !=0" class="absolute top-0 right-0 w-4 h-4 bg-red-600 mt-1 p-0.5 font-semibold leading-3 text-white text-xs rounded-full bg-opacity-90">{{cart.length}}</span>
           </button>
           </nuxt-link>
-          <div class="ml-4 relative hidden lg:block z-10 flex-shrink-0">
-            <div>
+          <div  class="ml-4 relative hidden lg:block z-10 flex-shrink-0">
+            <div v-if="user != {}">
               <button
                 type="button"
                 @click="profile = !profile"
@@ -299,6 +299,10 @@ export default {
   computed:{
     cart(){
       return this.$store.getters['cart/getCart']
+    },
+    user(){
+      console.log(this.$store.getters['user/getUser'])
+      return this.$store.getters['user/getUser']
     }
   }
 };
