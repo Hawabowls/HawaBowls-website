@@ -5,85 +5,114 @@
         <card-stat></card-stat>
       </div>
     </div>
-    <div class="px-4 md:px-10 mx-auto w-full -m-24">
-      <div class="flex flex-wrap">
-        <!-- <line-chart></line-chart>
-          <bar-chart></bar-chart> -->
-      </div>
-      <div class="flex flex-wrap mt-4">
-        <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+    <section class=" relative  px-4 md:px-10 mx-auto w-full -m-24 z-30">
+      <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div
-            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
+            class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
           >
-            <div class="rounded-t mb-0 px-4 py-3 border-0">
-              <div class="flex flex-wrap items-center">
-                <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-                  <h3 class="font-semibold text-base text-gray-700">
-                    Gestion des Commandes
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div class="block w-full overflow-x-auto">
-              <!-- Projects table -->
-              <div class="items-center">
-                <div
-                  class="flex justify-around border-collapse border border-solid border-gray-100 "
-                >
-                  <div
-                    class="px-4 bg-gray-50 text-gray-500 align-middle  py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-                  >
-                    id
-                  </div>
-                  <div
-                    class="px-4 bg-gray-50 text-gray-500 align-middle  py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-                  >
-                    Utilisateur
-                  </div>
-                  <div
-                    class="px-4 bg-gray-50 text-gray-500 align-middle  py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-                  >
-                    Montant
-                  </div>
-                  <div
-                    class="px-4 bg-gray-50 text-gray-500 align-middle py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-                  >
-                    Etat
-                  </div>
-                </div>
-                <div>
-                  <div class="grid grid-cols-6 gap-2">
-                    <div class="col-span-4 text-center">
-                      <span>01</span>
-                      <span>01</span>
-                      <span>01</span>
-                    </div>
-                    <div class="col-span-1">etat</div>
-                    <div class="col-span-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+            <div
+              class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+            >
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-100">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="hidden sm:block px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      ID
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Nom
+                    </th>
+                    <th
+                      scope="col"
+                      class="hidden md:block px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Details
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Status
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Montant
+                    </th>
+                    <th scope="col" class="relative px-6 py-3">
+                      <span class="sr-only">Voir</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="hidden sm:block px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900 truncate">
+                        01
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 h-10 w-10">
+                          <img
+                            class="h-10 w-10 rounded-full"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ml-4">
+                          <div class="text-sm font-medium text-gray-900">
+                            Jane
+                          </div>
+                          <div class="text-sm text-gray-500">Cooper</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="hidden md:block px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900 md:w-28 truncate">
+                        Regional Paradigm Technician
+                        fuuifbfbdibiudbudbududbujidbdbd
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <span
+                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-secondary-100 text-secondary-800"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                        Remis
+                      </span>
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      10.90
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                    >
+                      <a
+                        href="#"
+                        class="text-indigo-600 border border-blue-600 px-2 py-2 hover:bg-blue-700  rounded hover:text-gray-100"
+                        >Voir</a
+                      >
+                    </td>
+                  </tr>
+
+                  <!-- More people... -->
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
-      <footer-admin></footer-admin>
-    </div>
+    </section>
   </main>
 </template>
 
