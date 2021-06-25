@@ -50,8 +50,12 @@ export default {
     exposeConfig: true
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': { target: 'https://hawabowls-api.herokuapp.com/api', pathRewrite: { '^/api/': '' }, changeOrigin: true }
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
