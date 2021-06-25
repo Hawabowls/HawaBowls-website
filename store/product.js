@@ -49,7 +49,8 @@ export const actions = {
     },
     async getProduct({ commit }, payload) {
         try {
-            let response = await this.$axios.get(`/api/product/${payload.id}`);
+            console.log("t")
+            let response = await this.$axios.get(`/api/product/${payload}`);
             console.log(response.data)
             if (response.data) {
                 return response.data
