@@ -220,7 +220,7 @@
                     /></svg
                   >Ajout au panier
                 </button>
-                <nuxt-link to="{name:'plats-id',params:{id: p._id}}">
+                <nuxt-link :to="{ name: 'plats-id', params: { id: p._id } }">
                   <button
                     type="button"
                     class="inline-flex items-center px-2 py-2 border border-transparent text-md font-medium rounded shadow-sm text-white bg-primary-100 hover:bg-primary-300 focus:outline-none"

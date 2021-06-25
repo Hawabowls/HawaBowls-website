@@ -182,7 +182,7 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  layout: "user ",
+  layout: "user",
   data() {
     return {
       cartItem: {
