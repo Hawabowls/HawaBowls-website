@@ -10,20 +10,20 @@
               <div class="col-span-2 p-5">
                 <h1 class="text-xl font-medium ">Panier</h1>
                 <div
-                  v-for="i in 4"
-                  :key="i"
+                  v-for="p in cart"
+                  :key="p.name"
                   class="flex justify-between items-center mt-6 pt-6"
                 >
                   <div class="flex items-center">
                     <img
-                      src="https://i.imgur.com/EEguU02.jpg"
+                      :src="require('~/assets/img/plat/' + p.image + '.jpg')"
                       width="60"
                       class="rounded-full "
                     />
                     <div class="flex flex-col ml-3">
-                      <span class="md:text-md font-medium">Poalima</span>
+                      <span class="md:text-md font-medium">{{ p.name }}</span>
                       <span class="text-xs font-light text-gray-400"
-                        >#41551</span
+                        >#{{ p._id }}</span
                       >
                     </div>
                   </div>
@@ -33,12 +33,12 @@
                       <input
                         type="text"
                         class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
-                        value="1"
+                        v-model="p.quantity"
                       />
                       <span class="font-semibold">+</span>
                     </div>
                     <div class="pr-8 ">
-                      <span class="text-xs font-medium">€10.50</span>
+                      <span class="text-xs font-medium">€{{ p.price }}</span>
                     </div>
                     <div><i class="fa fa-close text-xs font-medium"></i></div>
                   </div>
@@ -89,7 +89,7 @@
                       >Sous-total:</span
                     >
                     <span class="text-lg font-bold text-gray-800 ">
-                      €24.90</span
+                      €{{ total }}</span
                     >
                   </div>
                 </div>
@@ -199,7 +199,15 @@
 
 <script>
 export default {
-  layout: "user"
+  layout: "user",
+  computed: {
+    cart() {
+      return this.$store.getters["cart/getCart"];
+    },
+    total() {
+      return this.$store.getters["cart/getCartTotal"];
+    }
+  }
 };
 </script>
 

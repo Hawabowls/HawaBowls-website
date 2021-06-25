@@ -120,7 +120,7 @@
                     /></svg
                   >Ajout au panier
                 </button>
-                <nuxt-link to="{name:'plats-id',params:{id: p._id}}">
+                <nuxt-link :to="{ name: 'plats-id', params: { id: p._id } }">
                   <button
                     type="button"
                     class="inline-flex items-center px-2 py-2 border border-transparent text-md font-medium rounded shadow-sm text-white bg-primary-100 hover:bg-primary-300 focus:outline-none"
@@ -201,7 +201,7 @@
 
               <div class="mt-2 space-y-1">
                 <button
-                  @click="addItemToCart(p)"
+                  @click="addItem(p)"
                   type="button"
                   class="inline-flex items-center px-2 py-2 border border-transparent text-md font-medium rounded shadow-sm text-white bg-accent-400 hover:bg-accent-500 focus:outline-none"
                 >
@@ -397,6 +397,11 @@ export default {
         this.poke = false;
         this.little = false;
       }
+    },
+    addItem(i) {
+      let cartItem = { _id: i.id, name: i.price, price: i.price, quantity: 1 };
+      console.log(cartItem);
+      return this.addItemToCart(cartItem);
     }
   },
   async fetch() {

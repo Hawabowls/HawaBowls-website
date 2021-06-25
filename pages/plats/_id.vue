@@ -1,6 +1,23 @@
 <template>
   <section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-24 mx-auto">
+    <div class="container px-5 py-12 md:py-24 mx-auto">
+      <nuxt-link :to="{ name: 'plats' }" class="ml-24 w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+          />
+        </svg>
+      </nuxt-link>
+
       <div class="lg:w-4/5 mx-auto flex flex-wrap">
         <img
           alt="ecommerce"
@@ -105,6 +122,7 @@
               <span class="mr-3">Taille du Poke</span>
               <div class="relative">
                 <select
+                  v-model="taille"
                   class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10"
                 >
                   <option>Petit Poke</option>
@@ -130,12 +148,13 @@
           </div>
           <div class="flex">
             <span class="title-font font-medium text-2xl text-gray-900">{{
-              item.price | formatPrice
+              isBigPoke(item.price) | formatPrice
             }}</span>
             <button
-              class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+              @click="addItemToCart(addItem(item))"
+              class="flex ml-auto text-white bg-accent-500 border-0 py-2 px-6 focus:outline-none hover:bg-accent-600 rounded"
             >
-              Button
+              Ajout au panier
             </button>
             <button
               class="rounded-full w-10 h-10 bg-accent-200 p-0 border-0 inline-flex items-center justify-center hover:text-accent-600 active:text-accent-600 text-accent-500 ml-4"
@@ -163,9 +182,16 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  layout: "auth",
+  layout: "user ",
   data() {
     return {
+      cartItem: {
+        _id: "",
+        name: "",
+        price: "",
+        quantity: 1
+      },
+      taille: "Petit Poke",
       item: {
         _id: "",
         name: "",
@@ -183,8 +209,18 @@ export default {
 
     average(arr) {
       return arr.reduce((p, c) => p + c, 0) / arr.length;
+    },
+    isBigPoke(v) {
+      return this.taille == "Petit Poke" ? v : v + 2.9;
+    },
+    addItem(i) {
+      this.cartItem._id = i.id;
+      this.cartItem.name = i.price;
+      this.cartItem.price = i.price;
+      return this.cartItem;
     }
   },
+  computed: {},
   filters: {
     formatPrice(price) {
       return `€${price}`;
@@ -192,7 +228,7 @@ export default {
   },
   async fetch() {
     console.log(this.$route.params.id);
-    /*   this.item = await this.getProduct(this.$route.params.id); */
+    this.item = await this.getProduct(this.$route.params.id);
   }
 };
 </script>
