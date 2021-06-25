@@ -1,5 +1,6 @@
 export const state = () => ({
-    user: {}
+    user: {},
+    token: {}
 })
 
 export const getters = {
@@ -9,11 +10,23 @@ export const getters = {
 
 export const mutation = {}
 
-export const action = {
-    login() {
-
+export const actions = {
+    async login(payload) {
+        try {
+            const client = await this.$axios.post('api/product')
+        } catch (error) {
+            return { error: error.message }
+        }
     },
-    inscription() {
+    async register(payload) {
+        try {
+            const client = await this.$axios.post('/api/register', payload)
+            console.log(client)
+            return client
+        } catch (error) {
+            console.log(error)
+            return { error: error.message }
+        }
 
     },
     update() { },
