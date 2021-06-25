@@ -66,8 +66,10 @@
             soucieux d eprendre soin de leur alimentation grâce à des produits
             frais et de qualité.
           </p>
-          <div class="mt-10 sm:flex flex-col lg:justify-start space-y-2">
-            <div class="relative pb-3/4 rounded overflow-hidden">
+          <div
+            class="mt-10 sm:flex flex-col lg:justify-center items-center space-y-2"
+          >
+            <div class="relative pb-3/4  inset-x-0 rounded overflow-hidden">
               <video
                 loop
                 muted
@@ -165,7 +167,7 @@
 import CardAbout from "./CardAbout.vue";
 import WaveBackground from "./WaveBackground.vue";
 export default {
-  components: { WaveBackground, CardAbout },
+  components: { WaveBackground, CardAbout }
 };
 </script>
 
