@@ -88,14 +88,15 @@
                       class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
                     >
                       <nuxt-link
-                        to="{name:'plats-id',params:{id: p._id}}"
-                        class="text-indigo-600 border border-blue-600 px-2 py-2 hover:bg-blue-700  rounded hover:text-gray-100"
+                        :to="{
+                          name: 'admin-produits-id',
+                          params: { id: p._id }
+                        }"
+                        class="text-primary-600 border border-primary-600 px-2 py-2 hover:bg-primary-700  rounded hover:text-gray-100"
                         >Edit</nuxt-link
                       >
                     </td>
                   </tr>
-
-                  <!-- More people... -->
                 </tbody>
               </table>
             </div>

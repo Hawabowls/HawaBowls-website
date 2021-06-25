@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="relative bg-secondary-500 md:pt-32 pb-32 pt-12"></div>
-    <section class=" relative  px-4 md:px-10 mx-auto w-full -m-24 z-30">
+    <section class=" relative  px-4 md:px-10 mx-auto w-full -m-24">
       <!-- This example requires Tailwind CSS v2.0+ -->
       <div class="bg-white rounded p-2 shadow-md">
         <!--
