@@ -56,7 +56,7 @@
       <div class="max-w-lg" v-for="p in poke" :key="p.name">
         <div class="relative pb-4/5">
           <img
-            :src="require('~/assets/img/plat/' + p.image + '.jpg')"
+            :src="p.image"
             class="absolute w-full h-full  rounded-lg shadow-md object-cover"
             alt="p.image"
           />
@@ -156,7 +156,7 @@
       <div class="max-w-lg" v-for="p in littledish" :key="p.name">
         <div class="relative pb-4/5">
           <img
-            :src="require('~/assets/img/plat/' + p.image + '.jpg')"
+            :src="require('~/assets/img/plat/' + p.image + '.png')"
             class="absolute w-full h-full  rounded-lg shadow-md object-cover"
             alt="p.image"
           />
