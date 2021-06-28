@@ -52,7 +52,7 @@
             "
           >
             <source
-              src="~/assets/img/banner/hawai-bowls-stop-motion.mp4"
+              src="https://res.cloudinary.com/hawabowls/video/upload/q_auto/v1624872794/Hawabowls/site_media/hawai-bowls-stop-motion_rygirv.mp4"
               type="video/mp4"
             />
           </video>
