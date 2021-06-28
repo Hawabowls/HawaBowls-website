@@ -54,7 +54,10 @@
       autoplay
       class="showcase-video  object-cover w-full h-full opacity-90 "
     >
-      <source src="~/assets/img/banner/video_hawa.mp4" type="video/mp4" />
+      <source
+        src="https://res.cloudinary.com/demo/video/upload/qsx6gtlpztfnx0cl3wak.mp4"
+        type="video/mp4"
+      />
     </video>
 
     <the-navbar></the-navbar>
