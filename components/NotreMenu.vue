@@ -142,8 +142,7 @@
               z-10
             "
           >
-            Bubble<br />
-            Tea
+            Boisson
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
@@ -168,6 +167,168 @@
       "
     >
       <li class="relative" v-for="dish in plats" :key="dish.nom">
+        <!--  <div
+            class="
+              group
+              block
+              w-full
+              rounded-lg
+              t
+              bg-gray-100
+              focus-within:ring-2
+              focus-within:ring-offset-2
+              focus-within:ring-offset-gray-100
+              focus-within:ring-indigo-500
+              overflow-hidden
+            "
+          >
+            <img
+              :src="require('~/assets/img/plat/' + dish.image + '.jpg')"
+              alt=""
+              class="object-fill pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
+          </div> -->
+
+        <div class="card-image" @click="sendDish(dish)">
+          <img
+            :src="require('~/assets/img/plat/' + dish.image + '.png')"
+            :alt="dish.image"
+            class="image pointer-events-none"
+          />
+          <div class="image-overlay">
+            <p
+              class="
+                text-2xl
+                lg:text-3xl
+                font-bold
+                text-center
+                leading-tight
+                text-accent-100
+              "
+            >
+              {{ dish.nom }}
+            </p>
+          </div>
+        </div>
+
+        <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        <modal
+          v-if="isModal && selectionedDish"
+          @close-modal="changeValue"
+          :item="selectionedDish"
+        ></modal>
+      </li>
+
+      <!-- More files... -->
+    </ul>
+    <ul
+      v-if="boisson"
+      role="list"
+      class="
+        grid grid-cols-2
+        gap-x-4 gap-y-8
+        sm:grid-cols-3
+        mx-auto
+        sm:gap-x-6
+        lg:grid-cols-5
+        mt-4
+        xl:gap-x-8
+      "
+    >
+      <li class="relative" v-for="dish in boissons" :key="dish.nom">
+        <!--  <div
+            class="
+              group
+              block
+              w-full
+              rounded-lg
+              t
+              bg-gray-100
+              focus-within:ring-2
+              focus-within:ring-offset-2
+              focus-within:ring-offset-gray-100
+              focus-within:ring-indigo-500
+              overflow-hidden
+            "
+          >
+            <img
+              :src="require('~/assets/img/plat/' + dish.image + '.jpg')"
+              alt=""
+              class="object-fill pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
+          </div> -->
+
+        <div class="card-image" @click="sendDish(dish)">
+          <img
+            :src="dish.image"
+            :alt="dish.image"
+            class="image pointer-events-none"
+          />
+          <div class="image-overlay">
+            <p
+              class="
+                text-2xl
+                lg:text-3xl
+                font-bold
+                text-center
+                leading-tight
+                text-accent-100
+              "
+            >
+              {{ dish.nom }}
+            </p>
+          </div>
+        </div>
+
+        <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        <modal
+          v-if="isModal && selectionedDish"
+          @close-modal="changeValue"
+          :item="selectionedDish"
+        ></modal>
+      </li>
+
+      <!-- More files... -->
+    </ul>
+    <ul
+      v-if="entree"
+      role="list"
+      class="
+        grid grid-cols-2
+        gap-x-4 gap-y-8
+        sm:grid-cols-3
+        mx-auto
+        sm:gap-x-6
+        lg:grid-cols-5
+        mt-4
+        xl:gap-x-8
+      "
+    >
+      <li class="relative" v-for="dish in entrees" :key="dish.nom">
         <!--  <div
             class="
               group
@@ -286,7 +447,45 @@ export default {
           allergene: ""
         }
       ],
-      entree: [{ nom: "" }],
+
+      entrees: [
+        {
+          nom: "Salade de mangue",
+          image: "Salade de mangue",
+          desc: "",
+          allergene: ""
+        },
+        {
+          nom: "Salade d'ananas",
+          image: "salade d'ananas",
+          desc: "",
+          allergene: ""
+        }
+      ],
+      boissons: [
+        { nom: "Bubble tea", image: "Po'alima", desc: "", allergene: "" },
+        {
+          nom: "Tensai thé Blanc",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1624875437/Hawabowls/site_media/Th%C3%A9_blanc_myrtille_aiudjf.png",
+          desc: "",
+          allergene: ""
+        },
+        {
+          nom: "Tensai matcha ",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1624875440/Hawabowls/site_media/th%C3%A9_matcha_menthe_poivre_s59msu.png",
+          desc: "",
+          allergene: ""
+        },
+        {
+          nom: "Tensai thé vert",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1624884679/Hawabowls/site_media/Th%C3%A9_vert_citron_zavocf.png",
+          desc: "",
+          allergene: ""
+        }
+      ],
       selectionedDish: {}
     };
   },
@@ -357,7 +556,7 @@ export default {
     @apply h-64;
   }
   .image {
-    @apply block w-full h-full transition duration-300 ease-in-out transform scale-100;
+    @apply block w-full h-full object-cover transition duration-300 ease-in-out transform scale-100;
 
     &:hover img {
       @apply transform scale-125;
