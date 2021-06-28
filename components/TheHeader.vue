@@ -55,7 +55,7 @@
       class="showcase-video  object-cover w-full h-full opacity-90 "
     >
       <source
-        src="https://res.cloudinary.com/demo/video/upload/qsx6gtlpztfnx0cl3wak.mp4"
+        src="https://res.cloudinary.com/hawabowls/video/upload/q_auto/v1624882862/Hawabowls/site_media/video_hawa2_wlxowv.mp4"
         type="video/mp4"
       />
     </video>

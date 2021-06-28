@@ -82,7 +82,7 @@
           />
         </div>
         <div
-          @click="toggle('poke')"
+          @click="toggle('entree')"
           class="
             group
             hover:bg-white
@@ -118,7 +118,7 @@
           />
         </div>
         <div
-          @click="toggle('poke')"
+          @click="toggle('boisson')"
           class="
             group
             hover:bg-white
@@ -195,7 +195,7 @@
 
         <div class="card-image" @click="sendDish(dish)">
           <img
-            :src="require('~/assets/img/plat/' + dish.image + '.jpg')"
+            :src="require('~/assets/img/plat/' + dish.image + '.png')"
             :alt="dish.image"
             class="image pointer-events-none"
           />
@@ -247,45 +247,46 @@ export default {
       poke: true,
       boisson: false,
       isModal: false,
-      dessert: false,
+      entree: false,
 
       plats: [
         {
           nom: "Po'Akahi",
-          image: "po'akahi",
+          image: "Po'akahi",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
           allergene: ""
         },
         {
           nom: "Po'Alua",
-          image: "po'alua",
+          image: "Po'alua",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         },
         {
           nom: "Po'Akolu",
-          image: "po'aha2",
+          image: "Po'akolu",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         },
         {
           nom: "Po'Aha",
-          image: "po'aha2",
+          image: "Po'aha",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         },
         {
           nom: "Po'Alima",
-          image: "po'aha2",
+          image: "Po'alima",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         }
       ],
+      entree: [{ nom: "" }],
       selectionedDish: {}
     };
   },
@@ -293,18 +294,18 @@ export default {
     toggle(section) {
       if (section == "poke") {
         this.poke = !this.poke;
-        this.dessert = false;
+        this.entree = false;
         this.boisson = false;
       }
-      if (section == "dessert") {
-        this.dessert = !this.dessert;
+      if (section == "entree") {
+        this.entree = !this.entree;
         this.poke = false;
         this.boisson = false;
       }
       if (section == "boisson") {
         this.boisson = !this.boisson;
         this.poke = false;
-        this.dessert = false;
+        this.entree = false;
       }
     },
     sendDish(dish) {
