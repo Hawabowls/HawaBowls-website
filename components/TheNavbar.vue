@@ -38,21 +38,25 @@
         <nuxt-link
           class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
           to="#menu"
+          @click="isOpen = !isOpen"
           >Menu</nuxt-link
         >
         <nuxt-link
           class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
           to="#commu"
+          @click="isOpen = !isOpen"
           >Communanté</nuxt-link
         >
         <nuxt-link
           class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
           to="/Blog"
+          @click="isOpen = !isOpen"
           >Blog</nuxt-link
         >
         <nuxt-link
           class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link anima bg-opacity-60 "
           to="/Contact"
+          @click="isOpen = !isOpen"
           >Contact</nuxt-link
         >
 
@@ -96,10 +100,16 @@ export default {
     changeValue(payload) {
       console.log(payload);
       this.isModalOpen = payload.value;
+    },
+    close(e) {
+      if (!this.$el.contains(e.target)) {
+        this.isOpen = false;
+      }
     }
   },
   mounted() {
     let scrollpos = window.scrollY;
+    let vm = this;
     let header = document.getElementById("container-nav");
     let video = document.querySelector("#video-nav");
     let navaction = document.getElementById("navAction");
@@ -126,6 +136,10 @@ export default {
         navaction.classList.add("text-gray-800"); */
       }
     });
+    document.addEventListener("click", this.close);
+  },
+  beforeDestroy() {
+    document.removeEventListener("click", this.close);
   }
 };
 </script>
