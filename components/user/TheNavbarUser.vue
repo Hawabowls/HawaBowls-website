@@ -153,9 +153,11 @@
              <span v-if="cart.length !=0" class="absolute top-0 right-0 w-4 h-4 bg-red-600 mt-1 p-0.5 font-semibold leading-3 text-white text-xs rounded-full bg-opacity-90">{{cart.length}}</span>
           </button>
           </nuxt-link>
-          <div  class="ml-4 relative hidden lg:block z-10 flex-shrink-0">
-            <div v-if="user != {}">
+          <div class="ml-4 relative hidden lg:block z-10 flex-shrink-0">
+            <div  v-if="user" class="flex space-x-1 items-center">
+              <span class="text-white capitalize">{{user.firstname}}</span>
               <button
+              
                 type="button"
                 @click="profile = !profile"
                 class="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
@@ -164,11 +166,10 @@
                 aria-haspopup="true"
               >
                 <span class="sr-only">Open user menu</span>
-                <img
-                  class="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="Photo de profile"
-                />
+              <img v-if="user.avatar" class="h-8 w-8 rounded full" :src="user.avatar" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               </button>
             </div>
 
@@ -193,8 +194,8 @@
                 tabindex="-1"
               >
                 <!-- Active: "bg-gray-100", Not Active: "" -->
-                <a
-                  href="#"
+                <nuxt-link
+                to="/user"
                   :class="[
                     active
                       ? 'bg-gray-100'
@@ -203,10 +204,10 @@
                   role="menuitem"
                   tabindex="-1"
                   id="user-menu-item-0"
-                  >Your Profile</a
+                  >Mon Profile</nuxt-link
                 >
-                <a
-                  href="#"
+                <nuxt-link
+                to="/paramatres"
                   :class="[
                     active
                       ? 'bg-gray-100'
@@ -215,7 +216,7 @@
                   role="menuitem"
                   tabindex="-1"
                   id="user-menu-item-1"
-                  >Settings</a
+                  >Parametres</nuxt-link
                 >
                 <a
                   href="#"
@@ -227,7 +228,7 @@
                   role="menuitem"
                   tabindex="-1"
                   id="user-menu-item-2"
-                  >Sign out</a
+                  >Déconnection</a
                 >
               </div>
             </div>
@@ -256,13 +257,14 @@
           <div class="flex-shrink-0">
             <img
               class="h-10 w-10 rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              :src="[user.avatar ? 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80':user.avatar]"
               alt=""
             />
+            
           </div>
           <div class="ml-3">
-            <div class="text-base font-medium text-gray-800">Tom Cook</div>
-            <div class="text-sm font-medium text-gray-500">tom@example.com</div>
+            <div class="text-base font-medium text-gray-800">{{user.firstname}}</div>
+            <div class="text-sm font-medium text-gray-500">{{user.email}}</div>
           </div>
         </div>
         <div class="mt-3 space-y-1">
@@ -288,6 +290,7 @@
 </template>
 
 <script>
+import { mapActions} from 'vuex'
 export default {
   data() {
     return {
@@ -296,14 +299,25 @@ export default {
       profile: false
     };
   },
+  methods:{
+      ...mapActions({
+      reconnection: "user/reconnection",})
+  },
   computed:{
     cart(){
       return this.$store.getters['cart/getCart']
     },
     user(){
-      console.log(this.$store.getters['user/getUser'])
       return this.$store.getters['user/getUser']
     }
+  } ,
+    async fetch(){
+       console.log(user)
+      if(!user){
+       
+          await this.reconnection();
+      }
+  
   }
 };
 </script>
