@@ -124,11 +124,13 @@
               <span>Total cost</span>
               <span class="text-white">{{ total }}</span>
             </div>
-            <button
-              class="bg-accent-500 font-semibold hover:bg-indigo-600 py-3 rounded-lg text-sm text-white uppercase w-full"
-            >
-              Checkout
-            </button>
+            <nuxt-link to="/user/checkout">
+              <button
+                class="bg-accent-500 font-semibold hover:bg-indigo-600 py-3 rounded-lg text-sm text-white uppercase w-full"
+              >
+                Checkout
+              </button>
+            </nuxt-link>
           </div>
         </div>
       </div>

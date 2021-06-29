@@ -23,7 +23,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/VueSplide.js', mode: 'client' },
-    { src: '~/plugins/persistedState.client.js' }
+    { src: '~/plugins/persistedState.client.js' },
+    { src: '~/plugins/vue-stripe.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,7 +44,6 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    'nuxt-stripe-module',
   ],
   dev: process.env.NODE_ENV !== 'production',
   //tailwind
@@ -56,8 +56,8 @@ export default {
     proxy: true
   },
   //sttripe
-  stripe: {
-    publishableKey: 'YOUR_STRIPE_PUBLISHABLE_KEY',
+  env: {
+    STRIPE_PK: process.env.STRIPE_PK
   },
 
 
