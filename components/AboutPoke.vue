@@ -165,9 +165,9 @@
 
 <script>
 import CardAbout from "./CardAbout.vue";
-import WaveBackground from "./WaveBackground.vue";
+
 export default {
-  components: { WaveBackground, CardAbout }
+  components: { CardAbout }
 };
 </script>
 
