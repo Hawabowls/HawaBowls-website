@@ -91,7 +91,7 @@
             <h4
               class="mt-1 font-semibold text-xl tracking-wider leading-tight truncate"
             >
-              {{ p.image }}
+              {{ p.name }}
             </h4>
             <div class="text-gray-500 text-xs font-medium">
               {{ p.description }}
