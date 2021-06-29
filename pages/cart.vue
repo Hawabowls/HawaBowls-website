@@ -37,7 +37,7 @@
             <div class="flex w-3/5 sm:w-2/5">
               <!-- product -->
               <div class="w-20">
-                <img class="h-24" :src="item.image" alt="" />
+                <img class="h-24 w-20 object-cover" :src="item.image" alt="" />
               </div>
               <div class="flex flex-col justify-between ml-4 flex-grow">
                 <span class="font-bold text-sm">{{ item.name }}</span>
@@ -51,30 +51,38 @@
               </div>
             </div>
             <div class="flex justify-center w-1/5">
-              <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-                <path
-                  d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                />
-              </svg>
-
+              <button @click="">
+                <svg
+                  class="fill-current text-gray-600 w-3"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                  />
+                </svg>
+              </button>
               <input
                 class="mx-2 border px-1 text-center w-8"
                 type="text"
                 v-model="item.quantity"
               />
-
-              <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-                <path
-                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
-                />
-              </svg>
+              <button @click="">
+                <svg
+                  class="fill-current text-gray-600 w-3"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                  />
+                </svg>
+              </button>
             </div>
             <span
               class="hidden sm:block text-center w-1/5 font-semibold text-sm"
               >{{ item.price }}</span
             >
             <span class="text-center w-1/5 font-semibold text-sm">{{
-              priceItem(item._id)
+              item.price * item.quantity
             }}</span>
           </div>
 
@@ -159,7 +167,8 @@ export default {
     remove(item) {
       this.removeItem(item);
     }
-  }
+  },
+  filter: {}
 };
 </script>
 
