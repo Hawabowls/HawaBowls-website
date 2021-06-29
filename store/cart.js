@@ -15,6 +15,7 @@ export const getters = {
     dishProducts: (state) => state.dishProducts,
     drinkProducts: (state) => state.drinkProducts,
     getCart: (state) => state.cartItems,
+    getTotalItemPrice: (state) => (id) => state.cartItems[id].price * state.cartItems[id].quantity,
     getCartTotal: (state) =>
         state.cartItems.length < 1
             ? '0'
@@ -23,6 +24,10 @@ export const getters = {
                 .reduce((a, b) => a + b),
 }
 export const mutations = {
+    removeItem: (state, item) => {
+        let id = state.cartItems.findIndex(x => x._id == item._id)
+        state.cartItems.splice(id, 1)
+    },
     setProducts: (state, products) => (state.allProducts = products),
     setFeaturedProducts: (state, products) => (state.featuredProducts = products),
     setDishProducts: (state, products) => (state.dishProducts = products),
@@ -30,15 +35,15 @@ export const mutations = {
     setCartItem: (state, item) => {
 
         if (state.cartItems.filter(i => i._id == item._id).length == 0) {
+            item.quantity = 1
             console.log(item)
             state.cartItems.push(item)
-            localStorage.setItem('cartItems', JSON.stringify(state.cartItems))
+
         } else {
             let index = state.cartItems.findIndex(x => x._id == item._id)
             console.log(index)
             console.log(state.cartItems[index])
             state.cartItems[index].quantity++
-            localStorage.setItem('cartItems', JSON.stringify(state.cartItems))
         }
     },
     removeCartItem: (state, id) =>
