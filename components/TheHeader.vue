@@ -49,6 +49,7 @@
       <!--   <plant-background></plant-background> -->
     </div>
     <video
+      playsinline
       loop
       muted
       autoplay
