@@ -26,49 +26,66 @@
 
         <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
       </div>
-
-      <div class="mt-4">
-        <label
-          class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-          for="LoggingEmailAddress"
-          >Email Address</label
-        >
-        <input
-          id="LoggingEmailAddress"
-          class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-          type="email"
-        />
-      </div>
-
-      <div class="mt-4">
-        <div class="flex justify-between">
+      <form @submit.prevent="connexion">
+        <div class="mt-4">
           <label
             class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-            for="loggingPassword"
-            >Mot de Passe</label
+            for="LoggingEmailAddress"
+            >Email Address</label
           >
-          <a
-            href="#"
-            class="text-xs text-gray-500 dark:text-gray-300 hover:underline"
-            >Mot de Passe oublié?</a
+          <input
+            v-model="form.email"
+            id="LoggingEmailAddress"
+            class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+            type="email"
+          />
+          <p
+            v-if="!mailIsValid && mailClick"
+            class="text-red-500 text-xs italic"
           >
+            Veuillez entrée un email valide
+          </p>
         </div>
 
-        <input
-          id="loggingPassword"
-          class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-          type="password"
-        />
-      </div>
+        <div class="mt-4">
+          <div class="flex justify-between">
+            <label
+              class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+              for="loggingPassword"
+              >Mot de Passe</label
+            >
+            <a
+              href="#"
+              class="text-xs text-gray-500 dark:text-gray-300 hover:underline"
+              >Mot de Passe oublié?</a
+            >
+          </div>
 
-      <div class="mt-6">
-        <button
-          class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-primary-600 rounded hover:bg-primary-700 focus:outline-none focus:bg-primary-700"
-        >
-          Connexion
-        </button>
-      </div>
+          <input
+            v-model="form.password"
+            id="loggingPassword"
+            class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+            type="password"
+          />
+          <p
+            v-if="!passwordIsValid && passwordClick"
+            class="text-red-500 text-xs italic"
+          >
+            Veuillez rentrer un mot de passe (min 6) et (max 24)
+          </p>
+          <!--     <p v-if="" class="text-red-500 text-xs italic">
+            Email ou mot d epasse incorect
+          </p> -->
+        </div>
 
+        <div class="mt-6">
+          <button
+            class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-primary-600 rounded hover:bg-primary-700 focus:outline-none focus:bg-primary-700"
+          >
+            Connexion
+          </button>
+        </div>
+      </form>
       <div class="flex items-center justify-between mt-4">
         <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
 
@@ -114,8 +131,48 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-  layout: "auth"
+  layout: "auth",
+  data() {
+    return {
+      regMail: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
+      passwordClick: false,
+      mailClick: false,
+      form: {
+        email: "",
+        password: ""
+      },
+      err: ""
+    };
+  },
+  computed: {
+    mailIsValid() {
+      return this.regMail.test(this.form.email);
+    },
+    passwordIsValid() {
+      return this.form.password.length >= 6 && this.form.password.length <= 32;
+    },
+    formIsValid() {
+      return this.mailIsValid && this.passwordIsValid;
+    }
+  },
+  methods: {
+    ...mapActions({ login: "user/login" }),
+    async connexion() {
+      if (this.formIsValid) {
+        console.log(this.form);
+        const client = await this.login(this.form);
+        console.log(client);
+        if (client.data) {
+          console.log(client);
+          this.$router.push("/cart");
+        }
+      } else {
+        console.log("invalid form");
+      }
+    }
+  }
 };
 </script>
 

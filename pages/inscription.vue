@@ -185,12 +185,14 @@ export default {
     }
   },
   methods: {
-    ...mapActions("user", ["register"]),
+    ...mapActions({ register: "user/register" }),
     async inscription() {
       if (this.formIsValid) {
+        console.log(this.form);
         const client = await this.register(this.form);
-        if (client) {
-          this.$router.push("/user");
+        if (client.data) {
+          console.log(client);
+          this.$router.push("/cart");
         }
       } else {
         console.log("invalid form");
