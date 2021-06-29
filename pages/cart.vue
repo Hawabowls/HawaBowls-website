@@ -1,211 +1,161 @@
 <template>
-  <section class="h-full md:h-screen bg-gray-300">
-    <div class="py-12">
-      <div
-        class="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg md:max-w-5xl"
-      >
-        <div class="md:flex ">
-          <div class="w-full p-4 px-5 py-5">
-            <div class="md:grid md:grid-cols-3 gap-2 ">
-              <div class="col-span-2 p-5">
-                <h1 class="text-xl font-medium ">Panier</h1>
-                <div
-                  v-for="p in cart"
-                  :key="p.name"
-                  class="flex justify-between items-center mt-6 pt-6"
-                >
-                  <div class="flex items-center">
-                    <img
-                      :src="require('~/assets/img/plat/' + p.image + '.jpg')"
-                      width="60"
-                      class="rounded-full "
-                    />
-                    <div class="flex flex-col ml-3">
-                      <span class="md:text-md font-medium">{{ p.name }}</span>
-                      <span class="text-xs font-light text-gray-400"
-                        >#{{ p._id }}</span
-                      >
-                    </div>
-                  </div>
-                  <div class="flex justify-center items-center">
-                    <div class="pr-8 flex ">
-                      <span class="font-semibold">-</span>
-                      <input
-                        type="text"
-                        class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
-                        v-model="p.quantity"
-                      />
-                      <span class="font-semibold">+</span>
-                    </div>
-                    <div class="pr-8 ">
-                      <span class="text-xs font-medium">€{{ p.price }}</span>
-                    </div>
-                    <div><i class="fa fa-close text-xs font-medium"></i></div>
-                  </div>
-                </div>
-                <!-- <div
-                  class="flex justify-between items-center pt-6 mt-6 border-t"
-                >
-                  <div class="flex items-center">
-                    <img
-                      src="https://i.imgur.com/Uv2Yqzo.jpg"
-                      width="60"
-                      class="rounded-full "
-                    />
-                    <div class="flex flex-col ml-3 ">
-                      <span class="text-md font-medium w-auto">Po'alua</span>
-                      <span class="text-xs font-light text-gray-400"
-                        >#66999</span
-                      >
-                    </div>
-                  </div>
-                  <div class="flex justify-center items-center">
-                    <div class="pr-8 flex">
-                      <span class="font-semibold">-</span>
-                      <input
-                        type="text"
-                        class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2"
-                        value="1"
-                      />
-                      <span class="font-semibold">+</span>
-                    </div>
-                    <div class="pr-8">
-                      <span class="text-xs font-medium">€10.50</span>
-                    </div>
-                    <div><i class="fa fa-close text-xs font-medium"></i></div>
-                  </div>
-                </div> -->
-                <div
-                  class="flex justify-between items-center mt-6 pt-6 border-t"
-                >
-                  <div class="flex items-center">
-                    <i class="fa fa-arrow-left text-sm pr-2"></i>
-                    <span class="text-md font-medium text-blue-500"
-                      >Continuer à choisir</span
-                    >
-                  </div>
-                  <div class="flex justify-center items-end">
-                    <span class="text-sm font-medium my-auto text-gray-400 mr-1"
-                      >Sous-total:</span
-                    >
-                    <span class="text-lg font-bold text-gray-800 ">
-                      €{{ total }}</span
-                    >
-                  </div>
-                </div>
+  <section class="bg-gray-200">
+    <div class="container mx-auto mt-10">
+      <div class="flex flex-wrap shadow-md my-10">
+        <div class="w-full md:w-3/4 bg-white px-10 py-10">
+          <div class="flex justify-between border-b pb-8">
+            <h1 class="font-semibold text-2xl">Panier Click n Collect</h1>
+            <h2 class="font-semibold text-2xl">3 Items</h2>
+          </div>
+          <div class="flex mt-10 mb-5">
+            <h3
+              class="font-semibold text-gray-600 text-xs uppercase w-3/5 sm:w-2/5"
+            >
+              Details du produit
+            </h3>
+            <h3
+              class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center"
+            >
+              Quantité
+            </h3>
+            <h3
+              class="hidden sm:block font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center"
+            >
+              Prix
+            </h3>
+            <h3
+              class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center"
+            >
+              Total
+            </h3>
+          </div>
+          <div
+            v-for="item in cart"
+            :key="item.name"
+            class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5"
+          >
+            <div class="flex w-3/5 sm:w-2/5">
+              <!-- product -->
+              <div class="w-20">
+                <img class="h-24" :src="item.image" alt="" />
               </div>
-              <div class=" p-5 bg-gray-800 rounded overflow-visible">
-                <span class="text-xl font-medium text-gray-100 block pb-3"
-                  >Card Details</span
-                >
-                <span class="text-xs text-gray-400 ">Card Type</span>
-                <div
-                  class="overflow-visible flex justify-between items-center mt-2"
-                >
-                  <div
-                    class="rounded w-52 h-28 bg-gray-500 py-2 px-4 relative right-10"
-                  >
-                    <span
-                      class="italic text-lg font-medium text-gray-200 underline"
-                      >VISA</span
-                    >
-                    <div class="flex justify-between items-center pt-4 ">
-                      <span class="text-xs text-gray-200 font-medium"
-                        >****</span
-                      >
-                      <span class="text-xs text-gray-200 font-medium"
-                        >****</span
-                      >
-                      <span class="text-xs text-gray-200 font-medium"
-                        >****</span
-                      >
-                      <span class="text-xs text-gray-200 font-medium"
-                        >****</span
-                      >
-                    </div>
-                    <div class="flex justify-between items-center mt-3">
-                      <span class="text-xs text-gray-200"
-                        >Giga Tamarashvili</span
-                      >
-                      <span class="text-xs text-gray-200">12/18</span>
-                    </div>
-                  </div>
-                  <div class="flex justify-center items-center flex-col">
-                    <img
-                      src="https://img.icons8.com/color/96/000000/mastercard-logo.png"
-                      width="40"
-                      class="relative right-5"
-                    />
-                    <span
-                      class="text-xs font-medium text-gray-200 bottom-2 relative right-5"
-                      >mastercard.</span
-                    >
-                  </div>
-                </div>
-                <div class="flex justify-center flex-col pt-3">
-                  <label class="text-xs text-gray-400 ">Name on Card</label>
-                  <input
-                    type="text"
-                    class="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"
-                    placeholder="Giga Tamarashvili"
-                  />
-                </div>
-                <div class="flex justify-center flex-col pt-3">
-                  <label class="text-xs text-gray-400 ">Card Number</label>
-                  <input
-                    type="text"
-                    class="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"
-                    placeholder="**** **** **** ****"
-                  />
-                </div>
-                <div class="grid grid-cols-3 gap-2 pt-2 mb-3">
-                  <div class="col-span-2 ">
-                    <label class="text-xs text-gray-400">Expiration Date</label>
-                    <div class="grid grid-cols-2 gap-2">
-                      <input
-                        type="text"
-                        class="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"
-                        placeholder="mm"
-                      />
-                      <input
-                        type="text"
-                        class="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"
-                        placeholder="yyyy"
-                      />
-                    </div>
-                  </div>
-                  <div class="">
-                    <label class="text-xs text-gray-400">CVV</label>
-                    <input
-                      type="text"
-                      class="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4"
-                      placeholder="XXX"
-                    />
-                  </div>
-                </div>
+              <div class="flex flex-col justify-between ml-4 flex-grow">
+                <span class="font-bold text-sm">{{ item.name }}</span>
+                <span class="text-red-500 text-xs">{{ item.category }}</span>
                 <button
-                  class="h-12 w-full bg-primary-400 rounded focus:outline-none text-white hover:bg-primary-600"
+                  @click="remove(item)"
+                  class="font-semibold hover:text-red-500 text-gray-500 text-xs"
                 >
-                  Payer en Ligne
+                  Remove
                 </button>
               </div>
             </div>
+            <div class="flex justify-center w-1/5">
+              <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+                <path
+                  d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                />
+              </svg>
+
+              <input
+                class="mx-2 border px-1 text-center w-8"
+                type="text"
+                v-model="item.quantity"
+              />
+
+              <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+                <path
+                  d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                />
+              </svg>
+            </div>
+            <span
+              class="hidden sm:block text-center w-1/5 font-semibold text-sm"
+              >{{ item.price }}</span
+            >
+            <span class="text-center w-1/5 font-semibold text-sm">{{
+              priceItem(item._id)
+            }}</span>
+          </div>
+
+          <nuxt-link
+            to="/plats"
+            class="flex font-semibold text-indigo-600 text-sm mt-10"
+          >
+            <svg
+              class="fill-current mr-2 text-indigo-600 w-4"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"
+              />
+            </svg>
+            Continue Shopping
+          </nuxt-link>
+        </div>
+
+        <div id="summary" class="bg-primary-500 w-full md:w-1/4 px-8 py-10">
+          <h1 class="font-semibold text-gray-100 text-2xl border-b pb-8">
+            Résume du panier
+          </h1>
+
+          <div class="py-10">
+            <label
+              for="promo"
+              class="font-semibold inline-block mb-3 text-gray-100 text-sm uppercase"
+              >Code Promo</label
+            >
+            <input
+              type="text"
+              id="promo"
+              placeholder="Entrer cotre code"
+              class="p-2 text-sm rounded-lg w-full"
+            />
+          </div>
+          <button
+            class="bg-red-500 hover:bg-red-600 px-5 py-2 rounded-lg text-sm text-white uppercase"
+          >
+            Appliquer
+          </button>
+          <div class="border-t mt-8">
+            <div
+              class="flex font-semibold justify-between py-6 text-gray-100 text-sm uppercase"
+            >
+              <span>Total cost</span>
+              <span class="text-white">{{ total }}</span>
+            </div>
+            <button
+              class="bg-accent-500 font-semibold hover:bg-indigo-600 py-3 rounded-lg text-sm text-white uppercase w-full"
+            >
+              Checkout
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </section></template
->
+  </section>
+</template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   layout: "user",
+  middleware: "auth",
   computed: {
     cart() {
       return this.$store.getters["cart/getCart"];
     },
     total() {
       return this.$store.getters["cart/getCartTotal"];
+    },
+    priceItem(item) {
+      return this.$store.getters["cart/getTotalItemPrice"](item);
+    }
+  },
+  methods: {
+    ...mapMutations("cart", ["removeItem"]),
+    remove(item) {
+      this.removeItem(item);
     }
   }
 };
