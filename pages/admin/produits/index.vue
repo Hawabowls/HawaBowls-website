@@ -49,9 +49,7 @@
                         <div class="flex-shrink-0 h-10 w-10">
                           <img
                             class="h-10 w-10 rounded-full"
-                            :src="
-                              require('~/assets/img/plat/' + p.image + '.jpg')
-                            "
+                            :src="p.image"
                             alt=""
                           />
                         </div>
