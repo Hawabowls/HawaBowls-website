@@ -131,10 +131,10 @@
               id malesuada non. Cras aliquet purus dui laoreet diam sed lacus,
               fames.
             </p>
-            <a
+            <nuxt-link
               class="block w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base font-medium text-indigo-700 hover:bg-gray-50 sm:inline-block sm:w-auto"
-              href="#"
-              >Contactez-nous</a
+              to="/contact"
+              >Contactez-nous</nuxt-link
             >
           </div>
         </div>
