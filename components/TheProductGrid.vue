@@ -4,7 +4,7 @@
       <div class="h-72 w-full bg-primary-200">
         <img
           class="h-full w-full object-cover"
-          src="http://2020.pokebar.fr/wp-content/uploads/2020/09/2poke-bar-pois-ingredients.jpg"
+          src="https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1625045697/Hawabowls/site_media/2poke-bar-pois-ingredients_hcov4p.jpg"
           alt=""
         />
       </div>
@@ -24,13 +24,15 @@
       </div>
       <div class="h-72 w-full bg-primary-300">
         <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+          class="order-2 h-full w-full object-cover"
+          src="https://res.cloudinary.com/hawabowls/image/upload/v1625045680/Hawabowls/site_media/photo-1605027990121-cbae9e0642df_myoecs.jpg"
           alt=""
         />
       </div>
       <div
         class="
+        order-last
+        sm:order-none
           h-72
           w-full
           bg-primary-100
@@ -76,13 +78,13 @@
       <div class="hidden lg:block h-72 w-full bg-primary-600">
         <img
           class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1589753014594-0676c69bbcbe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFkaXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          src="https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1625045731/Hawabowls/site_media/photo-1589753014594-0676c69bbcbe_zjiyev.jpg"
           alt=""
         />
       </div>
-      <div class="h-72 w-full bg-primary-700">
+      <div class=" sm:order-none h-72 w-full bg-primary-700">
         <img
-          src="http://2020.pokebar.fr/wp-content/uploads/2020/10/poke-bar-recette-3.gif"
+          src="https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1625045750/Hawabowls/site_media/poke-bar-recette-3_hx72zy.gif"
           alt="Image"
           class="h-full w-full object-cover"
         />
@@ -90,7 +92,7 @@
       <div class="h-72 w-full bg-primary-700">
         <img
           class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1587883012610-e3df17d41270?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          src="https://res.cloudinary.com/hawabowls/image/upload/v1625045762/Hawabowls/site_media/photo-1587883012610-e3df17d41270_rhvtvz.jpg"
           alt=""
         />
       </div>
