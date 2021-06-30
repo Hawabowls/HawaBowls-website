@@ -616,7 +616,7 @@ export default {
         },
 
         {
-          nom: "Pke Personnalisé",
+          nom: "Poke Personnalisé",
           image:
             "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624885059/Hawabowls/site_media/Po_alima_eq9yob.webp",
           desc:
@@ -733,18 +733,11 @@ export default {
       @apply transform scale-150;
     }
   }
-  &:hover {
-    @apply transform -translate-y-3;
-  }
 }
 
 .card-container {
   @apply flex flex-col justify-center items-center overflow-hidden;
   -webkit-overflow-scrolling: touch;
-
-  & ::-webkit-scrollbar {
-    display: none !important;
-  }
 }
 
 .card-image {
@@ -766,11 +759,11 @@ export default {
     &:hover {
       @apply opacity-100;
       & > * {
-        @apply transform translate-y-0;
+        @apply transform -translate-y-3;
       }
     }
     & > * {
-      @apply transition duration-300 transform translate-y-9;
+      @apply transition duration-300 transform translate-y-4;
     }
   }
 }

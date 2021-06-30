@@ -20,6 +20,12 @@ export default {
   css: [
   ],
 
+  render: {
+    static: {
+      maxAge: 1000 * 60 * 60 * 24 * 7
+    }
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/VueSplide.js', mode: 'client' },
