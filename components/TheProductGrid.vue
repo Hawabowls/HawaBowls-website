@@ -84,7 +84,7 @@
       </div>
       <div class=" sm:order-none h-72 w-full bg-primary-700">
         <img
-          src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,q_70,h_300/v1625045750/Hawabowls/site_media/poke-bar-recette-3_hx72zy.gif"
+          src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,q_70,h_300/v1625063622/Hawabowls/site_media/poke-bar-recette-3_hx72zy_yzwutr.gif"
           alt="Image"
           class="h-full w-full object-cover"
         />
