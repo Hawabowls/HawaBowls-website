@@ -9,7 +9,7 @@
         </div>
         <div class="sm:hidden">
           <button
-            class="block p-1  text-primary-500 hover:text-white active:text-white focus:outline-none"
+            class="block p-1  text-white hover:text-accent-500 active:text-white focus:outline-none"
             @click="isOpen = !isOpen"
           >
             <svg
