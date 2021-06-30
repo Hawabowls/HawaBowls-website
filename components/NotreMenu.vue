@@ -80,7 +80,7 @@
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
             src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
-            alt=""
+            alt="photo de poke"
           />
         </div>
         <div class="mt-4 grid grid-cols-2 gap-8">
@@ -115,8 +115,8 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-              alt=""
+              src="https://res.cloudinary.com/hawabowls/image/upload/q_80/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp"
+              alt="photo dessert"
             />
           </div>
           <div
@@ -150,8 +150,8 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-              alt=""
+              src="https://res.cloudinary.com/hawabowls/image/upload/q_80/v1625061345/Hawabowls/site_media/photo-1603046891726-36bfd957e0bf_nuwy0z.webp"
+              alt="photo entrée"
             />
           </div>
           <div
@@ -184,7 +184,7 @@
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
               src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
-              alt=""
+              alt="photo de bubble tea"
             />
           </div>
           <div
@@ -216,8 +216,8 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
-              alt=""
+              src="https://res.cloudinary.com/hawabowls/image/upload/q_80/v1625062803/Hawabowls/site_media/boisson_rrt0tg.webp"
+              alt="image de boisson"
             />
           </div>
         </div>

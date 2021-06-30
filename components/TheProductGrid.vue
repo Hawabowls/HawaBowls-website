@@ -4,7 +4,7 @@
       <div class="h-72 w-full bg-primary-200">
         <img
           class="h-full w-full object-cover"
-          src="https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1625045697/Hawabowls/site_media/2poke-bar-pois-ingredients_hcov4p.jpg"
+          src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,q_70,h_300/v1625045697/Hawabowls/site_media/2poke-bar-pois-ingredients_hcov4p.webp"
           alt=""
         />
       </div>
@@ -25,7 +25,7 @@
       <div class="h-72 w-full bg-primary-300">
         <img
           class="order-2 h-full w-full object-cover"
-          src="https://res.cloudinary.com/hawabowls/image/upload/v1625045680/Hawabowls/site_media/photo-1605027990121-cbae9e0642df_myoecs.jpg"
+          src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,q_70,h_300/v1625045680/Hawabowls/site_media/photo-1605027990121-cbae9e0642df_myoecs.webp"
           alt=""
         />
       </div>
@@ -78,13 +78,13 @@
       <div class="hidden lg:block h-72 w-full bg-primary-600">
         <img
           class="h-full w-full object-cover"
-          src="https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1625045731/Hawabowls/site_media/photo-1589753014594-0676c69bbcbe_zjiyev.jpg"
+          src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,q_70,h_300/v1625045731/Hawabowls/site_media/photo-1589753014594-0676c69bbcbe_zjiyev.webp"
           alt=""
         />
       </div>
       <div class=" sm:order-none h-72 w-full bg-primary-700">
         <img
-          src="https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1625045750/Hawabowls/site_media/poke-bar-recette-3_hx72zy.gif"
+          src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,q_70,h_300/v1625045750/Hawabowls/site_media/poke-bar-recette-3_hx72zy.gif"
           alt="Image"
           class="h-full w-full object-cover"
         />
@@ -92,7 +92,7 @@
       <div class="h-72 w-full bg-primary-700">
         <img
           class="h-full w-full object-cover"
-          src="https://res.cloudinary.com/hawabowls/image/upload/v1625045762/Hawabowls/site_media/photo-1587883012610-e3df17d41270_rhvtvz.jpg"
+          src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,q_70,h_300/v1625045762/Hawabowls/site_media/photo-1587883012610-e3df17d41270_rhvtvz.webp"
           alt=""
         />
       </div>
