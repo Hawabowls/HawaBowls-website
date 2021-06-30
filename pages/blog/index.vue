@@ -1,8 +1,11 @@
 <template>
   <main>
     <section class="h-full w-full px-4 space-y-6">
-      <card-article></card-article>
-      <card-article></card-article>
+      <card-article
+        v-for="a in articles"
+        :key="a.title"
+        article="a"
+      ></card-article>
 
       <!-- This example requires Tailwind CSS v2.0+ -->
     </section>
@@ -12,7 +15,12 @@
 <script>
 import CardArticle from "~/components/blog/CardArticle.vue";
 export default {
-  components: { CardArticle }
+  components: { CardArticle },
+  data() {
+    return {
+      articles: [{ titre: "", desc: "", content: "", cover: ["", ""] }]
+    };
+  }
 };
 </script>
 

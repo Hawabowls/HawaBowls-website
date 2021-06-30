@@ -130,42 +130,57 @@
               </div>
             </div>
             <div class="mt-5 sm:mt-6 flex justify-between">
-              <button
-                class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
+              <nuxt-link
+                to="https://deliveroo.fr/fr/menu/nantes/nantes-centre/hawabowls"
               >
-                <img
-                  src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c520.png"
-                  class="w-full h-full object-contain object-center"
-                  alt=""
-                />
-              </button>
-              <button
-                class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
+                <button
+                  class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
+                >
+                  <img
+                    src="https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1625044099/Hawabowls/site_media/580b57fcd9996e24bc43c520_gndvnu.png"
+                    class="w-full h-full object-contain object-center"
+                    alt=""
+                  />
+                </button>
+              </nuxt-link>
+              <nuxt-link
+                to="https://www.ubereats.com/fr/store/hawabowls/NZJOMgp5RmuRG7wmvj_tPQ"
               >
-                <img
-                  src="https://logos-marques.com/wp-content/uploads/2021/03/Uber-Eats-Logo-2017.png"
-                  class="w-full h-full object-contain object-center"
-                  alt=""
-                />
-              </button>
-              <button
-                class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
+                <button
+                  class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
+                >
+                  <img
+                    src="https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1625044139/Hawabowls/site_media/Uber-Eats-Logo-2017_cebhyl.png"
+                    class="w-full h-full object-contain object-center"
+                    alt=""
+                  />
+                </button>
+              </nuxt-link>
+
+              <nuxt-link
+                to="https://naofood.coopcycle.org/fr/restaurant/58-hawa-bowls"
               >
-                <img
-                  src="https://naofood.fr/logos/NaoBlanc.png"
-                  class="w-full h-full object-contain object-center"
-                  alt=""
-                />
-              </button>
-              <button
-                class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
-              >
-                <img
-                  src="https://logo-marque.com/wp-content/uploads/2021/03/Just-Eat-Logo.png"
-                  class="w-full h-full object-contain object-center"
-                  alt=""
-                />
-              </button>
+                <button
+                  class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
+                >
+                  <img
+                    src="https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1625044160/Hawabowls/site_media/NaoBlanc_fcyncx.png"
+                    class="w-full h-full object-contain object-center"
+                    alt=""
+                  />
+                </button>
+              </nuxt-link>
+              <nuxt-link to="https://www.just-eat.fr/en/menu/hawa-bowls">
+                <button
+                  class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
+                >
+                  <img
+                    src="https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1625044290/Hawabowls/site_media/Just-Eat-Logo_xh6bur.png"
+                    class="w-full h-full object-contain object-center"
+                    alt=""
+                  />
+                </button>
+              </nuxt-link>
             </div>
           </div>
           <div v-if="emporter">

@@ -54,7 +54,9 @@
             group
             hover:bg-white
             relative
-            card
+           w-full
+           max-w-md
+           h-36
             cursor-pointer
             shadow-lg
             rounded-full
@@ -81,9 +83,10 @@
             alt=""
           />
         </div>
-        <div
-          @click="toggle('entree')"
-          class="
+        <div class="mt-4 grid grid-cols-2 gap-8">
+          <div
+            @click="toggle('dessert')"
+            class="
             group
             hover:bg-white
             relative
@@ -96,9 +99,9 @@
             justify-center
             overflow-hidden
           "
-        >
-          <h3
-            class="
+          >
+            <h3
+              class="
               text-2xl
               lg:text-3xl
               font-bold
@@ -107,19 +110,18 @@
               text-accent-200
               z-10
             "
-          >
-            Petites <br />
-            faim
-          </h3>
-          <img
-            class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            alt=""
-          />
-        </div>
-        <div
-          @click="toggle('boisson')"
-          class="
+            >
+              Dessert
+            </h3>
+            <img
+              class="absolute h-full w-full group-hover:opacity-80 object-cover"
+              src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt=""
+            />
+          </div>
+          <div
+            @click="toggle('entree')"
+            class="
             group
             hover:bg-white
             relative
@@ -132,23 +134,92 @@
             justify-center
             overflow-hidden
           "
-        >
-          <h3
+          >
+            <h3
+              class="
+              text-2xl
+              lg:text-3xl
+              font-bold
+              text-center
+              leading-tight
+              text-accent-200
+              z-10
+            "
+            >
+              Entree
+            </h3>
+            <img
+              class="absolute h-full w-full group-hover:opacity-80 object-cover"
+              src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+              alt=""
+            />
+          </div>
+          <div
+            @click="toggle('boisson')"
             class="
+            group
+            hover:bg-white
+            relative
+            card
+            cursor-pointer
+            shadow-lg
+            rounded-full
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+          "
+          >
+            <h3
+              class="
               text-2xl
               lg:text-4xl
               font-bold
               text-center text-accent-200
               z-10
             "
+            >
+              Bubble tea
+            </h3>
+            <img
+              class="absolute h-full w-full group-hover:opacity-80 object-cover"
+              src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
+              alt=""
+            />
+          </div>
+          <div
+            @click="toggle('boisson')"
+            class="
+            group
+            hover:bg-white
+            relative
+            card
+            cursor-pointer
+            shadow-lg
+            rounded-full
+            flex
+            items-center
+            justify-center
+            overflow-hidden
+          "
           >
-            Boisson
-          </h3>
-          <img
-            class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
-            alt=""
-          />
+            <h3
+              class="
+              text-2xl
+              lg:text-4xl
+              font-bold
+              text-center text-accent-200
+              z-10
+            "
+            >
+              Boisson
+            </h3>
+            <img
+              class="absolute h-full w-full group-hover:opacity-80 object-cover"
+              src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -194,7 +265,98 @@
 
         <div class="card-image" @click="sendDish(dish)">
           <img
-            :src="require('~/assets/img/plat/' + dish.image + '.png')"
+            :src="dish.image"
+            :alt="dish.name"
+            class="image pointer-events-none"
+          />
+          <div class="image-overlay">
+            <p
+              class="
+                text-2xl
+                lg:text-3xl
+                font-bold
+                text-center
+                leading-tight
+                text-accent-200
+              "
+            >
+              {{ dish.nom }}
+            </p>
+
+            <p
+              class="text-md
+                font-bold
+                text-center
+                leading-tight
+                text-accent-100"
+            >
+              {{ dish.desc }}
+            </p>
+          </div>
+        </div>
+
+        <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        <modal
+          v-if="isModal && selectionedDish"
+          @close-modal="changeValue"
+          :item="selectionedDish"
+        ></modal>
+      </li>
+
+      <!-- More files... -->
+    </ul>
+    <ul
+      v-if="boisson"
+      role="list"
+      class="
+        grid grid-cols-2
+        gap-x-4 gap-y-8
+        sm:grid-cols-3
+        mx-auto
+        sm:gap-x-6
+        lg:grid-cols-5
+        mt-4
+        xl:gap-x-8
+      "
+    >
+      <li class="relative" v-for="dish in boissons" :key="dish.nom">
+        <!--  <div
+            class="
+              group
+              block
+              w-full
+              rounded-lg
+              t
+              bg-gray-100
+              focus-within:ring-2
+              focus-within:ring-offset-2
+              focus-within:ring-offset-gray-100
+              focus-within:ring-indigo-500
+              overflow-hidden
+            "
+          >
+            <img
+              :src="require('~/assets/img/plat/' + dish.image + '.jpg')"
+              alt=""
+              class="object-fill pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
+          </div> -->
+
+        <div class="card-image" @click="sendDish(dish)">
+          <img
+            :src="dish.image"
             :alt="dish.image"
             class="image pointer-events-none"
           />
@@ -234,7 +396,7 @@
       <!-- More files... -->
     </ul>
     <ul
-      v-if="boisson"
+      v-if="dessert"
       role="list"
       class="
         grid grid-cols-2
@@ -247,7 +409,7 @@
         xl:gap-x-8
       "
     >
-      <li class="relative" v-for="dish in boissons" :key="dish.nom">
+      <li class="relative" v-for="dish in desserts" :key="dish.nom">
         <!--  <div
             class="
               group
@@ -356,8 +518,8 @@
 
         <div class="card-image" @click="sendDish(dish)">
           <img
-            :src="require('~/assets/img/plat/' + dish.image + '.png')"
-            :alt="dish.image"
+            :src="dish.image"
+            :alt="dish.name"
             class="image pointer-events-none"
           />
           <div class="image-overlay">
@@ -409,25 +571,29 @@ export default {
       boisson: false,
       isModal: false,
       entree: false,
+      dessert: false,
 
       plats: [
         {
           nom: "Po'Akahi",
-          image: "Po'akahi",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1624885061/Hawabowls/site_media/Po_akahi_mmos8w.png",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
           allergene: ""
         },
         {
           nom: "Po'Alua",
-          image: "Po'alua",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1624885060/Hawabowls/site_media/Po_alua_ghk1cw.png",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         },
         {
           nom: "Po'Akolu",
-          image: "Po'akolu",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1624885059/Hawabowls/site_media/Po_akolu_vqa7sx.png",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
@@ -441,7 +607,8 @@ export default {
         },
         {
           nom: "Po'Alima",
-          image: "Po'alima",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1624885059/Hawabowls/site_media/Po_alima_eq9yob.png",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
@@ -462,26 +629,41 @@ export default {
           allergene: ""
         }
       ],
+      desserts: [
+        {
+          nom: "Moelleux au chocolat",
+          image: "",
+          desc: "",
+          allergene: ""
+        },
+        {
+          nom: "Shia",
+          image: "",
+          desc: "",
+          allergene: ""
+        }
+      ],
+
       boissons: [
         { nom: "Bubble tea", image: "Po'alima", desc: "", allergene: "" },
         {
           nom: "Tensai thé Blanc",
           image:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1624875437/Hawabowls/site_media/Th%C3%A9_blanc_myrtille_aiudjf.png",
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1624875437/Hawabowls/site_media/Th%C3%A9_blanc_myrtille_aiudjf.png",
           desc: "",
           allergene: ""
         },
         {
           nom: "Tensai matcha ",
           image:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1624875440/Hawabowls/site_media/th%C3%A9_matcha_menthe_poivre_s59msu.png",
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1624875440/Hawabowls/site_media/th%C3%A9_matcha_menthe_poivre_s59msu.png",
           desc: "",
           allergene: ""
         },
         {
           nom: "Tensai thé vert",
           image:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_auto/v1624884679/Hawabowls/site_media/Th%C3%A9_vert_citron_zavocf.png",
+            "https://res.cloudinary.com/hawabowls/image/upload/q_auto:eco/v1624884679/Hawabowls/site_media/Th%C3%A9_vert_citron_zavocf.png",
           desc: "",
           allergene: ""
         }
@@ -503,6 +685,12 @@ export default {
       }
       if (section == "boisson") {
         this.boisson = !this.boisson;
+        this.poke = false;
+        this.entree = false;
+      }
+      if (section == "dessert") {
+        this.dessert = !this.dessert;
+        this.boisson = false;
         this.poke = false;
         this.entree = false;
       }
@@ -537,13 +725,9 @@ export default {
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  @apply flex flex-col justify-center items-center overflow-hidden;
   -webkit-overflow-scrolling: touch;
-  overflow-x:auto @screen sm {
-    overflow: hidden;
-  }
+
   & ::-webkit-scrollbar {
     display: none !important;
   }
@@ -563,7 +747,7 @@ export default {
     }
   }
   .image-overlay {
-    @apply absolute top-0 left-0 w-full h-full bg-primary-700 bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-500;
+    @apply absolute top-0 left-0 w-full h-full bg-primary-700 bg-opacity-60 flex flex-col items-center justify-center opacity-0 transition-opacity duration-500;
 
     &:hover {
       @apply opacity-100;

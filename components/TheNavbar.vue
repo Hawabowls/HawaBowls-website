@@ -3,11 +3,9 @@
     <nav class="sm:flex py-3 sm:justify-between items-center px-3">
       <div class="flex justify-between ">
         <div>
-          <img
-            src="img/Logo_transparent.png"
-            class="object-cover h-10"
-            alt=""
-          />
+          <nuxt-link to="/">
+            <img src="img/Logo_transparent.png" class="object-cover h-10" alt=""
+          /></nuxt-link>
         </div>
         <div class="sm:hidden">
           <button

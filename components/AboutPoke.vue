@@ -71,6 +71,7 @@
           >
             <div class="relative pb-3/4  inset-x-0 rounded overflow-hidden">
               <video
+                playsinline
                 loop
                 muted
                 autoplay
