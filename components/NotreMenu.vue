@@ -613,6 +613,15 @@ export default {
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
+        },
+
+        {
+          nom: "Pke Personnalisé",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624885059/Hawabowls/site_media/Po_alima_eq9yob.webp",
+          desc:
+            "Choissisez vous mêmes les ingrédients qui composeront votre poké parmi nos base, veggies, protéine, toopings et sauce",
+          allergene: ""
         }
       ],
 
@@ -632,6 +641,7 @@ export default {
           allergene: ""
         }
       ],
+      bubble: [{}],
       desserts: [
         {
           nom: "Moelleux au chocolat",
