@@ -224,6 +224,8 @@
       </div>
     </div>
     <ul
+      ref="pokebowls-1"
+      id="pokebowls"
       v-if="poke"
       role="list"
       class="
@@ -315,6 +317,7 @@
       <!-- More files... -->
     </ul>
     <ul
+      id="boisson"
       v-if="boisson"
       role="list"
       class="
@@ -396,6 +399,7 @@
       <!-- More files... -->
     </ul>
     <ul
+      id="dessert"
       v-if="dessert"
       role="list"
       class="
@@ -477,6 +481,7 @@
       <!-- More files... -->
     </ul>
     <ul
+      id="entree"
       v-if="entree"
       role="list"
       class="
@@ -616,9 +621,9 @@ export default {
         },
 
         {
-          nom: "Poke Personnalisé",
+          nom: "Création Poké ",
           image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624885059/Hawabowls/site_media/Po_alima_eq9yob.webp",
+            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1625124516/Hawabowls/site_media/c4f117b3-e7de-4729-8e14-ff6ff3461dba_vqylzt.webp",
           desc:
             "Choissisez vous mêmes les ingrédients qui composeront votre poké parmi nos base, veggies, protéine, toopings et sauce",
           allergene: ""
@@ -686,23 +691,33 @@ export default {
     };
   },
   methods: {
+    showCurrent(index) {
+      this.$refs[index].scrollIntoView();
+    },
     toggle(section) {
       if (section == "poke") {
+        this.showCurrent("pokebowls-1");
         this.poke = !this.poke;
         this.entree = false;
         this.boisson = false;
+        this.dessert = false;
       }
       if (section == "entree") {
+        /*   this.showCurrent("entree"); */
         this.entree = !this.entree;
         this.poke = false;
         this.boisson = false;
+        this.dessert = false;
       }
       if (section == "boisson") {
+        this.showCurrent("boisson");
         this.boisson = !this.boisson;
         this.poke = false;
         this.entree = false;
+        this.dessert = false;
       }
       if (section == "dessert") {
+        this.showCurrent("dessert");
         this.dessert = !this.dessert;
         this.boisson = false;
         this.poke = false;

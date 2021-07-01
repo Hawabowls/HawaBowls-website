@@ -144,7 +144,7 @@
               <div class="mb-8">
                 <img
                   class="rounded shadow-md"
-                  src="~assets/img/grid/little2.jpg"
+                  src="https://res.cloudinary.com/hawabowls/image/upload/q_auto,w_300,h-300/v1625064973/Hawabowls/site_media/little2_wvgbpa.webp"
                   alt=""
                 />
               </div>
@@ -184,7 +184,7 @@ export default {
 }
 
 .b {
-  background-image: url("~assets/img/grid/big.jpg");
+  background-image: url("https://res.cloudinary.com/hawabowls/image/upload/q_80,h_1000,w_700/v1625064932/Hawabowls/site_media/big_m6lwek.jpg");
   @apply bg-center;
 }
 </style>

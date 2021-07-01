@@ -52,7 +52,7 @@
             "
           >
             <source
-              src="https://res.cloudinary.com/hawabowls/video/upload/q_auto/v1624872794/Hawabowls/site_media/hawai-bowls-stop-motion_rygirv.mp4"
+              src="https://res.cloudinary.com/hawabowls/video/upload/q_80/v1624872794/Hawabowls/site_media/hawai-bowls-stop-motion_rygirv.mp4"
               type="video/mp4"
             />
           </video>
@@ -94,21 +94,21 @@
             <div class="hidden md:block card-i">
               <img
                 class="h-full w-full object-cover"
-                src="~assets/img/grid/little1.jpg"
+                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064947/Hawabowls/site_media/little1_krbbq0.webp"
                 alt=""
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover object-start"
-                src="~assets/img/grid/little2.jpg"
+                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064973/Hawabowls/site_media/little2_wvgbpa.webp"
                 alt=""
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover"
-                src="~assets/img/grid/little3.jpg"
+                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064999/Hawabowls/site_media/little3_bcm8ub.webp"
                 alt=""
               />
             </div>
@@ -147,7 +147,7 @@ export default {};
     .big {
       border-radius: 0.5rem;
       height: 100%;
-      background-image: url("~assets/img/grid/big.jpg");
+      background-image: url("https://res.cloudinary.com/hawabowls/image/upload/q_80,h_1000,w_700/v1625064932/Hawabowls/site_media/big_m6lwek.webp");
       background-size: cover;
       background-position: center;
     }
