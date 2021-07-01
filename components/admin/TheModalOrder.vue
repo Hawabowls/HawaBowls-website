@@ -105,14 +105,14 @@
           >
             Livraison
           </button>
-          <nuxt-link to="/plats" class="w-full sm:w-1/2">
+          <a to="/plats" class="w-full sm:w-1/2">
             <button
               disabled
               class="inline-flex text-white items-center text-3xl justify-center bg-accent-400 w-full rounded-lg p-2 m-1 hover:bg-accent-300 focus:outline-none"
             >
               Click and collect (Bientot)
             </button>
-          </nuxt-link>
+          </a>
         </div>
         <div class="mt-5 sm:mt-6 flex justify-center">
           <div v-if="livraison">
@@ -130,8 +130,8 @@
               </div>
             </div>
             <div class="mt-5 sm:mt-6 flex justify-between">
-              <nuxt-link
-                to="https://deliveroo.fr/fr/menu/nantes/nantes-centre/hawabowls"
+              <a
+                href="https://deliveroo.fr/fr/menu/nantes/nantes-centre/hawabowls"
               >
                 <button
                   class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
@@ -142,9 +142,9 @@
                     alt=""
                   />
                 </button>
-              </nuxt-link>
-              <nuxt-link
-                to="https://www.ubereats.com/fr/store/hawabowls/NZJOMgp5RmuRG7wmvj_tPQ"
+              </a>
+              <a
+                href="https://www.ubereats.com/fr/store/hawabowls/NZJOMgp5RmuRG7wmvj_tPQ"
               >
                 <button
                   class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
@@ -155,10 +155,10 @@
                     alt=""
                   />
                 </button>
-              </nuxt-link>
+              </a>
 
-              <nuxt-link
-                to="https://naofood.coopcycle.org/fr/restaurant/58-hawa-bowls"
+              <a
+                href="https://naofood.coopcycle.org/fr/restaurant/58-hawa-bowls"
               >
                 <button
                   class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
@@ -169,8 +169,8 @@
                     alt=""
                   />
                 </button>
-              </nuxt-link>
-              <nuxt-link to="https://www.just-eat.fr/en/menu/hawa-bowls">
+              </a>
+              <a href="https://www.just-eat.fr/en/menu/hawa-bowls">
                 <button
                   class="inline-flex justify-center bg-primary-400 w-20 h-20 rounded-full p-1"
                 >
@@ -180,7 +180,7 @@
                     alt=""
                   />
                 </button>
-              </nuxt-link>
+              </a>
             </div>
           </div>
           <div v-if="emporter">
