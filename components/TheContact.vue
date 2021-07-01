@@ -39,7 +39,7 @@
             >
               <img
                 class="object-cover object-center rounded-3xl shadow-2xl"
-                src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80"
+                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_400,h_670/v1625128781/Hawabowls/site_media/photo-1507207611509-ec012433ff52_ksfy2u.webp"
                 alt="personne entrain de discuter"
               />
             </div>

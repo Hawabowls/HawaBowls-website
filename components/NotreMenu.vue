@@ -79,7 +79,7 @@
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1625124516/Hawabowls/site_media/c4f117b3-e7de-4729-8e14-ff6ff3461dba_vqylzt.webp"
+            src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_80,w_520/v1625124516/Hawabowls/site_media/c4f117b3-e7de-4729-8e14-ff6ff3461dba_vqylzt.webp"
             alt="photo de poke"
           />
         </div>
@@ -234,7 +234,8 @@
         sm:grid-cols-3
         mx-auto
         sm:gap-x-6
-        lg:grid-cols-4
+        lg:grid-cols-3
+        lg:px-32
         mt-4
         xl:gap-x-8
       "
@@ -697,7 +698,7 @@ export default {
     },
     toggle(section) {
       if (section == "poke") {
-        this.showCurrent("pokebowls-1");
+        /*   this.showCurrent("pokebowls-1"); */
         this.poke = !this.poke;
         this.entree = false;
         this.boisson = false;
