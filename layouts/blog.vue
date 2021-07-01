@@ -1,7 +1,5 @@
 <template>
   <div>
-    <the-hero></the-hero>
-
     <Nuxt />
     <the-footer></the-footer>
   </div>
