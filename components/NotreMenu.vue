@@ -29,11 +29,12 @@
         >
           Plongez dans nos bowl de fraicheur
         </p>
-        <p class="max-w-xl mt-5 mx-auto text-xl text-gray-200">
-          Vous avez envie de quelque chose de frais et d'healthy vous êtes à la
-          bonne addresses. Chez Hawabowls nous avons comme seul but de vous
-          offrir des produit frais. et sain. Le tout servi dans un belle ecrin
-          et accompagné dans grand sourire pour égyer votre journée.
+        <p class="max-w-2xl mt-5 mx-auto text-xl text-gray-200">
+          Savourez une cuisine métissée où la nourriture saine, le respect de la
+          Nature et la vie à la cool sont notre credo ! Avec une carte
+          clairement inspirée du soleil d’Hawaï, nous promettons à vos papilles
+          un voyage à l’autre bout du monde. Pokés Bowls, avocado toast, chia
+          bowls, bubble tea, jus bio... vous allez vous régaler !
         </p>
       </div>
       <div
