@@ -6,12 +6,12 @@
           <nuxt-link to="/">
             <img
               src="img/Logo_transparent.png"
-              class="hidden sm:block object-cover h-10"
+              class="hidden md:block object-cover h-10"
               alt=""
             />
             <img
-              src="img/Fichier 3.png"
-              class=" sm:hidden object-cover h-10"
+              src="img/Fichier 1.png"
+              class=" md:hidden object-cover h-10"
               alt=""
             />
           </nuxt-link>
