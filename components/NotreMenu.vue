@@ -30,10 +30,10 @@
           Plongez dans nos bowl de fraicheur
         </p>
         <p class="max-w-xl mt-5 mx-auto text-xl text-gray-200">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim a
-          labore quaerat odit possimus reprehenderit quisquam, amet tempore
-          consequatur excepturi obcaecati nobis aspernatur nisi incidunt
-          voluptates soluta rem distinctio.
+          Vous avez envie de quelque chose de frais et d'healthy vous êtes à la
+          bonne addresses. Chez Hawabowls nous avons comme seul but de vous
+          offrir des produit frais. et sain. Le tout servi dans un belle ecrin
+          et accompagné dans grand sourire pour égyer votre journée.
         </p>
       </div>
       <div
