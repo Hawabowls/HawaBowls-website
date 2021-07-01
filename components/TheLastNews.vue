@@ -83,7 +83,7 @@ export default {
         {
           id: 5,
           url:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_80,h_1000,w_700/v1625064932/Hawabowls/site_media/big_m6lwek.webp",
+            "https://res.cloudinary.com/hawabowls/image/upload/q_80,h_800,w_500/v1625064932/Hawabowls/site_media/big_m6lwek.webp",
           titre: "Poke Poke Poke",
           caption:
             "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",

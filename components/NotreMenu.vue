@@ -115,7 +115,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp"
+              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_420,h_300/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp"
               alt="photo dessert"
             />
           </div>
