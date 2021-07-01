@@ -11,7 +11,7 @@
             />
             <img
               src="img/Fichier 3.png"
-              class=" md:hidden object-cover h-10"
+              class=" sm:hidden object-cover h-10"
               alt=""
             />
           </nuxt-link>
