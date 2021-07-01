@@ -182,7 +182,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head: {
+    title: "Page de contact",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Si vous avez des idées de projet ou de partenariat dont vous aimeriez nous faire part. N'hésitez pas c'est par ici."
+      }
+    ]
+  }
+};
 </script>
 
 <style></style>
