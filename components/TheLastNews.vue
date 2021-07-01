@@ -40,28 +40,32 @@ export default {
       lastNews: [
         {
           id: 0,
-          url: "big",
+          url:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_80,h_1000,w_700/v1625064932/Hawabowls/site_media/big_m6lwek.webp",
           titre: "Hola que tal",
           caption: "Bienvenido",
           source: "blog"
         },
         {
           id: 1,
-          url: "little1",
+          url:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064947/Hawabowls/site_media/little1_krbbq0.webp",
           titre: "Poke Poke Poke",
           caption: "Belle journée",
           source: "instragram"
         },
         {
           id: 2,
-          url: "little3",
+          url:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064999/Hawabowls/site_media/little3_bcm8ub.webp",
           titre: "Hola que tal",
           caption: "envie d'un petit tensai",
           source: "instagram"
         },
         {
           id: 3,
-          url: "little2",
+          url:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064973/Hawabowls/site_media/little2_wvgbpa.webp",
           titre: "Poke Poke Poke",
           caption: "see big",
           source: "instragram"
@@ -69,7 +73,8 @@ export default {
 
         {
           id: 4,
-          url: "little1",
+          url:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064947/Hawabowls/site_media/little1_krbbq0.webp",
           titre: "Poke Poke Poke",
           caption:
             "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
@@ -77,7 +82,8 @@ export default {
         },
         {
           id: 5,
-          url: "big",
+          url:
+            "https://res.cloudinary.com/hawabowls/image/upload/q_80,h_1000,w_700/v1625064932/Hawabowls/site_media/big_m6lwek.webp",
           titre: "Poke Poke Poke",
           caption:
             "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",

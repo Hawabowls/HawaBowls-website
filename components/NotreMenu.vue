@@ -79,7 +79,7 @@
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://images.unsplash.com/photo-1604259597308-5321e8e4789c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1892&q=80"
+            src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1625124516/Hawabowls/site_media/c4f117b3-e7de-4729-8e14-ff6ff3461dba_vqylzt.webp"
             alt="photo de poke"
           />
         </div>
@@ -234,7 +234,7 @@
         sm:grid-cols-3
         mx-auto
         sm:gap-x-6
-        lg:grid-cols-5
+        lg:grid-cols-4
         mt-4
         xl:gap-x-8
       "
