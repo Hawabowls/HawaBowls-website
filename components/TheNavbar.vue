@@ -44,34 +44,43 @@
         </div>
       </div>
       <div id="mobile-menu" :class="isOpen ? 'block' : 'hidden'">
-        <nuxt-link class="nav-brand-link anima sm:hidden md:block" to="/"
-          >Accueil</nuxt-link
-        >
-        <nuxt-link
-          class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
-          to="#menu"
-          @click="isOpen = !isOpen"
-          >Menu</nuxt-link
-        >
-        <nuxt-link
-          class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
-          to="#commu"
-          @click="isOpen = !isOpen"
-          >Communanté</nuxt-link
-        >
-        <nuxt-link
-          class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
-          to="/Blog"
-          @click="isOpen = !isOpen"
-          >Blog</nuxt-link
-        >
-        <nuxt-link
-          class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link anima bg-opacity-60 "
-          to="/Contact"
-          @click="isOpen = !isOpen"
-          >Contact</nuxt-link
-        >
+        <div>
+          <nuxt-link class="nav-brand-link anima sm:hidden md:block" to="/"
+            >Accueil</nuxt-link
+          >
+        </div>
 
+        <div @click="isOpen = !isOpen">
+          <nuxt-link
+            class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
+            to="#menu"
+            >Menu</nuxt-link
+          >
+        </div>
+        <div @click="isOpen = !isOpen">
+          <nuxt-link
+            class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
+            to="#commu"
+            @click="isOpen = !isOpen"
+            >Communanté</nuxt-link
+          >
+        </div>
+        <div @click="isOpen = !isOpen">
+          <nuxt-link
+            class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
+            to="/Blog"
+            @click="isOpen = !isOpen"
+            >Blog</nuxt-link
+          >
+        </div>
+        <div @click="isOpen = !isOpen">
+          <nuxt-link
+            class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link anima bg-opacity-60 "
+            to="/Contact"
+            @click="isOpen = !isOpen"
+            >Contact</nuxt-link
+          >
+        </div>
         <button
           class="mt-1 sm:mt-0 btn btn-test1"
           @click="isModalOpen = !isModalOpen"
