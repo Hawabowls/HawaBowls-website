@@ -6,7 +6,7 @@
         <div class="sm:flex sm:justify-around text-center">
           <nuxt-link to="/" class="footer-link">Accueil</nuxt-link>
           <nuxt-link to="/menu" class="footer-link">Menu</nuxt-link>
-          <nuxt-link to="/blog" class="footer-link">Blog</nuxt-link>
+          <!--       <nuxt-link to="/blog" class="footer-link">Blog</nuxt-link> -->
           <nuxt-link to="/contact" class="footer-link">Contact</nuxt-link>
 
           <nuxt-link to="/cgu" class="footer-link">Cgu</nuxt-link>
@@ -40,7 +40,7 @@ import CircleLogo from "./BaseCircleLogo.vue";
 import ButtonNetwork from "./ButtonNetwork.vue";
 export default {
   components: { CircleLogo, ButtonNetwork },
-  name: "TheFooter",
+  name: "TheFooter"
 };
 </script>
 

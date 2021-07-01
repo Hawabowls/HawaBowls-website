@@ -1,6 +1,6 @@
 <template>
   <div>
-    <the-navbar></the-navbar>
+    <the-hero></the-hero>
 
     <Nuxt />
     <the-footer></the-footer>
@@ -9,9 +9,9 @@
 
 <script>
 import TheFooter from "~/components/TheFooter.vue";
-import TheNavbar from "~/components/TheNavbar.vue";
+import TheHero from "~/components/TheHero.vue";
 export default {
-  components: { TheNavbar, TheFooter }
+  components: { TheHero, TheFooter }
 };
 </script>
 

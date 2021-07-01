@@ -1,42 +1,23 @@
 <template>
-  <section class="w-full mt-14 ">
-    <div
-      class="halfback px-4 py-5 md:px-2 flex justify-center mx-auto items-center"
-    >
-      <div class="flex-grow h-screen max-w-screen-lg mx-2">
-        <div class=" h-4/5 bg-gray-400">
-          <img
-            class="object-cover h-full w-full"
-            src="img/banner/banner.jpg"
-            alt=""
-          />
-        </div>
+  <header class="h-92 w-full">
+    <the-navbar></the-navbar>
+    <div class="container mx-auto flex flex-col bg-primary-500 items-center">
+      <div class="h-64  w-full rounded-md max-w-3xl ">
+        <img
+          class="h-full w-full object-cover"
+          src="https://images.unsplash.com/photo-1527731149372-fae504a1185f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          alt=""
+        />
       </div>
-      <div class="flex-none hidden sm:flex flex-col    place-content-center">
-        <button-network name="facebook"></button-network>
-        <button-network name="instagram"></button-network>
-      </div>
-      <!--  <div>
-          <svg
-            class="h-8 w-8 fill-current text-accent-500"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </div> -->
     </div>
-  </section>
+  </header>
 </template>
 
 <script>
-export default {};
+import TheNavbar from "./TheNavbar.vue";
+export default {
+  components: { TheNavbar }
+};
 </script>
 
 <style>
