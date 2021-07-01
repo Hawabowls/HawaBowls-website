@@ -265,7 +265,7 @@
             </button>
           </div> -->
 
-        <div class="card-image" @click="sendDish(dish)">
+        <div class="card-image" @dbclick="sendDish(dish)">
           <img
             :src="dish.image"
             :alt="dish.name"
@@ -357,7 +357,7 @@
             </button>
           </div> -->
 
-        <div class="card-image" @click="sendDish(dish)">
+        <div class="card-image" @dbclick="sendDish(dish)">
           <img
             :src="dish.image"
             :alt="dish.name"
@@ -439,7 +439,7 @@
             </button>
           </div> -->
 
-        <div class="card-image" @click="sendDish(dish)">
+        <div class="card-image" @dbclick="sendDish(dish)">
           <img
             :src="dish.image"
             :alt="dish.image"
@@ -521,7 +521,7 @@
             </button>
           </div> -->
 
-        <div class="card-image" @click="sendDish(dish)">
+        <div class="card-image" @dbclick="sendDish(dish)">
           <img
             :src="dish.image"
             :alt="dish.name"
@@ -554,6 +554,7 @@
             9.90
           </p> -->
         <modal
+          class=""
           v-if="isModal && selectionedDish"
           @close-modal="changeValue"
           :item="selectionedDish"
@@ -710,14 +711,14 @@ export default {
         this.dessert = false;
       }
       if (section == "boisson") {
-        this.showCurrent("boisson");
+        /*     this.showCurrent("boisson"); */
         this.boisson = !this.boisson;
         this.poke = false;
         this.entree = false;
         this.dessert = false;
       }
       if (section == "dessert") {
-        this.showCurrent("dessert");
+        /* this.showCurrent("dessert"); */
         this.dessert = !this.dessert;
         this.boisson = false;
         this.poke = false;

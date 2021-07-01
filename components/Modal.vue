@@ -73,10 +73,7 @@
             class="mx-auto flex items-center justify-center h-full w-full rounded-lg overflow-hidden bg-red-100 sm:mx-0"
           >
             <!-- Heroicon name: outline/exclamation -->
-            <img
-              :src="require('~/assets/img/plat/' + item.image + '.jpg')"
-              alt=""
-            />
+            <img :src="item.image" alt="" />
           </div>
           <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
             <h3
