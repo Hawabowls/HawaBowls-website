@@ -7,6 +7,20 @@
             <img src="img/Logo_transparent.png" class="object-cover h-10" alt=""
           /></nuxt-link>
         </div>
+
+        <div class="sm:hidden">
+          <button
+            class="mt-0 btn btn-test1"
+            @click="isModalOpen = !isModalOpen"
+          >
+            Commander
+          </button>
+
+          <the-modal-order
+            v-if="isModalOpen"
+            @close-modal="changeValue"
+          ></the-modal-order>
+        </div>
         <div class="sm:hidden">
           <button
             class="block p-1  text-white hover:text-accent-500 active:text-white focus:outline-none"
