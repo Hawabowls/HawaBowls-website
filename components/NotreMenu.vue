@@ -41,11 +41,11 @@
           mx-auto
           min-w-sm
           card-container
-          space-x-2
+          space-x-1
           md:space-x-4
           lg:space-x-8
-          overflow-x-hidden
-          p-4
+         
+          p-2
         "
       >
         <div
@@ -847,8 +847,8 @@ export default {
 
 <style lang="postcss">
 .card {
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
 
   & img {
     @apply transition duration-500 ease-in-out transform scale-100;

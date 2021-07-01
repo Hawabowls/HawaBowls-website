@@ -4,8 +4,17 @@
       <div class="flex justify-between ">
         <div>
           <nuxt-link to="/">
-            <img src="img/Logo_transparent.png" class="object-cover h-10" alt=""
-          /></nuxt-link>
+            <img
+              src="img/Logo_transparent.png"
+              class="hidden sm:block object-cover h-10"
+              alt=""
+            />
+            <img
+              src="img/Fichier 3.png"
+              class=" md:hidden object-cover h-10"
+              alt=""
+            />
+          </nuxt-link>
         </div>
 
         <div class="sm:hidden">
