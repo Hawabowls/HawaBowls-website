@@ -115,7 +115,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_420,h_300/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp"
+              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_420/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp"
               alt="photo dessert"
             />
           </div>
@@ -155,7 +155,7 @@
             />
           </div>
           <div
-            @click="toggle('boisson')"
+            @click="toggle('bubble')"
             class="
             group
             hover:bg-white
@@ -327,12 +327,96 @@
         sm:grid-cols-3
         mx-auto
         sm:gap-x-6
-        lg:grid-cols-5
+        lg:grid-cols-3
+        lg:px-24
         mt-4
         xl:gap-x-8
       "
     >
       <li class="relative" v-for="dish in boissons" :key="dish.nom">
+        <!--  <div
+            class="
+              group
+              block
+              w-full
+              rounded-lg
+              t
+              bg-gray-100
+              focus-within:ring-2
+              focus-within:ring-offset-2
+              focus-within:ring-offset-gray-100
+              focus-within:ring-indigo-500
+              overflow-hidden
+            "
+          >
+            <img
+              :src="require('~/assets/img/plat/' + dish.image + '.jpg')"
+              alt=""
+              class="object-fill pointer-events-none group-hover:opacity-75"
+            />
+            <button type="button" class="absolute inset-0 focus:outline-none">
+              <span class="sr-only">View details</span>
+            </button>
+          </div> -->
+
+        <div class="card-image" @dbclick="sendDish(dish)">
+          <img
+            :src="dish.image"
+            :alt="dish.name"
+            class="image pointer-events-none"
+          />
+          <div class="image-overlay">
+            <p
+              class="
+                text-2xl
+                lg:text-3xl
+                font-bold
+                text-center
+                leading-tight
+                text-accent-100
+              "
+            >
+              {{ dish.nom }}
+            </p>
+          </div>
+        </div>
+
+        <!--     <p
+            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
+          >
+            po'aha
+          </p>
+          <p
+            class="block text-sm font-medium text-gray-500 pointer-events-none"
+          >
+            9.90
+          </p> -->
+        <modal
+          v-if="isModal && selectionedDish"
+          @close-modal="changeValue"
+          :item="selectionedDish"
+        ></modal>
+      </li>
+
+      <!-- More files... -->
+    </ul>
+    <ul
+      id="bubble"
+      v-if="bubble"
+      role="list"
+      class="
+        grid grid-cols-2
+        gap-x-4 gap-y-8
+        sm:grid-cols-3
+        mx-auto
+        sm:gap-x-6
+        lg:grid-cols-3
+        lg:px-24
+        mt-4
+        xl:gap-x-8
+      "
+    >
+      <li class="relative" v-for="dish in bubbles" :key="dish.nom">
         <!--  <div
             class="
               group
@@ -409,7 +493,8 @@
         sm:grid-cols-3
         mx-auto
         sm:gap-x-6
-        lg:grid-cols-5
+          lg:grid-cols-3
+        lg:px-24
         mt-4
         xl:gap-x-8
       "
@@ -491,7 +576,8 @@
         sm:grid-cols-3
         mx-auto
         sm:gap-x-6
-        lg:grid-cols-5
+       lg:grid-cols-3
+        lg:px-24
         mt-4
         xl:gap-x-8
       "
@@ -578,6 +664,7 @@ export default {
       boisson: false,
       isModal: false,
       entree: false,
+      bubble: false,
       dessert: false,
 
       plats: [
@@ -648,7 +735,14 @@ export default {
           allergene: ""
         }
       ],
-      bubble: [{}],
+      bubbles: [
+        {
+          nom: "Création de Bubble Tea",
+          image:
+            "https://res.cloudinary.com/hawabowls/image/upload/v1625130669/Hawabowls/site_media/bubble_tea_bq2x9t.jpg",
+          desc: ""
+        }
+      ],
       desserts: [
         {
           nom: "Moelleux au chocolat",
@@ -702,18 +796,21 @@ export default {
         this.poke = !this.poke;
         this.entree = false;
         this.boisson = false;
+        this.bubble = false;
         this.dessert = false;
       }
       if (section == "entree") {
         /*   this.showCurrent("entree"); */
         this.entree = !this.entree;
         this.poke = false;
+        this.bubble = false;
         this.boisson = false;
         this.dessert = false;
       }
       if (section == "boisson") {
         /*     this.showCurrent("boisson"); */
         this.boisson = !this.boisson;
+        this.bubble = false;
         this.poke = false;
         this.entree = false;
         this.dessert = false;
@@ -721,6 +818,15 @@ export default {
       if (section == "dessert") {
         /* this.showCurrent("dessert"); */
         this.dessert = !this.dessert;
+        this.bubble = false;
+        this.boisson = false;
+        this.poke = false;
+        this.entree = false;
+      }
+      if (section == "bubble") {
+        /* this.showCurrent("dessert"); */
+        this.bubble = !this.bubble;
+        this.dessert = false;
         this.boisson = false;
         this.poke = false;
         this.entree = false;
