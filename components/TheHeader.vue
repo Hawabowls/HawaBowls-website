@@ -1,5 +1,5 @@
 <template>
-  <header class=" h-screen relative color-bg lake">
+  <header class=" h-screen relative bg-primary-500 lake">
     <div
       class="flex items-center absolute z-20 top-0 inset-x-0 justify-center w-full h-full space-y-4 bg-opacity-80"
     >
@@ -63,6 +63,7 @@
       <!--   <plant-background></plant-background> -->
     </div>
     <video
+      v-if="$route.name != 'contact' || $route.name != 'blog'"
       playsinline
       loop
       muted

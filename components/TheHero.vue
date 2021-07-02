@@ -12,7 +12,7 @@
 <script>
 import TheNavbar from "./TheNavbar.vue";
 export default {
-  props: ["titre", "cover"],
+  props: ["cover"],
   components: { TheNavbar }
 };
 </script>
