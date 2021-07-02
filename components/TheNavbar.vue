@@ -7,12 +7,12 @@
             <img
               src="img/Logo_transparent.png"
               class="hidden md:block object-cover h-10"
-              alt=""
+              alt="logo hawabowls"
             />
             <img
               src="img/Fichier 1.png"
               class=" md:hidden object-cover h-10"
-              alt=""
+              alt="logo hawabowls"
             />
           </nuxt-link>
         </div>
@@ -106,6 +106,7 @@
     <div class="hidden h-20" id="video-nav">
       <video
         src="~/assets/img/banner/video2.mp4"
+        title="Video des côte d'hawaï"
         loop
         muted
         autoplay
