@@ -16,6 +16,8 @@
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@popperjs/core": "^2.9.2",
     "@splidejs/vue-splide": "^0.3.5",
     "@tailwindcss/aspect-ratio": "^0.2.1",
