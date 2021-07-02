@@ -9,7 +9,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { hid: 'description', name: 'description', content: "Inspirés par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls ravissent à la fois les sportifs et les gourmands soucieux de prendre soin de leur​ ligne" }
+      { hid: 'description', name: 'description', content: "Inspirés par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls ravissent à la fois les sportifs et les gourmands soucieux de prendre soin de leur​ ligne" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "Aloha|Hawabowls - Restaurant Hawaïen" },
+      { property: "og:site_name", content: "ClicknChill" },
+      { property: "og:description", content: "Inspirés par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls ravissent à la fois les sportifs et les gourmands soucieux de prendre soin de leur​ ligne" },
+      { property: "og:locale", content: "fr_FR" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'img/Fichier 3.png' }
