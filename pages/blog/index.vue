@@ -23,6 +23,10 @@ export default {
           _id: 0,
           _slug: "les-graines-super-food",
           title: "Les graines Super food",
+          short_desc: `Les pokés bowls nous viennent tout droit du Pacifique, de la
+              tradition hawaïenne. Qui l‘eût cru que ce petit bol coloré,
+              gourmand et ancestral contiennent tout ce qu’il faut pour une
+              alimentation équilibrée et vitaminée.`,
 
           cover: ["img/blog/riz col.png", "img/blog/riz row.png"]
         }
