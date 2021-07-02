@@ -1,20 +1,22 @@
 import { join } from 'path'
+
+import { getRoutes } from './helpers/sitemap';
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Aloha|Hawabowls - Restaurant Hawaïen ',
+    title: 'Aloha|Hawabowls Website - Restaurant Hawaïen ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       { hid: 'description', name: 'description', content: "Inspirés par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls ravissent à la fois les sportifs et les gourmands soucieux de prendre soin de leur​ ligne" },
-      { property: "og:type", content: "website" },
-      { property: "og:title", content: "Aloha|Hawabowls - Restaurant Hawaïen" },
-      { property: "og:site_name", content: "ClicknChill" },
-      { property: "og:description", content: "Inspirés par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls ravissent à la fois les sportifs et les gourmands soucieux de prendre soin de leur​ ligne" },
-      { property: "og:locale", content: "fr_FR" },
+      { hid: "og:type", property: "og:type", content: "website" },
+      { hid: "og:title", property: "og:title", content: "Aloha! Hawabowls - Restaurant Hawaïen" },
+      { hid: "og:site_name", property: "og:site_name", content: "ClicknChill" },
+      { hid: "og:description", property: "og:description", content: "Inspirés par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls ravissent à la fois les sportifs et les gourmands soucieux de prendre soin de leur​ ligne" },
+      { hid: "og:locale", property: "og:locale", content: "fr_FR" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'img/Fichier 3.png' }
@@ -24,7 +26,6 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
-
   render: {
     static: {
       maxAge: 1000 * 60 * 60 * 24 * 7
@@ -55,6 +56,9 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
+
   ],
   dev: process.env.NODE_ENV !== 'production',
   //tailwind
@@ -71,7 +75,31 @@ export default {
     STRIPE_PK: process.env.STRIPE_PK
   },
 
-
+  //robot.txt
+  robot: [
+    {
+      UserAgent: 'Googlebot',
+      Disallow: () => ['/users', '/cart', '/admin', '/checkout', '/login'] // accepts function 
+    },
+    {
+      UserAgent: '*',
+      Disallow: () => ['/admin', '/checkout'],
+      Sitemap: `${process.env.WEBSITE_URL}/sitemap.xml`
+    }
+  ],
+  sitemap: {
+    path: '/sitemap.xml', // L'emplacement de votre fichier sitemap.
+    hostname: process.env.WEBSITE_URL, // L'adresse de votre site, que vous pouvez placer comme ici dans une variable d'environnement.
+    cacheTime: 1000 * 60 * 15, // La durée avant que le sitemap soit regénéré. Ici 15mn.
+    gzip: true,
+    generate: false, // Génère une version statique du sitemap quand activé. À utiliser avec nuxt generate.
+    exclude: [ // Les pages qu'on a pas trop envie de voir atterrir sur Google.
+      '/login',
+      '/admin/**',
+      '/cart',
+      '/checkout',
+    ]
+  },
   proxy: {
     '/api/': { target: 'https://hawabowls-api.herokuapp.com/api', pathRewrite: { '^/api/': '' }, changeOrigin: true }
   },
