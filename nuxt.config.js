@@ -1,6 +1,4 @@
 import { join } from 'path'
-
-import { getRoutes } from './helpers/sitemap';
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
