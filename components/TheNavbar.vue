@@ -71,7 +71,7 @@
             class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
             to="#commu"
             @click="isOpen = !isOpen"
-            >Communanté</nuxt-link
+            >Communauté</nuxt-link
           >
         </div>
         <!-- <div @click="isOpen = !isOpen">
