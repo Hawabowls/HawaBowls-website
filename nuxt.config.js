@@ -74,7 +74,7 @@ export default {
   },
 
   //robot.txt
-  robot: [
+  robots: [
     {
       UserAgent: 'Googlebot',
       Disallow: () => ['/users', '/cart', '/admin', '/checkout', '/login'] // accepts function 
