@@ -151,7 +151,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80/v1625061345/Hawabowls/site_media/photo-1603046891726-36bfd957e0bf_nuwy0z.webp"
+              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_330,h_498,/v1625061345/Hawabowls/site_media/photo-1603046891726-36bfd957e0bf_nuwy0z.webp"
               alt="photo entrée"
             />
           </div>
@@ -184,7 +184,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://images.unsplash.com/photo-1560023907-5f339617ea30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80 "
+              src="https://res.cloudinary.com/hawabowls/image/upload/v1625210619/Hawabowls/site_media/photo-1560023907-5f339617ea30_ecdylt.webp"
               alt="photo de bubble tea"
             />
           </div>
@@ -217,7 +217,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80/v1625062803/Hawabowls/site_media/boisson_rrt0tg.webp"
+              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_300,h_466/v1625062803/Hawabowls/site_media/boisson_rrt0tg.webp"
               alt="image de boisson"
             />
           </div>
