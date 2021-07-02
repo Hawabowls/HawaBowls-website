@@ -87,7 +87,11 @@
     </div>
     <div class="side-image h-full">
       <div class="h-full grid grid-cols-2 gap-4">
-        <div class="col-span-1 bg-primary-300 big"></div>
+        <div
+          class="col-span-1 bg-primary-300 big"
+          role="img"
+          aria-label=" fille qui mange un poke"
+        ></div>
 
         <div class="col-span-1">
           <div class="grid grid-row-3 gap-3">
@@ -95,21 +99,21 @@
               <img
                 class="h-full w-full object-cover"
                 src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064947/Hawabowls/site_media/little1_krbbq0.webp"
-                alt=""
+                alt="fille qui se prélasser au soleil"
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover object-start"
                 src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064973/Hawabowls/site_media/little2_wvgbpa.webp"
-                alt=""
+                alt="Un poke au bord de la plage"
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover"
                 src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064999/Hawabowls/site_media/little3_bcm8ub.webp"
-                alt=""
+                alt="Un surfeuse avec un tensai tea"
               />
             </div>
           </div>
