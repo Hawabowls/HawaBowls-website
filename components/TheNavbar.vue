@@ -5,12 +5,12 @@
         <div>
           <nuxt-link to="/">
             <img
-              src="img/Logo_transparent.png"
+              src="/img/Logo_transparent.png"
               class="hidden md:block object-cover h-10"
               alt="logo hawabowls"
             />
             <img
-              src="img/Fichier 1.png"
+              src="/img/Fichier 1.png"
               class=" md:hidden object-cover h-10"
               alt="logo hawabowls"
             />
@@ -74,14 +74,14 @@
             >Communauté</nuxt-link
           >
         </div>
-        <!-- <div @click="isOpen = !isOpen">
+        <div @click="isOpen = !isOpen">
           <nuxt-link
             class="mt-1 sm:mx-2 sm:mt-0 nav-brand-link anima  bg-opacity-60 "
             to="/Blog"
             @click="isOpen = !isOpen"
             >Blog</nuxt-link
           >
-        </div> -->
+        </div>
         <div @click="isOpen = !isOpen">
           <nuxt-link
             class="mt-1  sm:mx-2 sm:mt-0 sm:active nav-brand-link anima bg-opacity-60 "

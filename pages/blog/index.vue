@@ -3,8 +3,8 @@
     <section class="h-full w-full px-4 space-y-6">
       <card-article
         v-for="a in articles"
-        :key="a.title"
-        article="a"
+        :key="a._id"
+        :article="a"
       ></card-article>
 
       <!-- This example requires Tailwind CSS v2.0+ -->
@@ -18,7 +18,15 @@ export default {
   components: { CardArticle },
   data() {
     return {
-      articles: [{ titre: "", desc: "", content: "", cover: ["", ""] }]
+      articles: [
+        {
+          _id: 0,
+          _slug: "les-graines-super-food",
+          title: "Les graines Super food",
+
+          cover: ["img/blog/riz col.png", "img/blog/riz row.png"]
+        }
+      ]
     };
   }
 };
