@@ -247,6 +247,13 @@ export default {
       editor: null,
     };
   },
+  methods: {
+    setLink() {
+      const url = window.prompt("URL");
+
+      this.editor.chain().focus().setLink({ href: url }).run();
+    },
+  },
 
   mounted() {
     this.editor = new Editor({
@@ -286,7 +293,7 @@ export default {
     — Mom
   </blockquote>
 `,
-      extensions: [StarterKit],
+      extensions: [StarterKit, Link],
     });
   },
 

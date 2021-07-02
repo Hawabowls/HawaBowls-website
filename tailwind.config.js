@@ -88,6 +88,22 @@ module.exports = {
                 'titre': ['AracneRegular'],
                 'body': ['BryanProB']
             },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        color: '#333',
+                        a: {
+                            color: '#30377f',
+                            '&:hover': {
+                                color: '#f8b04d"',
+                            },
+                            '&:visited': {
+                                color: '#f8b04d"',
+                            },
+                        },
+                    },
+                },
+            },
             spacing: {
                 128: '32rem',
                 132: '36rem',
