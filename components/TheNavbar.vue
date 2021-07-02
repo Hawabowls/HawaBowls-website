@@ -53,7 +53,7 @@
         </div>
       </div>
       <div id="mobile-menu" :class="isOpen ? 'block' : 'hidden'">
-        <div>
+        <div @click="isOpen = !isOpen">
           <nuxt-link class="nav-brand-link anima sm:hidden md:block" to="/"
             >Accueil</nuxt-link
           >
