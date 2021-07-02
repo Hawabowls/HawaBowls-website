@@ -568,7 +568,7 @@
       <!-- More files... -->
     </ul>
     <ul
-      id="entree"
+      id="entree_container"
       v-if="entree"
       role="list"
       class="
@@ -667,6 +667,7 @@ export default {
       entree: false,
       bubble: false,
       dessert: false,
+      oldSection: "",
 
       plats: [
         {
@@ -789,7 +790,11 @@ export default {
   },
   methods: {
     showCurrent(index) {
-      this.$refs[index].scrollIntoView();
+      document.querySelector(index).scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
     },
     toggle(section) {
       if (section == "poke") {
@@ -799,14 +804,21 @@ export default {
         this.boisson = false;
         this.bubble = false;
         this.dessert = false;
+        if (this.oldSection != "poke") {
+          this.$nextTick(() => this.showCurrent("#pokebowls"));
+        }
+        this.oldSection = "poke";
       }
       if (section == "entree") {
-        /*   this.showCurrent("entree"); */
         this.entree = !this.entree;
         this.poke = false;
         this.bubble = false;
         this.boisson = false;
         this.dessert = false;
+        if (this.oldSection != "entree") {
+          this.$nextTick(() => this.showCurrent("#entree_container"));
+        }
+        this.oldSection = "entree";
       }
       if (section == "boisson") {
         /*     this.showCurrent("boisson"); */
@@ -815,6 +827,10 @@ export default {
         this.poke = false;
         this.entree = false;
         this.dessert = false;
+        if (this.oldSection != "boisson") {
+          this.$nextTick(() => this.showCurrent("#boisson"));
+        }
+        this.oldSection = "boisson";
       }
       if (section == "dessert") {
         /* this.showCurrent("dessert"); */
@@ -823,6 +839,10 @@ export default {
         this.boisson = false;
         this.poke = false;
         this.entree = false;
+        if (this.oldSection != "dessert") {
+          this.$nextTick(() => this.showCurrent("#dessert"));
+        }
+        this.oldSection = "dessert";
       }
       if (section == "bubble") {
         /* this.showCurrent("dessert"); */
@@ -831,6 +851,10 @@ export default {
         this.boisson = false;
         this.poke = false;
         this.entree = false;
+        if (this.oldSection != "bubble") {
+          this.$nextTick(() => this.showCurrent("#bubble"));
+        }
+        this.oldSection = "bubble";
       }
     },
     sendDish(dish) {
