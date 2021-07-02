@@ -35,11 +35,18 @@
         <div
           class="relative pb-4/5 sm:pb-1/2 px-auto rounded-lg flex justify-center overflow-hidden"
         >
+          <img
+            class="absolute md:hidden w-full h-full object-cover object-center "
+            src="img/banner/bowl.png"
+            alt=""
+          />
+
           <video
             loop
             muted
             autoplay
             class="
+            hidden md:block 
               absolute
               object-cover
               rounded-lg
