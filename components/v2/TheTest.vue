@@ -25,10 +25,10 @@
       <p
         class="mt-3 max-w-md mx-auto text-lg text-accent-400 sm:text-xl md:mt-5"
       >
-        C'est finalement 10 ans plus tard, en décembre 2020, que leur rêve^prend
+        C'est finalement 10 ans plus tard, en décembre 2020, que leur rêve prend
         forme avec l'ouverture d'Hawa Bowls en plein coeur de Nantes. Inspirés
         par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls
-        ravissent à la fois les sportifs et les gourmands soucieux d eprendre
+        ravissent à la fois les sportifs et les gourmands soucieux de prendre
         soin de leur alimentation grâce à des produits frais et de qualité.
       </p>
       <div class="mt-10 sm:flex w-full flex-col justify-center  space-y-2">
