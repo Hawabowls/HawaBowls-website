@@ -69,25 +69,6 @@ export default {
           titre: "Poke Poke Poke",
           caption: "see big",
           source: "instragram"
-        },
-
-        {
-          id: 4,
-          url:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064947/Hawabowls/site_media/little1_krbbq0.webp",
-          titre: "Poke Poke Poke",
-          caption:
-            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
-          source: "instragram"
-        },
-        {
-          id: 5,
-          url:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_80,h_750,w_500/v1625064932/Hawabowls/site_media/big_m6lwek.webp",
-          titre: "Poke Poke Poke",
-          caption:
-            "dcsbdcqhijkejxwhmlzdUIFBDCQJKXWGUKEFJBCSDKHQIODEDbsvisdb<lqsk",
-          source: "instragram"
         }
       ]
     };
