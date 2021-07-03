@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full">
     <Nuxt />
     <the-footer></the-footer>
   </div>
@@ -9,7 +9,7 @@
 import TheFooter from "~/components/TheFooter.vue";
 import TheHero from "~/components/TheHero.vue";
 export default {
-  components: { TheHero, TheFooter }
+  components: { TheHero, TheFooter },
 };
 </script>
 

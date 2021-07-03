@@ -1,8 +1,8 @@
 <template>
   <header class="h-92 w-full">
     <the-navbar></the-navbar>
-    <div class="container mx-auto flex flex-col bg-primary-500 items-center">
-      <div class="h-72 m-20 w-full rounded-md overflow-hidden max-w-4xl ">
+    <div class="w-full mx-auto flex flex-col bg-primary-500 items-center">
+      <div class="h-72 m-20 w-full rounded-md overflow-hidden max-w-4xl">
         <img class="h-full w-full object-cover" :src="cover" alt="" />
       </div>
     </div>
@@ -13,7 +13,7 @@
 import TheNavbar from "./TheNavbar.vue";
 export default {
   props: ["cover"],
-  components: { TheNavbar }
+  components: { TheNavbar },
 };
 </script>
 
