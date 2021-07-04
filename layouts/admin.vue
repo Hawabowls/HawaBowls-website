@@ -21,9 +21,7 @@ export default {
   },
   middleware: "admin",
 
-  methods: {
-    ...mapActions({ reconnect: "admin/reconnection" }),
-  },
+  methods: {},
   mounted() {},
 };
 </script>
