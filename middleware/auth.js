@@ -1,6 +1,5 @@
 export default function ({ redirect, store }) {
-    let user = store.getters['user/getUser']
-    console.log(user)
+    let user = store.state.user.authenticated
     if (!user) {
         return redirect('/login')
     }

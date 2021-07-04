@@ -33,7 +33,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/VueSplide.js', mode: 'client' },
-    { src: '~/plugins/persistedState.client.js' },
     { src: '~/plugins/vue-stripe.js', mode: 'client' },
   ],
 
@@ -99,7 +98,7 @@ export default {
     ]
   },
   proxy: {
-    '/api/': { target: 'https://hawabowls-api.herokuapp.com/api', pathRewrite: { '^/api/': '' }, changeOrigin: true }
+    '/api/': { target: 'https://hawabowls-api.herokuapp.com', pathRewrite: { '^/api/': '' }, changeOrigin: true }
   },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

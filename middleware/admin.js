@@ -1,7 +1,7 @@
 export default function ({ redirect, store }) {
-    let staff = store.getters['staff/getStaff']
-    console.log(staff)
-    if (!staff.email) {
+    let auth = store.state.admin.authenticatedStaff
+    console.log(auth)
+    if (!auth) {
         return redirect('/admin/login')
     }
 }

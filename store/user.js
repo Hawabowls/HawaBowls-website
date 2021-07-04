@@ -1,11 +1,12 @@
 export const state = () => ({
     loggedUser: null,
+    authenticated: false,
     token: ""
 })
 
 export const getters = {
     getUser: (state) => state.loggedUser,
-
+    isAuthenticated: (state) => state.authenticatedStaff
 
 }
 
@@ -13,7 +14,14 @@ export const mutations = {
     setCurrentToken: (state, token) => {
         state.token = token
     },
-    setCurrentUser: (state, user) => state.loggedUser = user
+    setAuthenticated(state, val) {
+        state.authenticated = val
+    },
+    setCurrentUser: (state, user) => state.loggedUser = user,
+    removeToken: (state) => {
+        state.token = "";
+        store.remove('token')
+    },
 }
 
 export const actions = {
@@ -22,6 +30,7 @@ export const actions = {
             const client = await this.$axios.post('/api/login', form)
             commit('setCurrentUser', client.data.user)
             commit('setCurrentToken', client.data.token)
+            commit('setAuthenticated', true)
             return client
         } catch (error) {
             return { error: error.message }
@@ -33,6 +42,7 @@ export const actions = {
             const client = await this.$axios.post('/api/register', form)
             commit('setCurrentUser', client.data.user)
             commit('setCurrentToken', client.data.token)
+            commit('setAuthenticated', true)
             return client
         } catch (error) {
             console.log(error)
@@ -45,6 +55,7 @@ export const actions = {
             console.log(form)
             const client = await this.$axios.post(`/api/${id}`, form)
             console.log(client)
+            commit('setCurrentStaff', client.data.staff)
             return client
         } catch (error) {
             console.log(error)
@@ -56,13 +67,18 @@ export const actions = {
     async signOutUser({ commit }) {
         try {
 
-            const client = await this.$axios.post(`/api/${id}`)
+            const client = await this.$axios.post(`/api/${id}`, {
+                headers: {
+                    Authorization: `Bearer ${state.token}`
+                }
+            })
         } catch (error) {
             console.log(error)
             return { error: error.message }
         }
-        commit('setCurrentToken', "");
+        commit('removeToken');
         commit('setCurrentUser', null)
+        commit('setAuthenticated', false)
     },
 
     async reconnection({ commit, state }) {
@@ -75,6 +91,7 @@ export const actions = {
             })
             commit('setCurrentToken', client.data.token);
             commit('setCurrentUser', client.data.user)
+            commit('setAuthenticated', true)
 
         } catch (error) {
             console.log(error)

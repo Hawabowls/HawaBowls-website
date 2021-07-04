@@ -12,16 +12,19 @@
 <script>
 import Navbar from "../components/admin/Navbar.vue";
 import TheSidebar from "../components/admin/TheSidebar.vue";
-import LineChart from "../components/admin/LineChart.vue";
-import BarChart from "../components/admin/BarChart.vue";
+
 export default {
   name: "dashboard-page",
   components: {
     Navbar,
     TheSidebar,
-    LineChart,
-    BarChart
-  }
+  },
+  middleware: "admin",
+
+  methods: {
+    ...mapActions({ reconnect: "admin/reconnection" }),
+  },
+  mounted() {},
 };
 </script>
 <style lang="postcss">
