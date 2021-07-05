@@ -229,15 +229,14 @@ export default {
   layout: "auth",
   data() {
     return {
-      regMail:
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
+      regMail: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
       passwordClick: false,
       mailClick: false,
       form: {
         email: "",
-        password: "",
+        password: ""
       },
-      err: "",
+      err: ""
     };
   },
   computed: {
@@ -249,7 +248,7 @@ export default {
     },
     formIsValid() {
       return this.mailIsValid && this.passwordIsValid;
-    },
+    }
   },
   methods: {
     ...mapActions({ login: "admin/login", reconnect: "admin/reconnection" }),
@@ -268,7 +267,7 @@ export default {
       }
     },
     async getAdLogged() {
-      if (store.get("tokenAd")) {
+      /*   if (store.get("tokenAd")) {
         const client = await this.reconnect(store.get("tokenAd"));
 
         if (client) {
@@ -276,12 +275,12 @@ export default {
           this.$router.push("/admin");
         }
       } else {
-      }
-    },
+      } */
+    }
   },
   mounted() {
-    this.getAdLogged();
-  },
+    /*   this.getAdLogged(); */
+  }
 };
 </script>
 

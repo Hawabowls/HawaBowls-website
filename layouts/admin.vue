@@ -12,17 +12,33 @@
 <script>
 import Navbar from "../components/admin/Navbar.vue";
 import TheSidebar from "../components/admin/TheSidebar.vue";
-
+let store = require("store");
+import { mapActions } from "vuex";
 export default {
   name: "dashboard-page",
   components: {
     Navbar,
-    TheSidebar,
+    TheSidebar
   },
-  middleware: "admin",
+  /*   middleware: "admin", */
 
-  methods: {},
-  mounted() {},
+  methods: {
+    ...mapActions({ reconnect: "admin/reconnection" }),
+    async getAdLogged() {
+      if (store.get("tokenAd")) {
+        const client = await this.reconnect(store.get("tokenAd"));
+
+        if (client) {
+          console.log(client);
+        }
+      } else {
+        this.$router.push("/admin/login");
+      }
+    }
+  },
+  mounted() {
+    this.getAdLogged();
+  }
 };
 </script>
 <style lang="postcss">
