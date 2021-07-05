@@ -1,3 +1,4 @@
+let store = require('store')
 export const state = () => ({
     ingredients: [],
     ingredient: {}
@@ -36,15 +37,59 @@ export const actions = {
     async getIngredient({ commit }, payload) {
         try {
             let response = await this.$axios.get(`/api/ingredients/${payload}`);
-            console.log(response.data)
             if (response.data) {
-                commit('setIngredient', response.data)
-
+                /* commit('setIngredient', response.data)
+ */ const { createdAt, updatedAt, __v, _id, ...ingredient } = response.data
+                console.log(ingredient)
+                return ingredient
             }
-            return response.data
+
 
         } catch (e) {
             console.log(e)
         }
-    }
+    },
+    async updateIngredient({ commit }, payload) {
+        try {
+            console.log(payload.id)
+            let tok = store.get('tokenAd')
+            let response = await this.$axios.patch(`/api/ingredients/${payload.id}`, payload.ingredient,
+                {
+                    headers: {
+                        Authorization: `Bearer ${tok}`
+                    }
+                });
+            console.log(response.data)
+
+            return response
+
+
+        } catch (e) {
+            console.log(e)
+        }
+
+
+    },
+    async createIngredient({ commit }, payload) {
+        try {
+            let tok = store.get('tokenAd')
+            let response = await this.$axios.post(`/api/ingredient/${payload.id}`, payload.ingredient,
+                {
+                    headers: {
+                        Authorization: `Bearer ${tok}`
+                    }
+                });
+            console.log(response.data)
+            if (response.data) {
+                return response.data
+
+            }
+
+
+        } catch (e) {
+            console.log(e)
+        }
+
+
+    },
 }
