@@ -4,21 +4,25 @@ export const state = () => ({
 })
 
 export const getters = {
-    getIngredient: (state) => state.user,
+    getIngredients: (state) => state.ingredients,
+    getIngredient: (state) => state.ingredient,
 }
 
-export const mutation = {
+export const mutations = {
     setIngredients: (state, ingredients) => (state.allIngredients = ingredients),
     setIngredient: (state, ingredient) => (state.ingredient = ingredient),
+    removeIngredient: (state, ingredient) => {
+        let id = state.ingredients.findIndex(x => x._id == ingredient._id)
+        state.ingredients.splice(id, 1)
+    }
 }
 
 
 export const actions = {
 
-    async getAllIngredients() {
+    async getAllIngredients({ commit }) {
         try {
             let response = await this.$axios.get('/api/ingredients');
-            console.log(response.data)
             if (response.data) {
                 commit('setIngredients', response.data)
 
@@ -29,7 +33,7 @@ export const actions = {
             console.log(e)
         }
     },
-    async getIngredient(payload) {
+    async getIngredient({ commit }, payload) {
         try {
             let response = await this.$axios.get(`/api/ingredients/${payload}`);
             console.log(response.data)

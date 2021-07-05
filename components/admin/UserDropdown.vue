@@ -18,6 +18,7 @@
             justify-center
             rounded-full
           "
+          v-if="staff"
         >
           <img
             v-if="staff.avatar"
@@ -59,7 +60,7 @@
       "
       v-bind:class="{
         hidden: !dropdownPopoverShow,
-        block: dropdownPopoverShow,
+        block: dropdownPopoverShow
       }"
       style="min-width: 12rem"
     >
@@ -138,27 +139,26 @@ import { createPopper } from "@popperjs/core";
 export default {
   data() {
     return {
-      dropdownPopoverShow: false,
-      staff: {},
+      dropdownPopoverShow: false
     };
   },
   computed: {
     staff() {
       return this.$store.getters["admin/getStaff"];
-    },
+    }
   },
   methods: {
-    toggleDropdown: function (event) {
+    toggleDropdown: function(event) {
       event.preventDefault();
       if (this.dropdownPopoverShow) {
         this.dropdownPopoverShow = false;
       } else {
         this.dropdownPopoverShow = true;
         createPopper(this.$refs.btnDropdownRef, this.$refs.popoverDropdownRef, {
-          placement: "bottom-end",
+          placement: "bottom-end"
         });
       }
-    },
-  },
+    }
+  }
 };
 </script>
