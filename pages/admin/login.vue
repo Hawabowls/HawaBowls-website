@@ -269,10 +269,11 @@ export default {
     },
     async getAdLogged() {
       if (store.get("tokenAd")) {
-        this.$router.push("/admin");
         const client = await this.reconnect(store.get("tokenAd"));
 
-        if (client.data.staff) {
+        if (client) {
+          console.log(client);
+          this.$router.push("/admin");
         }
       } else {
       }
