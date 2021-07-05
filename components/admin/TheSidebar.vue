@@ -95,7 +95,7 @@
           </li>
           <li class="items-center">
             <nuxt-link
-              class="text-gray-700 hover:text-gray-500 flex items-center text-xs uppercase py-3 font-bold block"
+              class="text-gray-700 hover:text-accent-400 flex items-center text-xs uppercase py-3 font-bold "
               to="/admin/commandes"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,23 +116,34 @@
           </li>
           <li class="items-center">
             <nuxt-link
-              class="text-gray-700 hover:text-gray-500 flex items-center text-xs uppercase py-3 font-bold block"
+              class="text-gray-700 hover:text-accent-400 flex items-center text-xs uppercase py-3 font-bold "
               to="/admin/produits"
-              ><i class="fas fa-user-circle text-gray-400 mr-2 text-sm"></i>
+            >
+              <svg class="opacity-75 h-4 w-4 mr-2 text-sm" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M15.6 12H2V15C2 18.9 5.1 22 9 22H15C18.9 22 22 18.9 22 15V12H15.6M20 15C20 17.8 17.8 20 15 20H9C6.2 20 4 17.8 4 15V14H20V15M16.2 11L20.3 4.4L22 5.5L18.6 11H16.2Z"
+                />
+              </svg>
               Gestion des Plats & dessert</nuxt-link
             >
           </li>
           <li class="items-center">
-            <a
-              class="text-gray-700 hover:text-gray-500 flex items-center text-xs uppercase py-3 font-bold block"
+            <nuxt-link
+              class="text-gray-700 hover:text-accent-400 flex items-center text-xs uppercase py-3 font-bold "
               to="/admin/Ingredients"
-              ><i class="fas fa-fingerprint text-gray-400 mr-2 text-sm"></i>
-              Gestion des Ingredients</a
+              ><svg class="opacity-75 h-4 w-4 mr-2 text-sm" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"
+                />
+              </svg>
+              Gestion des Ingredients</nuxt-link
             >
           </li>
           <li class="items-center">
-            <a
-              class="text-gray-700 hover:text-gray-500 flex items-center text-xs uppercase py-3 font-bold block"
+            <nuxt-link
+              class="text-gray-700 hover:text-accent-400 flex items-center text-xs uppercase py-3 font-bold "
               to="/admin/website"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +159,7 @@
                   d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                 />
               </svg>
-              Gestion Website</a
+              Gestion Website</nuxt-link
             >
           </li>
           <!--  <li class="items-center">
