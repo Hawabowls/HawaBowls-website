@@ -5,7 +5,7 @@
     </div>
     <section class=" relative  px-4 md:px-10 mx-auto w-full -m-24 z-30">
       <div class="flex flex-col">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="-my-2 overflow-x-auto sm:-my-6 lg:-my-8">
           <div
             class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
           >
@@ -36,7 +36,7 @@
                     <th scope="col" class="relative px-3 py-3">
                       <nuxt-link
                         :to="{
-                          name: 'admin-produits-create'
+                          name: 'admin-ingredients-create'
                         }"
                         class="text-primary-600 border border-primary-600 px-2 py-2 hover:bg-primary-700  rounded hover:text-gray-100"
                         >Créer Ingredients</nuxt-link

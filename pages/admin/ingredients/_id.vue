@@ -141,7 +141,6 @@ export default {
 
     async update() {
       try {
-        console.log("dans le update" + this.ingredient);
         let response = await this.updateIngredient({
           id: this.$route.params.id,
           ingredient: this.ingredient

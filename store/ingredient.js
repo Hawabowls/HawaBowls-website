@@ -73,7 +73,7 @@ export const actions = {
     async createIngredient({ commit }, payload) {
         try {
             let tok = store.get('tokenAd')
-            let response = await this.$axios.post(`/api/ingredient/${payload.id}`, payload.ingredient,
+            let response = await this.$axios.post(`/api/ingredients`, payload.ingredient,
                 {
                     headers: {
                         Authorization: `Bearer ${tok}`

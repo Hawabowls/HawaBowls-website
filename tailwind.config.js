@@ -104,6 +104,7 @@ module.exports = {
                     },
                 },
             },
+            opacity: ['disabled'],
             spacing: {
                 128: '32rem',
                 132: '36rem',
