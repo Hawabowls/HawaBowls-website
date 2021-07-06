@@ -4,6 +4,7 @@
   <div class="relative inline-block text-left">
     <div>
       <div
+        @click="open = !open"
         type="button"
         class="
           flex
@@ -83,7 +84,7 @@
         base
 
         <div
-          v-for="i in ing"
+          v-for="i in baseIngredient"
           :key="i.name"
           href="#"
           class="text-gray-700 group flex items-center px-4 py-2 text-sm"
@@ -102,7 +103,9 @@
 export default {
   props: ["ing", "selectedIngredient"],
   data() {
-    return {};
+    return {
+      open: false,
+    };
   },
   methods: {
     addToIngredients(ingr) {
@@ -119,7 +122,20 @@ export default {
       );
     },
   },
-  computed: {},
+  computed: {
+    baseIngredient() {
+      return this.ing.filter((i) => i.type === "base");
+    },
+    veggieIngredient() {
+      return this.ing.filter((i) => i.type === "veggies");
+    },
+    toppingsIngredient() {
+      return this.ing.filter((i) => i.type === "toppings");
+    },
+    proteinIngredient() {
+      return this.ing.filter((i) => i.type === "protein");
+    },
+  },
 };
 </script>
 
