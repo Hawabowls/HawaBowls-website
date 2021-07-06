@@ -1,98 +1,101 @@
-<template
-  >
+<template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="relative inline-block text-left">
-    <div>
-      <div
-        @click="open = !open"
-        type="button"
-        class="
-          flex
-          justify-center
-          w-full
-          rounded-md
-          border border-gray-300
-          shadow-sm
-          px-4
-          py-2
-          bg-white
-          text-sm
-          font-medium
-          text-gray-700
-          hover:bg-gray-50
-          focus:outline-none
-          focus:ring-2
-          focus:ring-offset-2
-          focus:ring-offset-gray-100
-          focus:ring-indigo-500
-        "
-        id="menu-button"
-        aria-expanded="true"
-        aria-haspopup="true"
-      >
-        Selectionnner vos Ingredients
-        <!-- Heroicon name: solid/chevron-down -->
-        <svg
-          class="-mr-1 ml-2 h-5 w-5"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </div>
-    </div>
-
-    <!--
-    Dropdown menu, show/hide based on menu state.
-
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  -->
+  <div
+    class="fixed z-10 inset-0 overflow-y-auto"
+    aria-labelledby="modal-title"
+    role="dialog"
+    aria-modal="true"
+  >
     <div
-      v-if="open"
-      class="
-        origin-top-right
-        z-30
-        absolute
-        right-0
-        mt-2
-        w-64
-        rounded-md
-        shadow-lg
-        bg-white
-        ring-1 ring-black ring-opacity-5
-        divide-y divide-gray-100
-        focus:outline-none
-      "
-      role="menu"
-      aria-orientation="vertical"
-      aria-labelledby="menu-button"
-      tabindex="-1"
+      class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
     >
-      <div class="py-1" role="none">
-        <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-        base
+      <!--
+      Background overlay, show/hide based on modal state.
 
+      Entering: "ease-out duration-300"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+      <div
+        class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        aria-hidden="true"
+      ></div>
+
+      <!-- This element is to trick the browser into centering the modal contents. -->
+      <span
+        class="hidden sm:inline-block sm:align-middle sm:h-screen"
+        aria-hidden="true"
+        >&#8203;</span
+      >
+
+      <!--
+      Modal panel, show/hide based on modal state.
+
+      Entering: "ease-out duration-300"
+        From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        To: "opacity-100 translate-y-0 sm:scale-100"
+      Leaving: "ease-in duration-200"
+        From: "opacity-100 translate-y-0 sm:scale-100"
+        To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+    -->
+      <div
+        class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
+      >
+        <div>
+          <div
+            class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+          >
+            <!-- Heroicon name: outline/check -->
+            <svg
+              class="h-6 w-6 text-green-600"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-5">
+            <h3
+              class="text-lg leading-6 font-medium text-gray-900"
+              id="modal-title"
+            >
+              Payment successful
+            </h3>
+            <div class="mt-2">
+              <p class="text-sm text-gray-500">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                aliquam laudantium explicabo pariatur iste dolorem animi vitae
+                error totam. At sapiente aliquam accusamus facere veritatis.
+              </p>
+            </div>
+          </div>
+        </div>
         <div
-          v-for="i in baseIngredient"
-          :key="i.name"
-          href="#"
-          class="text-gray-700 group flex items-center px-4 py-2 text-sm"
-          role="menuitem"
-          tabindex="-1"
-          id="menu-item-0"
+          class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
         >
-          {{ i.name }}
+          <button
+            type="button"
+            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm"
+          >
+            Deactivate
+          </button>
+          <button
+            type="button"
+            class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </div>
@@ -104,38 +107,36 @@ export default {
   props: ["ing", "selectedIngredient"],
   data() {
     return {
-      open: false,
+      open: false
     };
   },
   methods: {
     addToIngredients(ingr) {
-      if (
-        this.selectedIngredient.filter((i) => i._id == ingr._id).length == 0
-      ) {
+      if (this.selectedIngredient.filter(i => i._id == ingr._id).length == 0) {
         this.selectedIngredient.push(item);
       }
     },
     removeIngredients(ingr) {
       this.selectedIngredient.splice(
-        this.selectedIngredient.findIndex((el) => el._id === ingr._id),
+        this.selectedIngredient.findIndex(el => el._id === ingr._id),
         1
       );
-    },
+    }
   },
   computed: {
     baseIngredient() {
-      return this.ing.filter((i) => i.type === "base");
+      return this.ing.filter(i => i.type === "base");
     },
     veggieIngredient() {
-      return this.ing.filter((i) => i.type === "veggies");
+      return this.ing.filter(i => i.type === "veggies");
     },
     toppingsIngredient() {
-      return this.ing.filter((i) => i.type === "toppings");
+      return this.ing.filter(i => i.type === "toppings");
     },
     proteinIngredient() {
-      return this.ing.filter((i) => i.type === "protein");
-    },
-  },
+      return this.ing.filter(i => i.type === "protein");
+    }
+  }
 };
 </script>
 

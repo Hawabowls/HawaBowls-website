@@ -10,13 +10,23 @@
         >
           <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             <div>
-              <div>
-                <h3 class="text-lg leading-6 font-medium text-gray-900">
-                  Details de l'article
-                </h3>
-                <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                  Infos sur l'article
-                </p>
+              <div class="flex justify-between">
+                <div>
+                  <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    Details de l'article
+                  </h3>
+                  <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                    Infos sur l'article
+                  </p>
+                </div>
+
+                <button
+                  @click="destroyArticle"
+                  type="button"
+                  class="ml-3 inline-flex justify-center items-center py-1 px-4 border border-transparent shadow-sm text-sm font-semibold rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Supprimer
+                </button>
               </div>
               <div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
                 <div class="space-y-6 sm:space-y-5">
@@ -246,13 +256,26 @@ export default {
   methods: {
     ...mapActions({
       getArticle: "blog/getArticle",
-      updateArticle: "blog/updateArticle"
+      updateArticle: "blog/updateArticle",
+      deleteArticle: "blog/deleteArticle"
     }),
     async update() {
       try {
         let response = await this.updateArticle({
           id: this.$route.params.id,
           article: this.article
+        });
+        console.log(response);
+        //rajoute notification reussite et echec
+        this.$router.push("/admin/blog");
+      } catch (e) {
+        console.log(e);
+      }
+    },
+    async destroyArticle() {
+      try {
+        let response = await this.deleteArticle({
+          id: this.$route.params.id
         });
         console.log(response);
         //rajoute notification reussite et echec

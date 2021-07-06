@@ -4,6 +4,7 @@
       <ul class="flex flex-nowrap m-1 overflow-hidden justify-center">
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -23,6 +24,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -42,6 +44,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -61,20 +64,7 @@
         </li>
         <li class="tool">
           <button
-            @click="
-              editor
-                .chain()
-                .focus()
-                .toggleCode()
-                .run()
-            "
-            :class="{ 'is-active': editor.isActive('code') }"
-          >
-            code
-          </button>
-        </li>
-        <li class="tool">
-          <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -93,6 +83,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -106,6 +97,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -123,8 +115,85 @@
             </svg>
           </button>
         </li>
+
         <li class="tool">
           <button
+            type="button"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleHighlight()
+                .run()
+            "
+            :class="{ 'is-active': editor.isActive('highlight') }"
+          >
+            highlight
+          </button>
+        </li>
+        <li class="tool">
+          <button
+            type="button"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .setTextAlign('left')
+                .run()
+            "
+            :class="{ 'is-active': editor.isActive({ textAlign: 'left' }) }"
+          >
+            <svg style="" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M3,3H21V5H3V3M3,7H15V9H3V7M3,11H21V13H3V11M3,15H15V17H3V15M3,19H21V21H3V19Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="tool">
+          <button
+            type="button"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .setTextAlign('center')
+                .run()
+            "
+            :class="{ 'is-active': editor.isActive({ textAlign: 'center' }) }"
+          >
+            <svg style="" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M3,3H21V5H3V3M7,7H17V9H7V7M3,11H21V13H3V11M7,15H17V17H7V15M3,19H21V21H3V19Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="tool">
+          <button
+            type="button"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .setTextAlign('right')
+                .run()
+            "
+            :class="{ 'is-active': editor.isActive({ textAlign: 'right' }) }"
+          >
+            <svg style="" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M3,3H21V5H3V3M9,7H21V9H9V7M3,11H21V13H3V11M9,15H21V17H9V15M3,19H21V21H3V19Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="tool">
+          <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -139,6 +208,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -153,6 +223,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -167,6 +238,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -181,6 +253,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -195,6 +268,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -209,6 +283,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -228,6 +303,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -247,6 +323,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -266,6 +343,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -285,6 +363,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -298,6 +377,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -316,6 +396,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="setLink"
             :class="{ 'is-active': editor.isActive('link') }"
           >
@@ -329,6 +410,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -347,6 +429,7 @@
         </li>
         <li class="tool">
           <button
+            type="button"
             @click="
               editor
                 .chain()
@@ -373,6 +456,8 @@
 import { Editor, EditorContent } from "@tiptap/vue-2";
 import StarterKit from "@tiptap/starter-kit";
 import Link from "@tiptap/extension-link";
+import TextAlign from "@tiptap/extension-text-align";
+import Highlight from "@tiptap/extension-highlight";
 
 export default {
   name: "EditorWyg",
@@ -434,7 +519,14 @@ export default {
         // JSON
         // this.$emit('input', this.editor.getJSON())
       },
-      extensions: [StarterKit, Link]
+      extensions: [
+        StarterKit,
+        Link,
+        TextAlign.configure({
+          types: ["heading", "paragraph"]
+        }),
+        Highlight
+      ]
     });
   },
 

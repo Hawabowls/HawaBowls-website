@@ -39,11 +39,24 @@
                     </th>
                     <th
                       scope="col"
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      class="px-6 py-3 hidden sm:block text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
                       Date de Publication
                     </th>
-                    <th scope="col" class="relative px-6 py-3">
+                    <th scope="col" class="relative px-5  ">
+                      <nuxt-link
+                        :to="{
+                          name: 'admin-blog-create'
+                        }"
+                        class="inline-flex items-center text-primary-600 border border-primary-600 px-1 my-1 hover:bg-primary-700  rounded hover:text-gray-100"
+                      >
+                        <span
+                          class="p-1 text-primary-600 hover:bg-white hover:text-white"
+                          >+</span
+                        >
+                        Article</nuxt-link
+                      >
+
                       <span class="sr-only">Voir</span>
                     </th>
                   </tr>

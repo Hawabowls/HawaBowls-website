@@ -6,7 +6,7 @@
       <div class="bg-white rounded p-2 shadow-md">
         <form
           class="space-y-8 divide-y divide-gray-200"
-          @submit.prevent="update"
+          @submit.prevent="create"
         >
           <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             <div>
@@ -217,6 +217,8 @@
                 </button></nuxt-link
               >
               <button
+                :disabled="!valid"
+                :class="[!valid ? 'opacity-50' : 'opacity-100']"
                 type="submit"
                 class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
@@ -239,9 +241,44 @@ export default {
   components: { EditorWyg },
   data() {
     return {
-      article: {},
+      article: {
+        title: "",
+        author: "",
+        isPublished: false,
+        desc: "",
+        content: "",
+        publishingDate: "",
+        cover: []
+      },
       oldArt: {}
     };
+  },
+  methods: {
+    ...mapActions({
+      createArticle: "blog/createArticle"
+    }),
+    async create() {
+      try {
+        let response = await this.createArticle({
+          article: this.article
+        });
+        console.log(response);
+        //rajoute notification reussite et echec
+        /*   this.$router.push("/admin/blog"); */
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  },
+  computed: {
+    valid() {
+      return (
+        this.article.title &&
+        this.article.desc &&
+        this.article.author &&
+        this.article.content
+      );
+    }
   }
 };
 </script>

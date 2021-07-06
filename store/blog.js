@@ -74,7 +74,7 @@ export const actions = {
     async createArticle({ commit }, payload) {
         try {
             let tok = store.get('tokenAd')
-            let response = await this.$axios.post(`/api/articles`, payload.ingredient,
+            let response = await this.$axios.post(`/api/articles`, payload.article,
                 {
                     headers: {
                         Authorization: `Bearer ${tok}`
@@ -93,4 +93,26 @@ export const actions = {
 
 
     },
+    async deleteArticle({ commit }, payload) {
+        try {
+
+            let tok = store.get('tokenAd')
+            let response = await this.$axios.delete(`/api/articles/${payload.id}`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${tok}`
+                    }
+                });
+            console.log(response)
+            if (response) {
+                return response
+
+            }
+
+
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
 }
