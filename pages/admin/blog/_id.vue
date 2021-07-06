@@ -242,6 +242,51 @@ export default {
       article: {},
       oldArt: {}
     };
+  },
+  methods: {
+    ...mapActions({
+      getArticle: "blog/getArticle",
+      updateArticle: "blog/updateArticle"
+    }),
+    async update() {
+      try {
+        let response = await this.updateArticle({
+          id: this.$route.params.id,
+          article: this.article
+        });
+        console.log(response);
+        //rajoute notification reussite et echec
+        this.$router.push("/admin/blog");
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  },
+  async fetch() {
+    this.article = await this.getArticle(this.$route.params.id);
+    this.oldArt = { ...this.article };
+  },
+  watch: {
+    /* ingredient: {
+      handler: function(val) {
+        console.log(
+          val.name == this.oldIng.name &&
+            val.type == this.oldIng.type &&
+            val.isInStock === this.oldIng.isInStock
+        );
+        if (
+          val.name != this.oldIng.name ||
+          val.type != this.oldIng.type ||
+          val.isInStock !== this.oldIng.isInStock
+        ) {
+          this.change = true;
+        } else {
+          this.change = false;
+        }
+      },
+      deep: true */
   }
 };
 </script>
+
+<style></style>

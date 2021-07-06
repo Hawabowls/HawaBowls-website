@@ -4,7 +4,13 @@
       <ul class="flex flex-nowrap m-1 overflow-hidden justify-center">
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleBold().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleBold()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('bold') }"
           >
             <svg viewBox="0 0 24 24">
@@ -17,7 +23,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleItalic().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleItalic()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('italic') }"
           >
             <svg viewBox="0 0 24 24">
@@ -30,7 +42,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleStrike().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleStrike()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('strike') }"
           >
             <svg viewBox="0 0 24 24">
@@ -43,14 +61,28 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleCode().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleCode()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('code') }"
           >
             code
           </button>
         </li>
         <li class="tool">
-          <button @click="editor.chain().focus().unsetAllMarks().run()">
+          <button
+            @click="
+              editor
+                .chain()
+                .focus()
+                .unsetAllMarks()
+                .run()
+            "
+          >
             <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -60,13 +92,27 @@
           </button>
         </li>
         <li class="tool">
-          <button @click="editor.chain().focus().clearNodes().run()">
+          <button
+            @click="
+              editor
+                .chain()
+                .focus()
+                .clearNodes()
+                .run()
+            "
+          >
             clear nodes
           </button>
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().setParagraph().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .setParagraph()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('paragraph') }"
           >
             <svg class="" viewBox="0 0 24 24">
@@ -79,7 +125,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleHeading({ level: 1 }).run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleHeading({ level: 1 })
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('heading', { level: 1 }) }"
           >
             h1
@@ -87,7 +139,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleHeading({ level: 2 }).run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleHeading({ level: 2 })
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('heading', { level: 2 }) }"
           >
             h2
@@ -95,7 +153,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleHeading({ level: 3 }).run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleHeading({ level: 3 })
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('heading', { level: 3 }) }"
           >
             h3
@@ -103,7 +167,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleHeading({ level: 4 }).run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleHeading({ level: 4 })
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('heading', { level: 4 }) }"
           >
             h4
@@ -111,7 +181,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleHeading({ level: 5 }).run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleHeading({ level: 5 })
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('heading', { level: 5 }) }"
           >
             h5
@@ -119,7 +195,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleHeading({ level: 6 }).run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleHeading({ level: 6 })
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('heading', { level: 6 }) }"
           >
             h6
@@ -127,7 +209,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleBulletList().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleBulletList()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('bulletList') }"
           >
             <svg viewBox="0 0 24 24">
@@ -140,7 +228,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleOrderedList().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleOrderedList()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('orderedList') }"
           >
             <svg viewBox="0 0 24 24">
@@ -153,7 +247,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleCodeBlock().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleCodeBlock()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('codeBlock') }"
           >
             <svg viewBox="0 0 24 24">
@@ -166,7 +266,13 @@
         </li>
         <li class="tool">
           <button
-            @click="editor.chain().focus().toggleBlockquote().run()"
+            @click="
+              editor
+                .chain()
+                .focus()
+                .toggleBlockquote()
+                .run()
+            "
             :class="{ 'is-active': editor.isActive('blockquote') }"
           >
             <svg viewBox="0 0 24 24">
@@ -178,12 +284,28 @@
           </button>
         </li>
         <li class="tool">
-          <button @click="editor.chain().focus().setHorizontalRule().run()">
+          <button
+            @click="
+              editor
+                .chain()
+                .focus()
+                .setHorizontalRule()
+                .run()
+            "
+          >
             horizontal rule
           </button>
         </li>
         <li class="tool">
-          <button @click="editor.chain().focus().setHardBreak().run()">
+          <button
+            @click="
+              editor
+                .chain()
+                .focus()
+                .setHardBreak()
+                .run()
+            "
+          >
             <svg viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -206,7 +328,15 @@
           </button>
         </li>
         <li class="tool">
-          <button @click="editor.chain().focus().undo().run()">
+          <button
+            @click="
+              editor
+                .chain()
+                .focus()
+                .undo()
+                .run()
+            "
+          >
             <svg viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -216,7 +346,15 @@
           </button>
         </li>
         <li class="tool">
-          <button @click="editor.chain().focus().redo().run()">
+          <button
+            @click="
+              editor
+                .chain()
+                .focus()
+                .redo()
+                .run()
+            "
+          >
             <svg viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -239,20 +377,45 @@ import Link from "@tiptap/extension-link";
 export default {
   name: "EditorWyg",
   components: {
-    EditorContent,
+    EditorContent
+  },
+  props: {
+    value: {
+      type: String,
+      default: ""
+    }
   },
 
   data() {
     return {
-      editor: null,
+      editor: null
     };
   },
   methods: {
     setLink() {
       const url = window.prompt("URL");
 
-      this.editor.chain().focus().setLink({ href: url }).run();
-    },
+      this.editor
+        .chain()
+        .focus()
+        .setLink({ href: url })
+        .run();
+    }
+  },
+  watch: {
+    value(value) {
+      // HTML
+      const isSame = this.editor.getHTML() === value;
+
+      // JSON
+      // const isSame = this.editor.getJSON().toString() === value.toString()
+
+      if (isSame) {
+        return;
+      }
+
+      this.editor.commands.setContent(this.value, false);
+    }
   },
 
   mounted() {
@@ -260,46 +423,24 @@ export default {
       editorProps: {
         attributes: {
           class:
-            "prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none",
-        },
+            "prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none"
+        }
       },
-      content: `
-  <h2>
-    Hi there,
-  </h2>
-  <p>
-    this is a basic <em>basic</em> example of <strong>tiptap</strong>. Sure, there are all kind of basic text styles you’d probably expect from a text editor. But wait until you see the lists:
-  </p>
-  <ul>
-    <li>
-      That’s a bullet list with one …
-    </li>
-    <li>
-      … or two list items.
-    </li>
-  </ul>
-  <p>
-    Isn’t that great? And all of that is editable. But wait, there’s more. Let’s try a code block:
-  </p>
-  <pre><code class="language-css">body {
-  display: none;
-}</code></pre>
-  <p>
-    I know, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit around. Don’t forget to check the other examples too.
-  </p>
-  <blockquote>
-    Wow, that’s amazing. Good work, boy! 👏
-    <br />
-    — Mom
-  </blockquote>
-`,
-      extensions: [StarterKit, Link],
+      content: this.value,
+      onUpdate: () => {
+        // HTML
+        this.$emit("input", this.editor.getHTML());
+
+        // JSON
+        // this.$emit('input', this.editor.getJSON())
+      },
+      extensions: [StarterKit, Link]
     });
   },
 
   beforeDestroy() {
     this.editor.destroy();
-  },
+  }
 };
 </script>
 
