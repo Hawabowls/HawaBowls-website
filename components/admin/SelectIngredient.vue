@@ -104,6 +104,22 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    addToIngredients(ingr) {
+      if (
+        this.selectedIngredient.filter((i) => i._id == ingr._id).length == 0
+      ) {
+        this.selectedIngredient.push(item);
+      }
+    },
+    removeIngredients(ingr) {
+      this.selectedIngredient.splice(
+        this.selectedIngredient.findIndex((el) => el._id === ingr._id),
+        1
+      );
+    },
+  },
+  computed: {},
 };
 </script>
 
