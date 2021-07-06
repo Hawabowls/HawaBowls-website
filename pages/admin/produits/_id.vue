@@ -48,7 +48,14 @@
                       Ingredient
                     </label>
                     <div class="mt-1 sm:mt-0 sm:col-span-2">
+                      <div class="rounded w-full max-w-xs h-24 bg-primary-100">
+                        {{
+                          item.ingredients ? "Selectionner les ingredient" : ""
+                        }}
+                      </div>
                       <select-ingredient
+                        v-if="isOpen"
+                        class="max-w-lg"
                         :ing="ingredients"
                         selectItem="item.ingredients"
                       ></select-ingredient>
@@ -318,6 +325,7 @@ export default {
   layout: "admin",
   data() {
     return {
+      isOpen: false,
       item: { name: "", price: "" },
       ingredients: []
     };
