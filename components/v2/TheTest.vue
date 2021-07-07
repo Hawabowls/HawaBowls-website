@@ -105,7 +105,7 @@
             <div class="hidden md:block card-i">
               <img
                 class="h-full w-full object-cover"
-                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064947/Hawabowls/site_media/little1_krbbq0.webp"
+                src="~assets/grid/little1.jpg"
                 alt="fille qui se prélasser au soleil"
               />
             </div>

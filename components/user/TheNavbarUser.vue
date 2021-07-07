@@ -317,7 +317,7 @@ export default {
        
           await this.reconnection();
       }
-  
+
   }
 };
 </script>
