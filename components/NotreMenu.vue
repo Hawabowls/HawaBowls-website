@@ -876,23 +876,19 @@ export default {
   @apply flex flex-col justify-center items-center overflow-hidden;
   -webkit-overflow-scrolling: touch;
 }
-
 .card-image {
   @apply relative w-full h-52  overflow-hidden rounded-lg;
-
   @screen md {
     @apply h-64;
   }
   .image {
     @apply block w-full h-full object-cover transition duration-300 ease-in-out transform scale-100;
-
     &:hover img {
       @apply transform scale-125;
     }
   }
   .image-overlay {
     @apply absolute top-0 left-0 w-full h-full bg-primary-700 bg-opacity-60 flex flex-col items-center justify-center opacity-0 transition-opacity duration-500;
-
     &:hover {
       @apply opacity-100;
       & > * {

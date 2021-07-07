@@ -105,21 +105,21 @@
             <div class="hidden md:block card-i">
               <img
                 class="h-full w-full object-cover"
-                src="~/assets/img/grid/little1.webp"
+                src="img/grid/little1.webp"
                 alt="fille qui se prélasser au soleil"
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover object-start"
-                src="~/assets/img/grid/little2.webp"
+                src="img/grid/little2.webp"
                 alt="Un poke au bord de la plage"
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover"
-                src="~/assets/img/grid/little3.webp"
+                src="img/grid/little3.webp"
                 alt="Un surfeuse avec un tensai tea"
               />
             </div>
@@ -158,7 +158,7 @@ export default {};
     .big {
       border-radius: 0.5rem;
       height: 100%;
-      background-image: url("~assets/img/grid/big.webp");
+      background-image: url("/img/grid/big.webp");
       background-size: cover;
       background-position: center;
     }
