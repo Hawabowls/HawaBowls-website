@@ -54,7 +54,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/robots',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/imagemin',
 
   ],
   dev: process.env.NODE_ENV !== 'production',
@@ -97,6 +98,11 @@ export default {
       '/checkout',
     ]
   },
+
+  imagemin: {
+    enableInDev: true
+  },
+
   proxy: {
     '/api/': { target: 'https://hawabowls-api.herokuapp.com', pathRewrite: { '^/api/': '' }, changeOrigin: true }
   },
