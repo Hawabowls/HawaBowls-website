@@ -10,7 +10,10 @@
 import TheFooter from "~/components/TheFooter.vue";
 import TheNavbarUser from "~/components/user/TheNavbarUser.vue";
 export default {
-  components: { TheNavbarUser, TheFooter }
+  components: { TheNavbarUser, TheFooter },
+  head() {
+    script: [{ src: "https://js.stripe.com/v3/" }];
+  }
 };
 </script>
 
