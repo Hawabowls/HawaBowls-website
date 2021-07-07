@@ -40,32 +40,28 @@ export default {
       lastNews: [
         {
           id: 0,
-          url:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_80,h_750,w_500/v1625064932/Hawabowls/site_media/big_m6lwek.webp",
+          url: "~/assets/img/grid/big.webp",
           titre: "Hola que tal",
           caption: "Bienvenido",
           source: "blog"
         },
         {
           id: 1,
-          url:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064947/Hawabowls/site_media/little1_krbbq0.webp",
+          url: "~/assets/img/grid/little1.webp",
           titre: "Poke Poke Poke",
           caption: "Belle journée",
           source: "instragram"
         },
         {
           id: 2,
-          url:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064999/Hawabowls/site_media/little3_bcm8ub.webp",
+          url: "~/assets/img/grid/little3.webp",
           titre: "Hola que tal",
           caption: "envie d'un petit tensai",
           source: "instagram"
         },
         {
           id: 3,
-          url:
-            "https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064973/Hawabowls/site_media/little2_wvgbpa.webp",
+          url: "~/assets/img/grid/little2.webp",
           titre: "Poke Poke Poke",
           caption: "see big",
           source: "instragram"

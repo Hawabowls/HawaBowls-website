@@ -105,21 +105,21 @@
             <div class="hidden md:block card-i">
               <img
                 class="h-full w-full object-cover"
-                src="~assets/grid/little1.jpg"
+                src="~/assets/img/grid/little1.webp"
                 alt="fille qui se prélasser au soleil"
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover object-start"
-                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064973/Hawabowls/site_media/little2_wvgbpa.webp"
+                src="~/assets/img/grid/little2.webp"
                 alt="Un poke au bord de la plage"
               />
             </div>
             <div class="card-i">
               <img
                 class="h-full w-full object-cover"
-                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_350,h_450/v1625064999/Hawabowls/site_media/little3_bcm8ub.webp"
+                src="~/assets/img/grid/little3.webp"
                 alt="Un surfeuse avec un tensai tea"
               />
             </div>
@@ -158,25 +158,11 @@ export default {};
     .big {
       border-radius: 0.5rem;
       height: 100%;
-      background-image: url("https://res.cloudinary.com/hawabowls/image/upload/q_80,h_1000,w_700/v1625064932/Hawabowls/site_media/big_m6lwek.webp");
+      background-image: url("~assets/img/grid/big.webp");
       background-size: cover;
       background-position: center;
     }
 
-    .little1 {
-      height: 24rem;
-      background-image: url("~assets/img/grid/little1.jpg");
-      @apply bg-cover;
-    }
-    .little2 {
-      background-image: url("~assets/img/grid/little2.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-    .little3 {
-      height: 24rem;
-      background-image: url("~assets/img/grid/little1.jpg");
-    }
     .card-i {
       @apply rounded-lg overflow-hidden;
       @screen lg {

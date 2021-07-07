@@ -1,19 +1,3 @@
-<!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ]
-  }
-  ```
--->
 <template>
   <div class="relative py-16 bg-white">
     <div
@@ -39,7 +23,7 @@
             >
               <img
                 class="object-cover object-center rounded-3xl shadow-2xl"
-                src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_400,h_670/v1625128781/Hawabowls/site_media/photo-1507207611509-ec012433ff52_ksfy2u.webp"
+                src="~/assets/img/grid/contact.webp"
                 alt="personne entrain de discuter"
               />
             </div>

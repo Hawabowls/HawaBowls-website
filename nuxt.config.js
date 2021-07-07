@@ -100,7 +100,7 @@ export default {
   },
 
   imagemin: {
-    enableInDev: true
+
   },
 
   proxy: {
