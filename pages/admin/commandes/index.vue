@@ -1,11 +1,11 @@
 <template>
   <main class="">
     <div class="relative bg-secondary-500 md:pt-32 pb-32 z-0 pt-12">
-      <div class="px-4 md:px-10 mx-auto w-full">
-        <card-stat></card-stat>
-      </div>
+      <div class="px-4 md:px-10 mx-auto w-full"></div>
     </div>
-    <section class=" relative  px-4 md:px-10 mx-auto w-full -m-24 z-30">
+    <section
+      class=" relative min-h-full  px-4 md:px-10 mx-auto w-full -m-24 z-30"
+    >
       <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div
@@ -113,6 +113,7 @@
         </div>
       </div>
     </section>
+    <footer-admin></footer-admin>
   </main>
 </template>
 
