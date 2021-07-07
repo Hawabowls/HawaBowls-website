@@ -40,28 +40,28 @@ export default {
       lastNews: [
         {
           id: 0,
-          url: "~/assets/img/grid/big.webp",
+          url: require(`~/assets/img/grid/big.webp`),
           titre: "Hola que tal",
           caption: "Bienvenido",
           source: "blog"
         },
         {
           id: 1,
-          url: "~/assets/img/grid/little1.webp",
+          url: require(`~/assets/img/grid/little1.webp`),
           titre: "Poke Poke Poke",
           caption: "Belle journée",
           source: "instragram"
         },
         {
           id: 2,
-          url: "~/assets/img/grid/little3.webp",
+          url: require(`~/assets/img/grid/little3.webp`),
           titre: "Hola que tal",
           caption: "envie d'un petit tensai",
           source: "instagram"
         },
         {
           id: 3,
-          url: "~/assets/img/grid/little2.webp",
+          url: require(`~/assets/img/grid/little2.webp`),
           titre: "Poke Poke Poke",
           caption: "see big",
           source: "instragram"
