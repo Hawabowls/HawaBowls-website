@@ -672,40 +672,35 @@ export default {
       plats: [
         {
           nom: "Po'Akahi",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624885061/Hawabowls/site_media/Po_akahi_mmos8w.webp",
+          image: "img/plat/Po'akahi.webp",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
           allergene: ""
         },
         {
           nom: "Po'Alua",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624885060/Hawabowls/site_media/Po_alua_ghk1cw.webp",
+          image: "img/plat/Po'alua.webp",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         },
         {
           nom: "Po'Akolu",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624885059/Hawabowls/site_media/Po_akolu_vqa7sx.webp",
+          image: "img/plat/Po'akolu.webp",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         },
         {
           nom: "Po'Aha",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1625050664/Hawabowls/site_media/Po_aha_elwdzt.webp",
+          image: "img/plat/Po'aha.webp",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
         },
         {
           nom: "Po'Alima",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624885059/Hawabowls/site_media/Po_alima_eq9yob.webp",
+          image: "img/plat/Po'alima.webp",
           desc:
             "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
           allergene: ""
@@ -713,8 +708,7 @@ export default {
 
         {
           nom: "Création Poké ",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1625124516/Hawabowls/site_media/c4f117b3-e7de-4729-8e14-ff6ff3461dba_vqylzt.webp",
+          image: "img/plat/Header .webp",
           desc:
             "Choissisez vous mêmes les ingrédients qui composeront votre poké parmi nos base, veggies, protéine, toopings et sauce",
           allergene: ""
@@ -748,13 +742,13 @@ export default {
       desserts: [
         {
           nom: "Moelleux au chocolat",
-          image: require(`~/assets/img/plat/moelleux au chocolat.webp`),
+          image: `img/plat/moelleux au chocolat.webp`,
           desc: "",
           allergene: ""
         },
         {
           nom: "Shia",
-          image: require(`~/assets/img/plat/chia bowl.webp`),
+          image: "img/plat/chia bowl.webp",
           desc: "",
           allergene: ""
         }
@@ -763,22 +757,19 @@ export default {
       boissons: [
         {
           nom: "Tensai thé Blanc",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/Hawabowls/site_media/Th%C3%A9_blanc_myrtille_aiudjf.webp",
+          image: "img/plat/Thé blanc myrtille.webp",
           desc: "",
           allergene: ""
         },
         {
           nom: "Tensai matcha ",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624875440/Hawabowls/site_media/th%C3%A9_matcha_menthe_poivre_s59msu.webp",
+          image: "img/plat/thé matcha menthe poivre.webp",
           desc: "",
           allergene: ""
         },
         {
           nom: "Tensai thé vert",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624884679/Hawabowls/site_media/Th%C3%A9_vert_citron_zavocf.webp",
+          image: "img/plat/Thé vert citron.webp",
           desc: "",
           allergene: ""
         }

@@ -23,7 +23,7 @@
             >
               <img
                 class="object-cover object-center rounded-3xl shadow-2xl"
-                src="~/assets/img/grid/contact.webp"
+                src="img/grid/contact.webp"
                 alt="personne entrain de discuter"
               />
             </div>

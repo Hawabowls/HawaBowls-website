@@ -99,7 +99,6 @@ export default {
   },
 
 
-
   proxy: {
     '/api/': { target: 'https://hawabowls-api.herokuapp.com', pathRewrite: { '^/api/': '' }, changeOrigin: true }
   },
