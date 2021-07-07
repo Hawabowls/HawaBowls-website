@@ -748,15 +748,13 @@ export default {
       desserts: [
         {
           nom: "Moelleux au chocolat",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1625050481/Hawabowls/site_media/moelleux_au_chocolat_wl4d0o.webp",
+          image: require(`~/assets/img/plat/moelleux au chocolat.webp`),
           desc: "",
           allergene: ""
         },
         {
           nom: "Shia",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp",
+          image: require(`~/assets/img/plat/chia bowl.webp`),
           desc: "",
           allergene: ""
         }
