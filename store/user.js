@@ -1,3 +1,4 @@
+let store = require('store')
 export const state = () => ({
     loggedUser: null,
     authenticated: false,
@@ -13,6 +14,7 @@ export const getters = {
 export const mutations = {
     setCurrentToken: (state, token) => {
         state.token = token
+        store.set('token', token)
     },
     setAuthenticated(state, val) {
         state.authenticated = val
