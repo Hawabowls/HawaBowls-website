@@ -9,10 +9,29 @@
 <script>
 import TheFooter from "~/components/TheFooter.vue";
 import TheNavbarUser from "~/components/user/TheNavbarUser.vue";
+let store = require("store");
+import { mapActions } from "vuex";
 export default {
   components: { TheNavbarUser, TheFooter },
   head() {
     script: [{ src: "https://js.stripe.com/v3/" }];
+  },
+  methods: {
+    ...mapActions({ reconnect: "user/reconnection" }),
+    async getAdLogged() {
+      if (store.get("token")) {
+        if (!this.$store.getters["user/isAuthenticated"]) {
+          const client = await this.reconnect(store.get("token"));
+
+          if (client) {
+            console.log(client);
+          }
+        }
+      }
+    }
+  },
+  mounted() {
+    this.getAdLogged();
   }
 };
 </script>
