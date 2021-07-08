@@ -1,7 +1,7 @@
 <template>
   <main class="max-w-7xl mx-auto py-4 sm:px-5 lg:px-8">
     <div
-      class="mx-auto min-w-sm  card-container space-x-2 overflow-x-hidden p-4"
+      class="mx-auto min-w-sm  flex justify-center  space-x-1 overflow-x-hidden p-4"
     >
       <div
         @click="toggle('poke')"
@@ -422,11 +422,9 @@ export default {
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  -webkit-overflow-scrolling: touch;
-  overflow-x:auto @screen sm {
+  @apply flex justify-center items-center overflow-hidden;
+  overflow-x: auto;
+  @screen sm {
     overflow: hidden;
   }
   & ::-webkit-scrollbar {
