@@ -6,14 +6,14 @@
       mx-auto
       p-6
       grid grid-cols-1
-      row-gap-12
+      gap-5
       lg:grid-cols-10
       lg:col-gap-10
       lg:pt-12
     "
   >
     <Payment :total="total"></Payment>
-    <Summary :items="items"></Summary>
+    <Summary :items="cart"></Summary>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
   layout: "clean",
   components: {
     Payment,
-    Summary,
+    Summary
   },
   head() {
     return { script: [{ src: "https://js.stripe.com/v3/" }] };
@@ -36,34 +36,41 @@ export default {
         {
           title: "Title 1",
           description: "lorem impsu liwe",
-          price: 550,
+          price: 550
         },
         {
           title: "Title 2",
           description: "lorem impsu liwe",
-          price: 250,
+          price: 250
         },
         {
           title: "Title 3",
           description: "lorem impsu liwe",
-          price: 150,
-        },
+          price: 150
+        }
       ],
-      total: 0,
       isCard: true,
-      loading: true,
+      loading: true
     };
   },
   methods: {
     getTotal(items) {
-      items.forEach((item) => {
+      items.forEach(item => {
         this.total += item.price;
       });
+    }
+  },
+  computed: {
+    cart() {
+      return this.$store.getters["cart/getCart"];
     },
+    total() {
+      return this.$store.getters["cart/getCartTotal"];
+    }
   },
   mounted() {
     this.getTotal(this.items);
-  },
+  }
 };
 </script>
 
