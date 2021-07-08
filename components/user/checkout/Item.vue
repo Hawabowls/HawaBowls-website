@@ -28,7 +28,7 @@
 export default {
   name: "Item",
   props: {
-    item: Object
-  }
+    item: Object,
+  },
 };
 </script>
