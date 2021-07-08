@@ -80,7 +80,7 @@
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_80,w_520/v1625124516/Hawabowls/site_media/c4f117b3-e7de-4729-8e14-ff6ff3461dba_vqylzt.webp"
+            src="img/plat/Header .webp"
             alt="photo de poke"
           />
         </div>
@@ -116,7 +116,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_420/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp"
+              src="img/plat/moelleux au chocolat.webp"
               alt="photo dessert"
             />
           </div>
