@@ -118,7 +118,7 @@
         <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
       </div>
       <div class="mt-5">
-        <nuxt-link to="/inscription">
+        <nuxt-link to="/cart">
           <button
             class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-secondary-600 rounded hover:bg-secondary-700 focus:outline-none focus:bg-secondary-700"
           >
