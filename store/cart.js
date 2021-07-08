@@ -1,7 +1,6 @@
 export const state = () => ({
     allProducts: [],
     featuredProducts: [],
-
     cartItems: [],
 })
 
