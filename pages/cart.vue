@@ -150,7 +150,6 @@
 import { mapMutations } from "vuex";
 export default {
   layout: "user",
-  middleware: "auth",
   computed: {
     cart() {
       return this.$store.getters["cart/getCart"];
