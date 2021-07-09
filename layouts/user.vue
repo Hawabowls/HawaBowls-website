@@ -17,23 +17,29 @@ export default {
     script: [{ src: "https://js.stripe.com/v3/" }];
   },
   methods: {
-    ...mapActions({ reconnect: "user/reconnection" }),
+    ...mapActions({ reconnect: "user/reconnection", addCart: "cart/addCart" }),
     async getAdLogged() {
-      if (!this.$store.getters["user/isAuthenticated"]) {
-        if (store.get("tokenAd")) {
-          const client = await this.reconnect(store.get("tokenAd"));
+      if (store.get("token")) {
+        if (!this.$store.getters["user/isAuthenticated"]) {
+          const client = await this.reconnect(store.get("token"));
 
           if (client) {
             console.log(client);
           }
-        } else {
-          this.$router.push("/admin/login");
+        }
+      }
+    },
+    async getCart() {
+      if (this.$store.getters["cart/getCart"].length == 0) {
+        if (store.get("cart")) {
+          this.addCart(store.get("cart"));
         }
       }
     }
   },
   mounted() {
     this.getAdLogged();
+    this.getCart();
   }
 };
 </script>

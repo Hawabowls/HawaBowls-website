@@ -1,10 +1,14 @@
 <template>
   <div class="grid grid-cols-8 overflow-hidden col-gap-6 mb-5">
-    <img class="block col-span-3 w-full h-20 rounded bg-gray-600" src alt />
+    <img
+      class="block col-span-3 w-full h-20 rounded bg-gray-600"
+      :src="item.image"
+      :alt="item.name"
+    />
     <div class="col-span-5">
       <div class="flex">
         <h6 class="text-sm font-semibold text-gray-800 flex-grow">
-          {{ item.title }}
+          {{ item.name }}
         </h6>
         <button>
           <svg
@@ -28,7 +32,7 @@
 export default {
   name: "Item",
   props: {
-    item: Object,
-  },
+    item: Object
+  }
 };
 </script>

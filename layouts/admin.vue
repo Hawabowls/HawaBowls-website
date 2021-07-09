@@ -26,13 +26,16 @@ export default {
     ...mapActions({ reconnect: "admin/reconnection" }),
     async getAdLogged() {
       if (store.get("tokenAd")) {
-        const client = await this.reconnect(store.get("tokenAd"));
+        if (!this.$store.getters["admin/isAuthenticated"]) {
+          const client = await this.reconnect(store.get("tokenAd"));
 
-        if (client) {
-          console.log(client);
+          if (client) {
+            console.log(client);
+          }
+        } else {
+          console.log("ici");
+          this.$router.push("/admin/login");
         }
-      } else {
-        this.$router.push("/admin/login");
       }
     }
   },

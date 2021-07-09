@@ -129,7 +129,7 @@
             <div
               class="flex font-semibold justify-between py-6 text-gray-100 text-sm uppercase"
             >
-              <span>Total cost</span>
+              <span>Coût Total</span>
               <span class="text-white">{{ total }}</span>
             </div>
             <nuxt-link to="/user/checkout">
@@ -150,7 +150,6 @@
 import { mapMutations } from "vuex";
 export default {
   layout: "user",
-  middleware: "auth",
   computed: {
     cart() {
       return this.$store.getters["cart/getCart"];
@@ -166,7 +165,8 @@ export default {
     ...mapMutations("cart", ["removeItem"]),
     remove(item) {
       this.removeItem(item);
-    }
+    },
+    addQuantity(item) {}
   },
   filter: {}
 };

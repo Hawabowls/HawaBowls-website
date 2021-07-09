@@ -1,7 +1,7 @@
+let store = require('store')
 export const state = () => ({
     allProducts: [],
     featuredProducts: [],
-
     cartItems: [],
 })
 
@@ -32,12 +32,14 @@ export const mutations = {
     setFeaturedProducts: (state, products) => (state.featuredProducts = products),
     setDishProducts: (state, products) => (state.dishProducts = products),
     setDrinkProducts: (state, products) => (state.drinkProducts = products),
+    setCartItems: (state, cart) => state.cartItems = cart,
     setCartItem: (state, item) => {
 
         if (state.cartItems.filter(i => i._id == item._id).length == 0) {
             item.quantity = 1
             console.log(item)
             state.cartItems.push(item)
+            store.set('cart', state.cartItems)
 
         } else {
             let index = state.cartItems.findIndex(x => x._id == item._id)
@@ -60,4 +62,7 @@ export const actions = {
     async deleteCartItem({ commit }, id) {
         await commit('removeCartItem', id)
     },
+    async addCart({ commit }, cart) {
+        await commit('setCartItems', cart)
+    }
 }

@@ -5,7 +5,23 @@
 </template>
 
 <script>
-export default {};
+let store = require("store");
+import { mapActions } from "vuex";
+export default {
+  methods: {
+    ...mapActions({ addCart: "cart/addCart" }),
+    async getCart() {
+      if (this.$store.getters["cart/getCart"].length == 0) {
+        if (store.get("cart")) {
+          this.addCart(store.get("cart"));
+        }
+      }
+    }
+  },
+  mounted() {
+    this.getCart();
+  }
+};
 </script>
 
 <style lang="postcss">

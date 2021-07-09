@@ -7,7 +7,7 @@ export const state = () => ({
 
 export const getters = {
     getUser: (state) => state.loggedUser,
-    isAuthenticated: (state) => state.authenticatedStaff
+    isAuthenticated: (state) => state.authenticatedStaff,
 
 }
 
