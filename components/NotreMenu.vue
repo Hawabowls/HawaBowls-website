@@ -151,7 +151,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_330,h_498,/v1625061345/Hawabowls/site_media/photo-1603046891726-36bfd957e0bf_nuwy0z.webp"
+              src="img/plat/entree.webp"
               alt="photo entrée"
             />
           </div>
@@ -184,7 +184,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/v1625210619/Hawabowls/site_media/photo-1560023907-5f339617ea30_ecdylt.webp"
+              src="img/plat/bubble.webp"
               alt="photo de bubble tea"
             />
           </div>
@@ -217,7 +217,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_300,h_466/v1625062803/Hawabowls/site_media/boisson_rrt0tg.webp"
+              src="img/plat/boisson.webp"
               alt="image de boisson"
             />
           </div>
@@ -718,15 +718,13 @@ export default {
       entrees: [
         {
           nom: "Salade de mangue",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624875435/Hawabowls/site_media/Salade_de_mangue_ihmqz7.webp",
+          image: "img/plat/salade d'ananas.webp",
           desc: "",
           allergene: ""
         },
         {
           nom: "Salade d'ananas",
-          image:
-            "https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_70,w_370/v1624875431/Hawabowls/site_media/salade_d_ananas_tjk32i.webp",
+          image: "img/plat/Salade de mangue.webp",
           desc: "",
           allergene: ""
         }
