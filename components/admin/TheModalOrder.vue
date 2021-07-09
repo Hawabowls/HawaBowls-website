@@ -107,6 +107,7 @@
           </button>
           <a to="/plats" class="w-full sm:w-1/2">
             <button
+              disabled
               class="inline-flex text-white items-center text-3xl justify-center bg-accent-400 w-full rounded-lg p-2 m-1 hover:bg-accent-300 focus:outline-none"
             >
               Click and collect (Bientot)
