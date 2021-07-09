@@ -674,21 +674,21 @@ export default {
           nom: "Po'Akahi",
           image: "img/plat/Po'akahi.webp",
           desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre,  Graîne de sesame,Oignon frits",
           allergene: ""
         },
         {
           nom: "Po'Alua",
           image: "img/plat/Po'alua.webp",
           desc:
-            "Riz vinaigré, Saumon mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+            "Riz vinaigré, Saumon mariné cuit,  Mangues fraiche, Radis, Chou Rouge, Avocat, Fèves Edamame, Jeune pousse de soja, Graîne de sesame",
           allergene: ""
         },
         {
           nom: "Po'Akolu",
           image: "img/plat/Po'akolu.webp",
           desc:
-            "Riz vinaigré, Saumon mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+            "Riz vinaigré, Tofu mariné cuit, Mangues fraiches, Fèves Edamame, Tomate cerise, Salade d'algues Wakamé, Carotte râpées, Graîne de sesame, Oignon frits",
           allergene: ""
         },
         {
@@ -710,7 +710,7 @@ export default {
           nom: "Création Poké ",
           image: "img/plat/Header .webp",
           desc:
-            "Choissisez vous mêmes les ingrédients qui composeront votre poké parmi nos base, veggies, protéine, toopings et sauce",
+            "Choissisez vous mêmes les ingrédients qui composeront votre poké parmi nos base, veggies, protéines, toopings et sauces",
           allergene: ""
         }
       ],
