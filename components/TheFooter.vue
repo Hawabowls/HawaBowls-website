@@ -5,7 +5,7 @@
         <base-circle-logo></base-circle-logo>
         <div class="sm:flex sm:justify-around text-center">
           <nuxt-link to="/" class="footer-link">Accueil</nuxt-link>
-          <nuxt-link to="/menu" class="footer-link">Menu</nuxt-link>
+          <nuxt-link to="#menu" class="footer-link">Menu</nuxt-link>
           <nuxt-link to="/blog" class="footer-link">Blog</nuxt-link>
           <nuxt-link to="/contact" class="footer-link">Contact</nuxt-link>
 

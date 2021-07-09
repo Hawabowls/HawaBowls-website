@@ -80,7 +80,7 @@
           </h3>
           <img
             class="absolute h-full w-full group-hover:opacity-80 object-cover"
-            src="https://res.cloudinary.com/hawabowls/image/upload/c_fill,f_auto,h_300,q_80,w_520/v1625124516/Hawabowls/site_media/c4f117b3-e7de-4729-8e14-ff6ff3461dba_vqylzt.webp"
+            src="img/plat/Header .webp"
             alt="photo de poke"
           />
         </div>
@@ -116,7 +116,7 @@
             </h3>
             <img
               class="absolute h-full w-full group-hover:opacity-80 object-cover"
-              src="https://res.cloudinary.com/hawabowls/image/upload/q_80,w_420/v1624875439/Hawabowls/site_media/chia_bowl_vxul2s.webp"
+              src="img/plat/moelleux au chocolat.webp"
               alt="photo dessert"
             />
           </div>
@@ -674,21 +674,21 @@ export default {
           nom: "Po'Akahi",
           image: "img/plat/Po'akahi.webp",
           desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre,  Graîne de sesame,Oignon frits",
           allergene: ""
         },
         {
           nom: "Po'Alua",
           image: "img/plat/Po'alua.webp",
           desc:
-            "Riz vinaigré, Saumon mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+            "Riz vinaigré, Saumon mariné cuit,  Mangues fraiche, Radis, Chou Rouge, Avocat, Fèves Edamame, Jeune pousse de soja, Graîne de sesame",
           allergene: ""
         },
         {
           nom: "Po'Akolu",
           image: "img/plat/Po'akolu.webp",
           desc:
-            "Riz vinaigré, Saumon mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
+            "Riz vinaigré, Tofu mariné cuit, Mangues fraiches, Fèves Edamame, Tomate cerise, Salade d'algues Wakamé, Carotte râpées, Graîne de sesame, Oignon frits",
           allergene: ""
         },
         {
@@ -710,7 +710,7 @@ export default {
           nom: "Création Poké ",
           image: "img/plat/Header .webp",
           desc:
-            "Choissisez vous mêmes les ingrédients qui composeront votre poké parmi nos base, veggies, protéine, toopings et sauce",
+            "Choissisez vous mêmes les ingrédients qui composeront votre poké parmi nos base, veggies, protéines, toopings et sauces",
           allergene: ""
         }
       ],
