@@ -681,28 +681,28 @@ export default {
           nom: "Po'Alua",
           image: "img/plat/Po'alua.webp",
           desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+            "Riz vinaigré, Saumon mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
           allergene: ""
         },
         {
           nom: "Po'Akolu",
           image: "img/plat/Po'akolu.webp",
           desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+            "Riz vinaigré, Saumon mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
           allergene: ""
         },
         {
           nom: "Po'Aha",
           image: "img/plat/Po'aha.webp",
           desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+            "Riz vinaigré, Thon cru mariné, Avocat, Radis, Fèves Edamame, Chou Rouge, Carotte râpées, Ananas, Graîne de sesame ",
           allergene: ""
         },
         {
           nom: "Po'Alima",
           image: "img/plat/Po'alima.webp",
           desc:
-            "Riz vinaigré, Boeuf mariné cuit, Ananas, Avocat, Tomate cerise, Mais",
+            "Riz vinaigré, Saumon mariné cuit, Ananas, Avocat, Tomate cerise, Mais, concombre, graîne",
           allergene: ""
         },
 
