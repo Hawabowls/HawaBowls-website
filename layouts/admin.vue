@@ -33,6 +33,7 @@ export default {
             console.log(client);
           }
         } else {
+          console.log("ici");
           this.$router.push("/admin/login");
         }
       }

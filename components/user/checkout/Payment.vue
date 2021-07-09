@@ -83,34 +83,34 @@ const style = {
     base: {
       border: "1px solid",
       iconColor: "#c4f0ff",
-      color: "#87BBFD",
+      color: "#30377f",
       fontWeight: "500",
       fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
       fontSize: "16px",
       fontSmoothing: "antialiased",
       ":-webkit-autofill": {
-        color: "#fce883",
+        color: "#fce883"
       },
       "::placeholder": {
-        color: "#87BBFD",
-      },
+        color: "#30377f"
+      }
     },
     invalid: {
       iconColor: "#FFC7EE",
-      color: "red",
-    },
-  },
+      color: "red"
+    }
+  }
 };
 export default {
   name: "Payment",
   props: {
-    total: Number,
+    total: Number
   },
   data() {
     return {
       elements: null,
       stripe: null,
-      loading: true,
+      loading: true
     };
   },
   methods: {
@@ -118,41 +118,37 @@ export default {
       this.$emit("change-parent");
     },
     async handleSubmit(event) {
-      if (loading.value) return;
+      if (this.loading) return;
       this.loading = true;
 
       const { name, mobile } = Object.fromEntries(new FormData(event.target));
 
-      const cardElement = this.elements.get;
+      const cardElement = this.elements.getElement("card");
       try {
-        const response = await this.$axios("/api/stripe", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ amount: 1999 }),
+        const response = await this.$axios.post("/api/order/stripe", {
+          amount: this.total * 100
         });
-        const { secret } = await response.json();
+        const secret = response.data.secret;
         console.log("secret", secret);
         const billingDetails = {
           name,
-          mobile,
+          mobile
         };
-        const paymentMethodReq = await stripe.createPaymentMethod({
+        const paymentMethodReq = await this.stripe.createPaymentMethod({
           type: "card",
           card: cardElement,
-          billing_details: billingDetails,
+          billing_details: billingDetails
         });
         console.log("error?", paymentMethodReq);
-        const { error } = await stripe.confirmCardPayment(secret, {
-          payment_method: paymentMethodReq.paymentMethod.id,
+        const { error } = await this.stripe.confirmCardPayment(secret, {
+          payment_method: paymentMethodReq.paymentMethod.id
         });
-        loading.value = false;
+        this.loading = false;
         console.log("error?", error);
         router.push("/success");
       } catch (error) {
         console.log("error", error);
-        loading.value = false;
+        this.loading = false;
       }
     },
     async loadStripe() {
@@ -164,10 +160,10 @@ export default {
       const element = this.elements.create(ELEMENT_TYPE, style);
       element.mount("#card");
       this.loading = false;
-    },
+    }
   },
   mounted() {
     this.loadStripe();
-  },
+  }
 };
 </script>

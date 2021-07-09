@@ -17,7 +17,7 @@ export default {
     script: [{ src: "https://js.stripe.com/v3/" }];
   },
   methods: {
-    ...mapActions({ reconnect: "user/reconnection" }),
+    ...mapActions({ reconnect: "user/reconnection", addCart: "cart/addCart" }),
     async getAdLogged() {
       if (store.get("token")) {
         if (!this.$store.getters["user/isAuthenticated"]) {
@@ -28,10 +28,18 @@ export default {
           }
         }
       }
+    },
+    async getCart() {
+      if (this.$store.getters["cart/getCart"].length == 0) {
+        if (store.get("cart")) {
+          this.addCart(store.get("cart"));
+        }
+      }
     }
   },
   mounted() {
     this.getAdLogged();
+    this.getCart();
   }
 };
 </script>

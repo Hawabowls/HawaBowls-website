@@ -12,7 +12,7 @@
       lg:pt-12
     "
   >
-    <Payment :total="total"></Payment>
+    <Payment :total="parseFloat(total)"></Payment>
     <Summary :items="cart"></Summary>
   </div>
 </template>
