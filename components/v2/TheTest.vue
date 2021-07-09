@@ -15,11 +15,11 @@
         <span class="block text-accent-500 xl:inline">Qui somme-nous?</span>
       </h2>
       <p class="mt-3 max-w-md mx-auto text-lg text-accent-400 sm:text-xl">
-        C'est en 2010 que les deux foncdateurs et amis de longue date, Walid et
-        Daniel ont l'idée de ccréer un concept de restaurant healthy.Quand on
-        sais que 80% des résultats du sportif se trouvent dans l'assiette et 20%
+        C'est en 2010 que les deux fondateurs et mais de longue date, Walid et
+        Daniel ont l'idée de créer un concept de restaurant healthy. Quand on
+        sait que 80% des résultats du sportif se trouvent dans l'assiette et 20%
         dans l'effort, il était important pour eux, grands sportifs, de proposer
-        un endroit dédié au bien être proposant des produits frais et vitaminés
+        un endroit dédié au bien-être proposant des produits frais et vitaminés
         en alliant plaisir culinaire er bienfaits.
       </p>
       <p
@@ -27,7 +27,7 @@
       >
         C'est finalement 10 ans plus tard, en décembre 2020, que leur rêve prend
         forme avec l'ouverture d'Hawa Bowls en plein coeur de Nantes. Inspirés
-        par le soleil d'Hawai avec une touche nantaise, les poké hawa Bowls
+        par le soleil d'Hawaii avec une touche nantaise, les poké Hawa Bowls
         ravissent à la fois les sportifs et les gourmands soucieux de prendre
         soin de leur alimentation grâce à des produits frais et de qualité.
       </p>
