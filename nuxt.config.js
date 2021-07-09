@@ -42,7 +42,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics'
   ],
 
   loading: '~/components/LoadingIcon.vue',
@@ -71,6 +72,12 @@ export default {
   env: {
     STRIPE_PK: process.env.STRIPE_PK
   },
+
+  //google analytics
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+
 
   //robot.txt
   robots: [
