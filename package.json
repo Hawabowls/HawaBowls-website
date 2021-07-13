@@ -36,6 +36,7 @@
     "nuxt": "^2.15.3",
     "store": "^2.0.12",
     "stripe": "^8.160.0",
+    "vue-gtag": "^1.16.1",
     "vue-image-compressor": "^1.0.3",
     "vue3-carousel": "^0.1.21",
     "vuex-persistedstate": "^4.0.0-beta.3"
