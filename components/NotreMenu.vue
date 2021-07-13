@@ -717,14 +717,14 @@ export default {
 
       entrees: [
         {
-          nom: "Salade de mangue",
-          image: "img/plat/salade d'ananas.webp",
+          nom: "Salade d'edamame",
+          image: "img/plat/salade d'edamame.webp",
           desc: "",
           allergene: ""
         },
         {
-          nom: "Salade d'ananas",
-          image: "img/plat/Salade de mangue.webp",
+          nom: "Salade de wakame",
+          image: "img/plat/Salade de wakame.webp",
           desc: "",
           allergene: ""
         }
@@ -747,6 +747,18 @@ export default {
         {
           nom: "Shia",
           image: "img/plat/chia bowl.webp",
+          desc: "",
+          allergene: ""
+        },
+        {
+          nom: "Salade de mangue",
+          image: "img/plat/salade d'ananas.webp",
+          desc: "",
+          allergene: ""
+        },
+        {
+          nom: "Salade d'ananas",
+          image: "img/plat/Salade de mangue.webp",
           desc: "",
           allergene: ""
         }
