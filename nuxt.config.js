@@ -34,6 +34,7 @@ export default {
   plugins: [
     { src: '~/plugins/VueSplide.js', mode: 'client' },
     { src: '~/plugins/vue-stripe.js', mode: 'client' },
+    { src: '~/plugins/gtag.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,7 +44,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-analytics'
   ],
 
   loading: '~/components/LoadingIcon.vue',
@@ -71,11 +71,6 @@ export default {
   //sttripe
   env: {
     STRIPE_PK: process.env.STRIPE_PK
-  },
-
-  //google analytics
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
   },
 
 
